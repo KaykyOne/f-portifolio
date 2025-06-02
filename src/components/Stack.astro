@@ -1,0 +1,111 @@
+---
+import Image from "astro/components/Image.astro";
+import logoJS from "../assets/icons/javascript.svg";
+import logoCSharp from "../assets/icons/CSharp.svg";
+import logoHTML from "../assets/icons/html5.svg";
+import logoCSS from "../assets/icons/css3.svg";
+
+import React from "../assets/icons/react.svg";
+import Node from "../assets/icons/node.svg";
+import Git from "../assets/icons/git.svg";
+import GitHub from "../assets/icons/github.svg";
+import Next from "../assets/icons/next.svg";
+import Tailwind from "../assets/icons/tailwindcss.svg";
+import DotNet from "../assets/icons/dotnet.svg";
+import AstroIcon from "../assets/icons/astro.svg";
+
+import Postgres from "../assets/icons/postgresql.svg";
+import Supabase from "../assets/icons/supabase.svg";
+import Firebase from "../assets/icons/firebase.svg";
+
+
+
+---
+
+<div>
+    <div class="flex flex-col p-2 text-center text-darkblue pt-2 items-center">
+        <h1 class="text-center text-5xl font-bold w-full mt-10">Stack</h1>
+        <h3>Minhas Habilidades</h3>
+        <div class="grid grid-cols-1 md:grid-cols-5 mt-10 w-8/12 gap-4">
+            <div class="flex group flex-col justify-center items-center transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                <Image class={"w-[100px] h-[100px]"} alt={"imagem-js"} src={logoJS} />
+                <h3 class="group-hover:translate-y-4 transition-all duration-500">Javascript</h3>
+                <div class="bg-black h-1 mt-1 w-[80px] group-hover:-translate-y-4 transition-all duration-500"></div>
+            </div>
+
+            <div class="flex group flex-col justify-center items-center transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                <Image class={"w-[100px] h-[100px]"} alt={"imagem-c#"} src={logoCSharp} />
+                <h3 class="group-hover:translate-y-4 transition-all duration-500">C#</h3>
+                <div class="bg-black h-1 mt-1 w-[80px] group-hover:-translate-y-4 transition-all duration-500"></div>
+            </div>
+
+            <div class="flex group flex-col justify-center items-center transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                <Image class={"w-[100px] h-[100px]"} alt={"imagem-html"} src={logoHTML} />
+                <h3 class="group-hover:translate-y-4 transition-all duration-500">HTML5</h3>
+                <div class="bg-black h-1 mt-1 w-[80px] group-hover:-translate-y-4 transition-all duration-500"></div>
+            </div>
+
+            <div class="flex group flex-col justify-center items-center transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                <Image class={"w-[100px] h-[100px]"} alt={"imagem-css"} src={logoCSS} />
+                <h3 class="group-hover:translate-y-4 transition-all duration-500">CSS3</h3>
+                <div class="bg-black h-1 mt-1 w-[80px] group-hover:-translate-y-4 transition-all duration-500"></div>
+            </div>
+
+            <div class="flex group flex-col justify-center items-center transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                <h1 class="flex text-5xl font-black h-[100px] items-center">SQL</h1>
+                <h3 class="group-hover:translate-y-4 transition-all duration-500">SQL</h3>
+                <div class="bg-black h-1 mt-1 w-[80px] group-hover:-translate-y-4 transition-all duration-500"></div>
+            </div>
+        </div>
+        <h1 class="text-center text-5xl font-bold w-full mt-10">Frameworks e Ferramentas</h1>
+        <h3>Usados atualmente ou que já foram usados</h3>
+
+        <div class="flex flex-wrap w-8/12 justify-around bg-darkblue rounded-md p-8 text-white mt-8 gap-5 transition-all duration-500 hover:-translate-y-3">
+            <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
+                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-react"} src={React} />
+                <h3>React.js</h3>
+            </div>
+            <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
+                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-node"} src={Node} />
+                <h3>Node.js</h3>
+            </div>
+            <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
+                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-git"} src={Git} />
+                <h3>Git</h3>
+            </div>
+            <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
+                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-github"} src={GitHub} />
+                <h3>GitHub</h3>
+            </div>
+            <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
+                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-next"} src={Next} />
+                <h3>Next.js</h3>
+            </div>
+            <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
+                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-tailwind"} src={Tailwind} />
+                <h3>Tailwind CSS</h3>
+            </div>
+            <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
+                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-dotnet"} src={DotNet} />
+                <h3>.NET</h3>
+            </div>
+            <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
+                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-astro"} src={AstroIcon} />
+                <h3>Astro</h3>
+            </div>
+
+            <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
+                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-postgres"} src={Postgres} />
+                <h3>PostgreSQL</h3>
+            </div>
+            <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
+                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-supabase"} src={Supabase} />
+                <h3>Supabase</h3>
+            </div>
+            <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
+                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-firebase"} src={Firebase} />
+                <h3>Firebase</h3>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+---
+import Image from "astro/components/Image.astro"
+import ImageEmail from "../assets/imgs/iconecontatoemail.svg"
+---
+
+<div class=" mt-5">
+    <div class="w-full h-[10px] bg-white grid items-center">
+        <div class="flex h-1/2 bg-darkblue"></div>
+    </div>
+
+    <div class="flex justify-center items-center p-5 min-h-[500px] text-white bg-darkblue">
+        <div class="grid grid-cols-1 md:grid-cols-2 md:w-8/12">
+            <div class="flex flex-col text-start justify-center items-center mb-4 md:mb-0">
+                <span class="material-icons !text-7xl">
+                    verified
+                </span>
+                <h1 class="text-5xl font-bold">Gostou do que viu?</h1>
+                <h3 class="text-2xl">Entre em contato comigo por aqui!</h3>
+            </div>
+
+            <div class="flex flex-col">
+                <h1 class="text-3xl font-semibold">Contato</h1>
+                <h3 class="mb-5">Envio simplificado! sem necessidade de abrir o e-mail!</h3>
+                <form action="https://formsubmit.co/kaykyzioti@gmail.com" method="POST" class="flex flex-col gap-4">
+                    <input type="text" name="name" required placeholder="Seu nome" class="border p-2 rounded-md" />
+                    <input type="email" name="email" required placeholder="Seu email" class="border p-2 rounded-md" />
+                    <textarea name="message" required placeholder="Sua mensagem (máximo 130 caracteres)" maxlength="130" class="border p-2 rounded-md"></textarea>
+                    <label class="font-black">*Só será necessário passar pela verificação!</label>
+                    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-md transition duration-500 hover:bg-green-700 cursor-pointer">
+                        Enviar
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

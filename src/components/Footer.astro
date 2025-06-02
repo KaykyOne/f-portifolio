@@ -1,0 +1,40 @@
+---
+import Image from "astro/components/Image.astro"
+import GitHub from "../assets/iconGItHub.png"
+import LinkedIn from "../assets/iconLinkedin.png"
+
+---
+
+<footer class="bg-black text-white p-6">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+    <!-- Logo / Nome -->
+    <div class="flex items-center gap-2">
+      <span class="text-2xl font-bold">KZ</span>
+    </div>
+
+    <!-- Navegação -->
+    <nav class="flex gap-6">
+      <a href="#home" class="hover:text-gray-300 transition">Home</a>
+      <a href="#sobre" class="hover:text-gray-300 transition">Sobre</a>
+      <a href="#material" class="hover:text-gray-300 transition">Material</a>
+    </nav>
+
+    <!-- Redes Sociais -->
+    <div class="flex gap-4">
+      <div class="flex items-center gap-2 hover:invert-25 cursor-pointer transition">
+        <Image class={'invert'} height={30} src={GitHub} alt={'logo_GitHubFooter'}/>
+        <a href="https://github.com/kaykyOne" target="_blank">GitHub</a>
+      </div>
+
+      <div class="flex items-center gap-2 hover:invert-25 cursor-pointer transition">
+        <Image class={'invert'} height={30} src={LinkedIn} alt={'logo_LinkedIn'}/>
+        <a href="https://linkedin.com/in/KaykyZioti" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Linha e texto final -->
+  <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-400">
+    © 2025 Kayky. Todos os direitos reservados.
+  </div>
+</footer>
