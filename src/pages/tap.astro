@@ -1,0 +1,63 @@
+---
+import GenericModel from "../components/GenericModel";
+import Layout from "../layouts/Layout.astro";
+
+const sobre =
+    "Na disciplina de Técnicas Avançadas de Programação, aprofundei meus conhecimentos no ecossistema .NET, aprendendo a desenvolver aplicações robustas e escaláveis. Uma das partes mais importantes foi o uso do Entity Framework, um ORM (Object-Relational Mapper) que automatiza a criação e manutenção do banco de dados a partir do código C#. Com ele, pude trabalhar com o padrão Code First, escrevendo as classes e deixando o framework cuidar da criação das tabelas e relacionamentos no banco.\n\nAlém disso, o curso abordou boas práticas no desenvolvimento back-end, manipulação de dados, uso de migrations para versionar o banco, e integração com APIs, preparando para construir sistemas reais com eficiência e organização.";
+
+const valores = [
+    {
+        icon: "code",
+        titulo: "Entity Framework Code First",
+        texto: "Aprendi a definir modelos de dados em classes C# e usar o Entity Framework para criar e atualizar o banco automaticamente, sem precisar escrever SQL manualmente. Isso agiliza o desenvolvimento e mantém o banco sempre alinhado ao código.",
+    },
+    {
+        icon: "storage",
+        titulo: "Gerenciamento de Dados",
+        texto: "Trabalhei com consultas LINQ, operações CRUD e migrations para versionar o banco. Isso me ajudou a entender como manipular dados de forma segura e eficiente no back-end.",
+    },
+    {
+        icon: "integration_instructions",
+        titulo: "Integração e Boas Práticas",
+        texto: "Estudei como estruturar projetos em camadas, separar responsabilidades e integrar APIs REST, garantindo código limpo e fácil manutenção.",
+    },
+];
+
+const aprendizados = [
+    {
+        img: "https://learn.microsoft.com/pt-br/ef/core/_static/efcore.svg",
+        titulo: "Entity Framework e .NET",
+        texto: "Com o Entity Framework, entendi como acelerar o desenvolvimento back-end automatizando o banco de dados e trabalhando diretamente com objetos C#. Isso facilita muito a vida do programador e melhora a qualidade do sistema.",
+        link: "",
+    },
+    {
+        img: "https://learn.microsoft.com/pt-br/ef/core/_static/efcore.svg",
+        titulo: "Projeto Loja",
+        texto: "Com o Entity Framework e .NET, fiz um projeto de loja durante as aulas para conseguir melhorar meu aprendizado e avançar no meio acadêmico, o projeto aprenseta uma busca por praticidade e eficiência.",
+        link: "",
+    },
+    {
+        img: "https://learn.microsoft.com/pt-br/ef/core/_static/efcore.svg",
+        titulo: "CRUD",
+        texto: "Com o Entity Framework e .NET, fiz um CRUD para aprender mais como funciona as ferramentas participantes e como aplicar o conhecimento teórico em algo mais prático, feito também durante as aulas.",
+        link: "",
+    },
+];
+
+const opiniao =
+    "Essa matéria abriu meus olhos para o desenvolvimento back-end profissional usando .NET. No começo, achei confuso entender como o banco era criado automaticamente, mas depois que peguei o jeito do Entity Framework, vi como ele facilita muito o trabalho. As migrations foram outra coisa que achei muito útil para controlar as alterações do banco ao longo do tempo. Também gostei de aprender boas práticas de arquitetura, que fazem o código ficar mais organizado e fácil de manter. Saio mais preparado para trabalhar com sistemas reais, principalmente em empresas que usam .NET como base.";
+---
+
+<Layout>
+    <GenericModel
+        imgBack={"https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg"}
+        titulo={"Técnicas Avançadas de Programação"}
+        subtitulo={"Desenvolvendo com .NET e Entity Framework"}
+        valores={valores}
+        aprendizados={aprendizados}
+        sobre={sobre}
+        nomeProfessor={"Willian"}
+        fotoProfessor={""}
+        opniao={opiniao}
+    />
+</Layout>

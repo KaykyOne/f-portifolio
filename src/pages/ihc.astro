@@ -1,0 +1,52 @@
+---
+import GenericModel from "../components/GenericModel";
+import Layout from "../layouts/Layout.astro";
+
+const sobre =
+    "A disciplina de Interação Humano-Computador (IHC) tem como principal objetivo estudar como as pessoas interagem com sistemas computacionais, e como projetar interfaces que sejam fáceis, intuitivas e eficientes. Durante o curso, os alunos aprendem princípios de usabilidade, acessibilidade, design centrado no usuário e avaliação de interfaces. A matéria estimula o desenvolvimento de soluções que atendam às necessidades reais dos usuários, tornando a experiência com a tecnologia mais agradável e produtiva.\n\nAo longo das aulas, é incentivado o trabalho prático com protótipos, testes com usuários e análise de casos reais. O conhecimento adquirido em IHC é fundamental para criar sistemas mais inclusivos, funcionais e focados no usuário, o que impacta diretamente na qualidade e aceitação de qualquer software.";
+
+const valores = [
+    {
+        icon: "psychology",
+        titulo: "Design Centrado no Usuário",
+        texto: "Aprendi a importância de colocar o usuário no centro do processo de desenvolvimento. Isso inclui entender suas necessidades, objetivos e limitações, garantindo que a interface seja pensada para facilitar suas tarefas.",
+    },
+    {
+        icon: "accessibility",
+        titulo: "Usabilidade e Acessibilidade",
+        texto: "Estudei os princípios de usabilidade e como tornar sistemas acessíveis para diferentes perfis de usuários, incluindo pessoas com deficiência. Entendi que uma boa interface é aquela que todos conseguem usar com facilidade.",
+    },
+    {
+        icon: "visibility",
+        titulo: "Avaliação de Interfaces",
+        texto: "Aprendi métodos para avaliar a qualidade de uma interface, como testes com usuários, heurísticas de Nielsen e questionários. Esses métodos ajudam a identificar pontos de melhoria e aumentar a satisfação do usuário.",
+    },
+];
+
+const aprendizados = [
+    {
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/User-Centered_Design_Process_Diagram.svg/2560px-User-Centered_Design_Process_Diagram.svg.png",
+        titulo: "Design Centrado no Usuário",
+        texto: "Esse conceito mudou minha forma de pensar o desenvolvimento de sistemas. Aprendi que ouvir o usuário desde o início é essencial para criar interfaces mais eficientes e agradáveis.",
+        link: "",
+    },
+];
+
+const opiniao =
+    "Durante o período em que cursei essa matéria, pude perceber o quanto a experiência do usuário é essencial no desenvolvimento de qualquer sistema. Os conteúdos abordados abriram meus olhos para detalhes que antes eu não considerava, como contraste de cores, tamanho de fontes, navegabilidade e feedback visual. Gostei muito da parte prática, onde criamos protótipos e realizamos testes com usuários. Isso me fez ver que até pequenos ajustes podem fazer uma grande diferença na usabilidade de um sistema. Apesar de alguns conceitos parecerem subjetivos no início, com os exemplos e as atividades propostas, tudo ficou mais claro. Acredito que essa disciplina me ajudou a desenvolver um olhar mais crítico e humano sobre o desenvolvimento de software. Foi uma experiência muito enriquecedora.";
+
+---
+
+<Layout>
+    <GenericModel
+        imgBack={"https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ZfgRnUJwZyC0ceGWh_t5OQ.jpeg"}
+        titulo={"Interação Humano-Computador"}
+        subtitulo={"Crie experiências mais humanas e intuitivas!"}
+        valores={valores}
+        aprendizados={aprendizados}
+        sobre={sobre}
+        nomeProfessor={"Willian"}
+        fotoProfessor={""}
+        opniao={opiniao}
+    />
+</Layout>

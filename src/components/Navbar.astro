@@ -4,42 +4,45 @@ import logoGitHub from "../assets/icons/github.svg";
 import logoLinkedin from "../assets/iconLinkedin.png";
 ---
 
-<div class="w-full p-3 flex justify-between items-center fixed bg-white scr z-50">
-    <h1 class="font-bold text-2xl">KZ.</h1>
-    <div class="flex gap-2">
-    <a class="flex cursor-pointer group hover:bg-black p-2 rounded-md translate-x-2 hover:translate-x-0 transition duration-300" href="/">
-        <span class="material-icons transition duration-300 group-hover:text-white">home</span>
-        <h1 class="text-white overflow-hidden whitespace-nowrap max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-300 ml-2 group-hover:mr-2">Home</h1>
-    </a>
-    <a class="flex cursor-pointer group hover:bg-black p-2 rounded-md translate-x-2 hover:translate-x-0 transition duration-300" href="sobre">
-        <span class="material-icons transition duration-300 group-hover:text-white">info</span>
-        <h1 class="text-white overflow-hidden whitespace-nowrap max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-300 ml-2 group-hover:mr-2">Sobre</h1>
-    </a>
-    <a class="flex cursor-pointer group hover:bg-black p-2 rounded-md translate-x-2 hover:translate-x-0 transition duration-300" href="material">
-        <span class="material-icons transition duration-300 group-hover:text-white">dashboard</span>
-        <h1 class="text-white overflow-hidden whitespace-nowrap max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-300 ml-2 group-hover:mr-2">Material</h1>
-    </a>
-    </div>
-
-    <div class="flex gap-2">
-        <div class="bg-white hover:bg-black group rounded-full p-1">
-            <Image
-                src={logoGitHub}
-                alt="GitHub"
-                width={40}
-                class={"cursor-pointer rounded-full group-hover:invert transition duration-300 hover:shadow-xl"}
-            />
+<div class="flex flex-col fixed z-50">
+    <div class="w-screen p-3 flex justify-between items-center bg-white">
+        <h1 class="font-bold text-2xl">KZ.</h1>
+        <div class="flex gap-2">
+        <a class="flex cursor-pointer group hover:bg-black p-2 rounded-md translate-x-2 hover:translate-x-0 transition duration-300" href="/f-portifolio/">
+            <span class="material-icons transition duration-300 group-hover:text-white">home</span>
+            <h1 class="text-white overflow-hidden whitespace-nowrap max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-300 ml-2 group-hover:mr-2">Home</h1>
+        </a>
+        <a class="flex cursor-pointer group hover:bg-black p-2 rounded-md translate-x-2 hover:translate-x-0 transition duration-300" href="/f-portifolio/sobre">
+            <span class="material-icons transition duration-300 group-hover:text-white">info</span>
+            <h1 class="text-white overflow-hidden whitespace-nowrap max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-300 ml-2 group-hover:mr-2">Sobre</h1>
+        </a>
+        <a class="flex cursor-pointer group hover:bg-black p-2 rounded-md translate-x-2 hover:translate-x-0 transition duration-300" href="/f-portifolio/material">
+            <span class="material-icons transition duration-300 group-hover:text-white">dashboard</span>
+            <h1 class="text-white overflow-hidden whitespace-nowrap max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-300 ml-2 group-hover:mr-2">Material</h1>
+        </a>
         </div>
 
+        <div class="flex gap-2">
+            <div class="bg-white hover:bg-black group rounded-full p-1">
+                <Image
+                    src={logoGitHub}
+                    alt="GitHub"
+                    width={40}
+                    class={"cursor-pointer rounded-full group-hover:invert transition duration-300 hover:shadow-xl"}
+                />
+            </div>
 
-        <div class="bg-white hover:bg-black group rounded-full p-1">
-            <Image
-                src={logoLinkedin}
-                alt="GitHub"
-                width={40}
-                class={"cursor-pointer rounded-full group-hover:invert transition duration-300 hover:shadow-xl"}
-            />
+
+            <div class="bg-white hover:bg-black group rounded-full p-1">
+                <Image
+                    src={logoLinkedin}
+                    alt="GitHub"
+                    width={40}
+                    class={"cursor-pointer rounded-full group-hover:invert transition duration-300 hover:shadow-xl"}
+                />
+            </div>
         </div>
     </div>
 </div>
+
 

@@ -1,0 +1,63 @@
+---
+import GenericModel from "../components/GenericModel";
+import Layout from "../layouts/Layout.astro";
+
+const sobre =
+    "A disciplina de Projeto Integrador tem como principal objetivo proporcionar aos alunos a oportunidade de aplicar, na prática, os conhecimentos adquiridos ao longo do curso. Funciona como um Trabalho de Conclusão de Curso (TCC), em que os estudantes desenvolvem um projeto real, que envolve análise, planejamento, desenvolvimento e apresentação de uma solução concreta para um problema identificado. Durante essa matéria, é esperado que o aluno coloque em prática habilidades técnicas, como programação, modelagem e integração de banco de dados, design de interfaces e análise de sistemas, além de competências pessoais como trabalho em equipe, comunicação e gestão de tempo.\n\nMais do que apenas um trabalho final, o Projeto Integrador representa uma etapa essencial na formação profissional, preparando o aluno para o mercado de trabalho com uma vivência mais próxima de desafios reais, utilizando tecnologias modernas e banco de dados relacionais ou não relacionais, dependendo da necessidade do projeto.";
+
+const valores = [
+    {
+        icon: "storage",
+        titulo: "Modelagem de Dados",
+        texto: "Aprendi a importância de pensar na estrutura do banco de dados desde o início do projeto. Criei diagramas ER para representar as entidades, relacionamentos e restrições do sistema, garantindo consistência e eficiência nas consultas. Essa modelagem facilitou o desenvolvimento posterior e reduziu erros de lógica.",
+    },
+    {
+        icon: "developer_board",
+        titulo: "PostgreSQL e SQL Server",
+        texto: "Durante o projeto, trabalhei com dois sistemas de gerenciamento de banco de dados: PostgreSQL e SQL Server. Entendi as particularidades de cada um, como tipos de dados, sintaxes específicas, comandos de manipulação e formas de otimizar consultas. Essa experiência ampliou minha visão sobre como escolher e usar o banco mais adequado para diferentes necessidades.",
+    },
+    {
+        icon: "query_stats",
+        titulo: "Consultas SQL",
+        texto: "Desenvolvi habilidades práticas em SQL, criando comandos para inserção, atualização, exclusão e consulta de dados. Aprendi a usar cláusulas como JOIN, WHERE, GROUP BY e funções agregadas para extrair informações úteis. Isso me ajudou a manipular dados com mais segurança e eficiência, tanto em PostgreSQL quanto em SQL Server.",
+    },
+];
+
+const aprendizados = [
+    {
+        img: "https://www.valuehost.com.br/blog/wp-content/uploads/2021/03/post_thumbnail-9930d2651e3fad3331fb00b5e63e9d6a.jpeg.webp",
+        titulo: "Banco de Dados Relacional",
+        texto: "Aprendi a estruturar e manipular bancos de dados relacionais usando PostgreSQL e SQL Server. Compreendi a importância de normalizar tabelas, definir chaves primárias e estrangeiras, além de garantir a integridade dos dados. Também entendi como isso afeta diretamente o desempenho e a escalabilidade do sistema.",
+        link: "",
+    },
+    {
+        img: "https://images.ctfassets.net/6yom6slo28h2/fJUJrqHAzWweaJZvNXgWS/446631a4e2f0cc825292c982c12e173a/postgresql.jpg?w=500&h=324&fl=progressive&q=100&fm=jpg",
+        titulo: "PostgreSQL",
+        texto: "No PostgreSQL, explorei recursos avançados como subconsultas, funções nativas, índices e manipulação de tipos de dados como arrays e JSON. Essa base me permitiu aplicar técnicas mais modernas de consulta e entender melhor como o banco otimiza o acesso aos dados internamente.",
+        link: "",
+    },
+    {
+        img: "https://w3.cdn.cl9.cloud/wp-content/uploads/2020/03/quais-as-diferencas-entre-as-versoes-do-sql-server-p10dnfny4wpoh5oxcvtewb4ezm48eemcycsg2jvhl4.jpg",
+        titulo: "SQL Server",
+        texto: "Utilizando o SQL Server, entendi como funciona o gerenciamento de transações, uso de procedures, views e triggers. Também pratiquei o uso do SQL Server Management Studio (SSMS), aprendendo a realizar backups, restaurar bancos e analisar planos de execução para melhorar o desempenho das queries.",
+        link: "",
+    },
+];
+
+const opiniao =
+    "Durante o período em que cursei essa matéria, pude perceber o quanto ela é fundamental para minha formação acadêmica e profissional. Os conteúdos abordados me proporcionaram uma nova visão sobre o tema, conectando teoria e prática de forma eficiente. A estrutura das aulas, os materiais disponibilizados e as atividades propostas contribuíram diretamente para o meu aprendizado. Embora alguns conceitos tenham sido inicialmente desafiadores, com o tempo e o apoio dos professores e colegas, consegui superá-los e assimilar os tópicos com mais clareza. Um dos aspectos mais positivos foi a possibilidade de aplicar os conhecimentos adquiridos em situações reais ou simuladas, o que tornou a experiência ainda mais significativa. Por outro lado, acredito que alguns temas poderiam ser explorados com mais profundidade, especialmente aqueles relacionados às tecnologias mais atuais ou tendências do mercado. Ainda assim, a matéria cumpriu bem seu papel e me deixou motivado a continuar estudando por conta própria. Em resumo, foi uma disciplina enriquecedora, que me fez refletir, aprender e crescer. Ela me mostrou que, mesmo diante de dificuldades, é possível evoluir e desenvolver competências importantes para minha trajetória.";
+---
+
+<Layout>
+    <GenericModel
+        imgBack={"https://blog.datasafer.com.br/wp-content/uploads/2024/01/Banco-de-dados.webp"}
+        titulo={"Banco de Dados"}
+        subtitulo={"Tabelas e muitos dados!"}
+        valores={valores}
+        aprendizados={aprendizados}
+        sobre={sobre}
+        nomeProfessor={"Alexandre Bernardes"}
+        fotoProfessor={""}
+        opniao={opiniao}
+    />
+</Layout>

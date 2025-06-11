@@ -1,0 +1,62 @@
+---
+import GenericModel from "../components/GenericModel";
+import Layout from "../layouts/Layout.astro";
+const valores = [
+    {
+        icon: "groups",
+        titulo: "Trabalho em Equipe",
+        texto: "O trabalho em equipe é importante porque permite juntar diferentes ideias e habilidades para alcançar um objetivo comum. Ele melhora a comunicação, a cooperação e a divisão de tarefas, tornando o trabalho mais eficiente. Além disso, fortalece o apoio entre os membros, ajuda a resolver problemas com mais facilidade e gera resultados melhores do que o trabalho individual. Saber trabalhar em grupo é uma habilidade essencial tanto na vida pessoal quanto profissional.",
+    },
+    {
+        icon: "folder",
+        titulo: "Organização",
+        texto: "Organizar um projeto é essencial para garantir que tudo saia como planejado. Com uma boa organização, é mais fácil definir objetivos, prazos, tarefas e responsabilidades. Isso evita confusões, retrabalhos e atrasos. Além disso, ajuda a manter o foco, acompanhar o progresso e resolver problemas mais rápido. Projetos bem organizados aumentam as chances de sucesso e deixam o time mais alinhado e produtivo.",
+    },
+    {
+        icon: "assignment",
+        titulo: "Documentação",
+        texto: "A documentação é fundamental para manter o registro claro e acessível de informações importantes sobre um projeto, sistema ou processo. Ela facilita o entendimento, a manutenção e a continuidade do trabalho, mesmo quando outras pessoas assumem. Com uma boa documentação, é mais fácil evitar erros, explicar decisões e garantir que todos sigam o mesmo padrão. Em resumo, documentar economiza tempo no futuro e torna o projeto mais profissional e confiável.",
+    },
+];
+
+const sobre =
+    "A disciplina de Projeto Integrador tem como principal objetivo proporcionar aos alunos a oportunidade de aplicar, na prática, os conhecimentos adquiridos ao longo do curso. Funciona como um Trabalho de Conclusão de Curso (TCC), em que os estudantes desenvolvem um projeto real, que envolve análise, planejamento, desenvolvimento e apresentação de uma solução concreta para um problema identificado. Durante essa matéria, é esperado que o aluno coloque em prática habilidades técnicas (como programação, banco de dados, design e análise de sistemas) e competências pessoais, como trabalho em equipe, comunicação e gestão de tempo.\n\nMais do que apenas um trabalho final, o Projeto Integrador representa uma etapa essencial na formação profissional, preparando o aluno para o mercado de trabalho com uma vivência mais próxima de desafios reais.";
+
+const aprendizados = [
+    {
+        img: "https://acervonet.com.br/wp-content/uploads/2022/05/side-view-man-arranging-business-files-1-1.jpg",
+        titulo: "Documentação PI",
+        texto: "Durante o desenvolvimento do Projeto Integrador, aprendi a importância de uma documentação completa e bem estruturada. Registrei todas as etapas do projeto, incluindo a definição de requisitos, decisões técnicas e funcionalidades implementadas, visando facilitar a compreensão por outros desenvolvedores e garantir a manutenção futura do sistema.",
+        link: "",
+    },
+    {
+        img: "https://img.freepik.com/fotos-gratis/plano-de-fundo-de-programacao-com-pessoa-trabalhando-com-codigos-no-computador_23-2150010125.jpg",
+        titulo: "Git e GitHub",
+        texto: "Aprendi a usar o Git para versionar meu código de forma organizada, criando ramificações, realizando commits frequentes e resolvendo conflitos. Além disso, utilizei o GitHub para armazenar meu projeto na nuvem, colaborar com colegas e documentar as entregas por meio de issues e pull requests, seguindo boas práticas de controle de versão.",
+        link: "",
+    },
+    {
+        img: "https://d2slcw3kip6qmk.cloudfront.net/marketing/pages/chart/class-diagram-for-hotel-management-system-UML/UML_class_diagram_hotel-949x683.PNG",
+        titulo: "Diagramas",
+        texto: "Com os diagramas UML, aprendi a representar visualmente a estrutura e o comportamento do meu sistema. Elaborei diagramas de caso de uso, de classe e de sequência para planejar e comunicar melhor o funcionamento da aplicação, ajudando a identificar falhas e melhorar o design da arquitetura.",
+        link: "",
+    },
+];
+
+const opiniao = "Durante o período em que cursei essa matéria, pude perceber o quanto ela é fundamental para minha formação acadêmica e profissional. Os conteúdos abordados me proporcionaram uma nova visão sobre o tema, conectando teoria e prática de forma eficiente. A estrutura das aulas, os materiais disponibilizados e as atividades propostas contribuíram diretamente para o meu aprendizado. Embora alguns conceitos tenham sido inicialmente desafiadores, com o tempo e o apoio dos professores e colegas, consegui superá-los e assimilar os tópicos com mais clareza. Um dos aspectos mais positivos foi a possibilidade de aplicar os conhecimentos adquiridos em situações reais ou simuladas, o que tornou a experiência ainda mais significativa. Por outro lado, acredito que alguns temas poderiam ser explorados com mais profundidade, especialmente aqueles relacionados às tecnologias mais atuais ou tendências do mercado. Ainda assim, a matéria cumpriu bem seu papel e me deixou motivado a continuar estudando por conta própria. Em resumo, foi uma disciplina enriquecedora, que me fez refletir, aprender e crescer. Ela me mostrou que, mesmo diante de dificuldades, é possível evoluir e desenvolver competências importantes para minha trajetória.";
+
+---
+
+<Layout>
+    <GenericModel
+        imgBack={"https://www.valuehost.com.br/blog/wp-content/uploads/2016/10/linguagens-de-programacao.jpeg.webp"}
+        titulo={"Projeto Integrador I"}
+        subtitulo={"Projetos, Diagramas e muito Planejamento!"}
+        valores={valores}
+        aprendizados={aprendizados}
+        sobre={sobre}
+        nomeProfessor={"Jefferson Passerini"}
+        fotoProfessor={"https://avatars.githubusercontent.com/u/46405189?v=4"}
+        opniao={opiniao}
+    />
+</Layout>

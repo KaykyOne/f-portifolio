@@ -1,0 +1,56 @@
+---
+import GenericModel from "../components/GenericModel";
+import Layout from "../layouts/Layout.astro";
+
+const sobre =
+  "A disciplina de Matemática Discreta foi essencial para desenvolver o raciocínio lógico e a base matemática usada na computação. Estudamos conceitos que não envolvem continuidade, como lógica proposicional, tabelas verdade, análise combinatória, teoria dos conjuntos, grafos e probabilidade. Esses temas ajudam a resolver problemas de forma estruturada e precisa, o que é fundamental na área da tecnologia.";
+
+const valores = [
+  {
+    icon: "psychology",
+    titulo: "Lógica Proposicional e Tabelas Verdade",
+    texto:
+      "Aprendi a montar e interpretar tabelas verdade, entender conectivos lógicos e criar expressões booleanas. Isso é a base para entender condições, estruturas de decisão e até circuitos digitais.",
+  },
+  {
+    icon: "functions",
+    titulo: "Análise Combinatória e Probabilidade",
+    texto:
+      "Estudamos permutação, combinação, arranjos e noções de probabilidade. Esses conceitos são usados para calcular possibilidades e tomar decisões com base em dados.",
+  },
+  {
+    icon: "share",
+    titulo: "Teoria dos Conjuntos e Grafos",
+    texto:
+      "Entendi como conjuntos se relacionam e como grafos podem representar ligações e caminhos. Isso é muito útil em estruturas de dados e problemas de redes.",
+  },
+];
+
+const aprendizados = [
+  {
+    img: "https://www.infoescola.com/wp-content/uploads/2010/05/tabela-verdade_126533937.jpg",
+    titulo: "Lógica e Tabelas Verdade",
+    texto:
+      "Com esse conteúdo, consegui entender como funciona o raciocínio lógico por trás dos algoritmos, condições e até estruturas de programação.",
+    link: "",
+  },
+];
+
+const opiniao =
+  "Matemática Discreta foi uma das matérias mais desafiadoras, mas também uma das mais úteis. Ela me fez pensar de forma mais lógica e estruturada. No começo, alguns temas como análise combinatória e lógica simbólica pareciam complicados, mas com prática e exemplos reais, tudo ficou mais claro. Foi uma disciplina que com certeza me preparou melhor para pensar como programador e resolver problemas de forma eficiente.";
+
+---
+
+<Layout>
+  <GenericModel
+    imgBack={"https://www.projetomedicina.com.br/site/wp-content/uploads/2013/06/raciocinio-logico.jpg"}
+    titulo={"Matemática Discreta"}
+    subtitulo={"Pensamento lógico e fundamentos para programação"}
+    valores={valores}
+    aprendizados={aprendizados}
+    sobre={sobre}
+    nomeProfessor={"Willian"}
+    fotoProfessor={""}
+    opniao={opiniao}
+  />
+</Layout>

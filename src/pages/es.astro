@@ -1,0 +1,56 @@
+---
+import GenericModel from "../components/GenericModel";
+import Layout from "../layouts/Layout.astro";
+
+const sobre = "A disciplina de Engenharia de Software tem como objetivo ensinar aos alunos os fundamentos, processos e boas práticas para o desenvolvimento de sistemas de software com qualidade, eficiência e organização. Ela aborda desde a análise de requisitos até o projeto, implementação, testes e manutenção de sistemas, sempre com foco em metodologias, documentação e trabalho em equipe.\n\nDurante o curso, os alunos entram em contato com conceitos como ciclo de vida do software, modelagem UML, engenharia de requisitos, arquitetura de software e testes. Essa base é essencial para desenvolver projetos de forma mais estruturada, colaborativa e alinhada com as necessidades dos usuários.";
+
+const valores = [
+    {
+        icon: "assignment",
+        titulo: "Documentação e Requisitos",
+        texto: "Aprendi a importância de entender o problema antes de codar. Através da engenharia de requisitos, pratiquei a criação de documentos que definem claramente o que o sistema deve fazer, baseando as decisões de projeto em necessidades reais do usuário.",
+    },
+    {
+        icon: "account_tree",
+        titulo: "UML e Modelagem de Sistemas",
+        texto: "Utilizei diagramas UML como casos de uso, diagramas de classes e de sequência para planejar o sistema antes da codificação. Isso ajudou a ter uma visão clara da estrutura e do comportamento da aplicação, evitando retrabalho.",
+    },
+    {
+        icon: "build_circle",
+        titulo: "Processo de Desenvolvimento",
+        texto: "Estudei metodologias como o Processo Unificado e Scrum, entendendo como organizar o desenvolvimento em fases, sprints ou iterações. Isso trouxe mais controle sobre prazos, entregas e qualidade do software.",
+    },
+];
+
+const aprendizados = [
+    {
+        img: "https://cdn2.hubspot.net/hubfs/2961792/eng-software-curso-undb.jpg",
+        titulo: "Engenharia de Requisitos",
+        texto: "Com os requisitos bem definidos, percebi que é possível evitar boa parte dos erros e retrabalho no projeto. Aprendi a identificar, classificar e documentar esses requisitos de forma clara e objetiva.",
+        link: "",
+    },
+    {
+        img: "https://zanotti.com.br/blog/wp-content/uploads/2020/10/image16.jpg",
+        titulo: "Modelagem com UML",
+        texto: "Diagramas como casos de uso, classes e sequência me ajudaram a planejar melhor o funcionamento do sistema. Isso facilitou a comunicação entre equipe e também a codificação.",
+        link: "",
+    },
+];
+
+const onpiao = 'Durante o período em que cursei essa matéria, pude perceber o quanto ela é fundamental para minha formação acadêmica e profissional. Os conteúdos abordados me proporcionaram uma nova visão sobre o tema, conectando teoria e prática de forma eficiente. A estrutura das aulas, os materiais disponibilizados e as atividades propostas contribuíram diretamente para o meu aprendizado.\brEmbora alguns conceitos tenham sido inicialmente desafiadores, com o tempo e o apoio dos professores e colegas, consegui superá-los e assimilar os tópicos com mais clareza. Um dos aspectos mais positivos foi a possibilidade de aplicar os conhecimentos adquiridos em situações reais ou simuladas, o que tornou a experiência ainda mais significativa.\brPor outro lado, acredito que alguns temas poderiam ser explorados com mais profundidade, especialmente aqueles relacionados às tecnologias mais atuais ou tendências do mercado. Ainda assim, a matéria cumpriu bem seu papel e me deixou motivado a continuar estudando por conta própria.\brEm resumo, foi uma disciplina enriquecedora, que me fez refletir, aprender e crescer. Ela me mostrou que, mesmo diante de dificuldades, é possível evoluir e desenvolver competências importantes para minha trajetória.'
+
+---
+
+<Layout>
+    <GenericModel
+        imgBack={"https://blog.mbauspesalq.com/wp-content/uploads/2023/06/atuacao-engenheiro-de-software-1024x576.jpg"}
+        titulo={"Engenharia de Software"}
+        subtitulo={"Planeje, modele e entregue software de qualidade!"}
+        valores={valores}
+        aprendizados={aprendizados}
+        sobre={sobre}
+        nomeProfessor={'Jefferson Passerini'}
+        fotoProfessor={'https://avatars.githubusercontent.com/u/46405189?v=4'}
+        opniao={onpiao}
+    />
+</Layout>

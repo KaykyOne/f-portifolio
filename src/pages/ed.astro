@@ -1,0 +1,51 @@
+---
+import GenericModel from "../components/GenericModel";
+import Layout from "../layouts/Layout.astro";
+
+const sobre =
+    "A disciplina de Estrutura de Dados tem como principal objetivo ensinar aos alunos como organizar, armazenar e manipular dados de forma eficiente dentro de um sistema. Ao longo da matéria, os estudantes aprendem a utilizar diferentes tipos de estruturas, como listas, pilhas, filas, árvores e grafos, cada uma adequada a diferentes tipos de problemas e necessidades. Além disso, a disciplina desenvolve o raciocínio lógico, análise de algoritmos e noções de desempenho e complexidade computacional.\n\nDurante o curso, é esperado que o aluno implemente essas estruturas em linguagem de programação, resolvendo problemas práticos e simulando situações do mundo real. Esses conhecimentos são fundamentais para criar sistemas mais rápidos, organizados e otimizados, o que tem impacto direto na qualidade do software desenvolvido.";
+
+const valores = [
+    {
+        icon: "data_object",
+        titulo: "Listas, Pilhas e Filas",
+        texto: "Aprendi a implementar e utilizar listas encadeadas, pilhas e filas para resolver diferentes tipos de problemas. Essas estruturas foram fundamentais para entender como organizar dados em memória e criar operações de inserção, remoção e busca de forma eficiente.",
+    },
+    {
+        icon: "account_tree",
+        titulo: "Árvores e Grafos",
+        texto: "Estudei estruturas mais complexas, como árvores binárias, árvores balanceadas e grafos. Com elas, consegui representar relações hierárquicas e conexões entre elementos, sendo úteis em situações como navegação em menus, buscas otimizadas e algoritmos de caminhos mínimos.",
+    },
+    {
+        icon: "calculate",
+        titulo: "Análise de Algoritmos",
+        texto: "Além de implementar as estruturas, aprendi a avaliar a complexidade de algoritmos em tempo e espaço. Isso me ajudou a entender qual estrutura é mais adequada para cada problema, melhorando a performance geral das aplicações.",
+    },
+];
+
+const aprendizados = [
+    {
+        img: "https://infoblogsi.wordpress.com/wp-content/uploads/2014/10/fila.png",
+        titulo: "Listas, Pilhas e Filas",
+        texto: "Essas estruturas básicas me ajudaram a entender como os dados podem ser organizados de forma linear. Aprendi a construir essas estruturas do zero e a usá-las para resolver problemas de forma mais lógica e estruturada.",
+        link: "",
+    },
+];
+
+const opiniao =
+    "Durante o período em que cursei essa matéria, pude perceber o quanto ela é fundamental para minha formação acadêmica e profissional. Os conteúdos abordados me proporcionaram uma nova visão sobre o tema, conectando teoria e prática de forma eficiente. A estrutura das aulas, os materiais disponibilizados e as atividades propostas contribuíram diretamente para o meu aprendizado. Embora alguns conceitos tenham sido inicialmente desafiadores, com o tempo e o apoio dos professores e colegas, consegui superá-los e assimilar os tópicos com mais clareza. Um dos aspectos mais positivos foi a possibilidade de aplicar os conhecimentos adquiridos em situações reais ou simuladas, o que tornou a experiência ainda mais significativa. Por outro lado, acredito que alguns temas poderiam ser explorados com mais profundidade, especialmente aqueles relacionados às tecnologias mais atuais ou tendências do mercado. Ainda assim, a matéria cumpriu bem seu papel e me deixou motivado a continuar estudando por conta própria. Em resumo, foi uma disciplina enriquecedora, que me fez refletir, aprender e crescer. Ela me mostrou que, mesmo diante de dificuldades, é possível evoluir e desenvolver competências importantes para minha trajetória.";
+---
+
+<Layout>
+    <GenericModel
+        imgBack={"https://static.mundoeducacao.uol.com.br/mundoeducacao/2019/10/logica.jpg"}
+        titulo={"Estrutura de Dados"}
+        subtitulo={"Organize, otimize e resolva problemas!"}
+        valores={valores}
+        aprendizados={aprendizados}
+        sobre={sobre}
+        nomeProfessor={"Willian"}
+        fotoProfessor={""}
+        opniao={opiniao}
+    />
+</Layout>

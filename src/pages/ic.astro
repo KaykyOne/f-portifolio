@@ -1,0 +1,57 @@
+---
+import GenericModel from "../components/GenericModel";
+import Layout from "../layouts/Layout.astro";
+
+const sobre =
+    "A disciplina de Inteligência Corporativa aborda como as empresas podem usar informações estratégicas para tomar decisões melhores e se destacar no mercado. Um dos principais conceitos que aprendi foi a análise SWOT, uma ferramenta que ajuda a entender os pontos fortes e fracos internos da empresa, além das oportunidades e ameaças do ambiente externo. Com essa análise, é possível planejar ações mais inteligentes e antecipar desafios, garantindo vantagem competitiva.";
+
+const valores = [
+    {
+        icon: "fitness_center",
+        titulo: "Forças (Strengths)",
+        texto: "Identifiquei os pontos fortes internos da empresa, como recursos exclusivos, equipe qualificada e tecnologias próprias, que podem ser usados para crescer e melhorar o negócio.",
+    },
+    {
+        icon: "question_mark",
+        titulo: "Fraquezas (Weaknesses)",
+        texto: "Aprendi a reconhecer limitações internas, como falta de recursos, processos ineficientes ou deficiências na comunicação, que podem prejudicar a empresa e precisam ser corrigidas.",
+    },
+    {
+        icon: "card_giftcard",
+        titulo: "Oportunidades (Opportunities)",
+        texto: "Estudei como detectar chances no mercado, como novas demandas, nichos ainda pouco explorados e mudanças positivas no ambiente externo que a empresa pode aproveitar.",
+    },
+    {
+        icon: "security",
+        titulo: "Ameaças (Threats)",
+        texto: "Também aprendi a analisar riscos externos, como concorrência crescente, mudanças regulatórias e crises econômicas, que podem impactar negativamente o negócio.",
+    },
+];
+
+const aprendizados = [
+    {
+        img: "https://upload.wikimedia.org/wikipedia/commons/2/2a/SWOT_analysis_diagram_PT.svg",
+        titulo: "Análise SWOT",
+        texto: "Com a análise SWOT, consegui entender melhor como fazer um diagnóstico completo da empresa e do mercado, permitindo decisões estratégicas mais eficazes e focadas na realidade.",
+        link: "",
+    },
+];
+
+const opiniao =
+    "Gostei muito de aprender sobre inteligência corporativa porque me fez enxergar o negócio além do óbvio. A análise SWOT foi uma ferramenta prática que consegui aplicar em estudos de caso, o que ajudou a fixar o conteúdo. Além disso, percebi a importância de olhar o ambiente interno e externo para planejar o futuro da empresa. Acho que essa disciplina me preparou para pensar de forma estratégica e pensar como ajudar uma empresa a crescer e se adaptar em um mercado competitivo.";
+
+---
+
+<Layout>
+    <GenericModel
+        imgBack={"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/SWOT_analysis_diagram_PT.svg/1200px-SWOT_analysis_diagram_PT.svg.png"}
+        titulo={"Inteligência Corporativa"}
+        subtitulo={"Análise Estratégica com SWOT"}
+        valores={valores}
+        aprendizados={aprendizados}
+        sobre={sobre}
+        nomeProfessor={"Willian"}
+        fotoProfessor={""}
+        opniao={opiniao}
+    />
+</Layout>

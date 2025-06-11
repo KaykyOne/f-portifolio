@@ -14,22 +14,26 @@ import LinkedIn from "../assets/iconLinkedin.png"
 
     <!-- Navegação -->
     <nav class="flex gap-6">
-      <a href="#home" class="hover:text-gray-300 transition">Home</a>
-      <a href="#sobre" class="hover:text-gray-300 transition">Sobre</a>
-      <a href="#material" class="hover:text-gray-300 transition">Material</a>
+      <a href="/f-portifolio/" class="hover:text-gray-300 transition">Home</a>
+      <a href="/f-portifolio/sobre" class="hover:text-gray-300 transition">Sobre</a>
+      <a href="/f-portifolio/material" class="hover:text-gray-300 transition">Material</a>
     </nav>
 
     <!-- Redes Sociais -->
     <div class="flex gap-4">
-      <div class="flex items-center gap-2 hover:invert-25 cursor-pointer transition">
-        <Image class={'invert'} height={30} src={GitHub} alt={'logo_GitHubFooter'}/>
-        <a href="https://github.com/kaykyOne" target="_blank">GitHub</a>
-      </div>
+      <a href="https://github.com/kaykyOne" target="_blank">
+        <div class="flex items-center gap-2 hover:invert-25 cursor-pointer transition">
+          <Image class={'invert'} height={30} src={GitHub} alt={'logo_GitHubFooter'}/>
+          <p>GitHub</p>
+        </div>
+      </a>
 
-      <div class="flex items-center gap-2 hover:invert-25 cursor-pointer transition">
-        <Image class={'invert'} height={30} src={LinkedIn} alt={'logo_LinkedIn'}/>
-        <a href="https://linkedin.com/in/KaykyZioti" target="_blank">LinkedIn</a>
-      </div>
+      <a href="https://linkedin.com/in/KaykyZioti" target="_blank">
+        <div class="flex items-center gap-2 hover:invert-25 cursor-pointer transition">
+          <Image class={'invert'} height={30} src={LinkedIn} alt={'logo_LinkedIn'}/>
+          <p>LinkedIn</p>
+        </div>
+      </a>
     </div>
   </div>
 

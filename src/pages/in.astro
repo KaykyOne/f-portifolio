@@ -1,0 +1,56 @@
+---
+import GenericModel from "../components/GenericModel";
+import Layout from "../layouts/Layout.astro";
+
+const sobre =
+  "A disciplina de Inglês teve como foco o aprendizado básico da língua, essencial para a comunicação global e também muito importante na área da tecnologia. O conteúdo abordado me ajudou a desenvolver vocabulário, reconhecer estruturas simples de frases e me familiarizar com sons e pronúncias do idioma.";
+
+const valores = [
+  {
+    icon: "abc",
+    titulo: "Alfabeto e Pronúncia",
+    texto:
+      "Aprendi o alfabeto em inglês e a forma correta de pronunciar cada letra, o que foi importante para começar a ler e entender palavras simples.",
+  },
+  {
+    icon: "pin",
+    titulo: "Números",
+    texto:
+      "Aprendi a contar em inglês, tanto os números cardinais (one, two, three...) quanto ordinais (first, second, third...), que são úteis no dia a dia e em comandos básicos.",
+  },
+  {
+    icon: "translate",
+    titulo: "Vocabulário Básico",
+    texto:
+      "Estudei palavras e expressões simples, como saudações, dias da semana, cores, objetos do cotidiano e verbos comuns, facilitando a construção de frases simples.",
+  },
+];
+
+const aprendizados = [
+  {
+    img: "https://img.freepik.com/vetores-gratis/alfabeto-em-ingles-plano_23-2147908953.jpg",
+    titulo: "Início do Inglês",
+    texto:
+      "Comecei a entender melhor o idioma e a me sentir mais confortável ao ouvir, ler e falar palavras simples. Foi uma base importante para seguir aprendendo.",
+    link: "",
+  },
+];
+
+const opiniao =
+  "Inglês foi uma matéria importante para mim, mesmo sendo só o básico. Aprender as letras, os números e o vocabulário inicial me deixou mais preparado para estudar conteúdos técnicos, que muitas vezes estão nesse idioma. Ainda tenho muito o que aprender, mas essa base foi essencial para me dar mais confiança.";
+
+---
+
+<Layout>
+  <GenericModel
+    imgBack={"https://img.freepik.com/vetores-premium/ingles-escolar_23-2147508855.jpg"}
+    titulo={"Inglês"}
+    subtitulo={"Primeiros passos no idioma mais falado do mundo"}
+    valores={valores}
+    aprendizados={aprendizados}
+    sobre={sobre}
+    nomeProfessor={"Willian"}
+    fotoProfessor={""}
+    opniao={opiniao}
+  />
+</Layout>

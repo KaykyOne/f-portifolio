@@ -1,0 +1,57 @@
+---
+import GenericModel from "../components/GenericModel";
+import Layout from "../layouts/Layout.astro";
+
+const sobre =
+    "A disciplina de Técnicas Avançadas de Programação tem como foco aprofundar o conhecimento em tecnologias modernas para o desenvolvimento de aplicações web completas. Durante o curso, os alunos têm contato com bibliotecas e frameworks como React, além de serviços como Firebase, que permitem autenticação, banco de dados em tempo real e deploy de projetos. A disciplina também estimula boas práticas de organização de código, componentização, integração com back-end e uso de ferramentas modernas do ecossistema JavaScript.\n\nCom uma abordagem prática, os alunos desenvolvem projetos que simulam aplicações reais, aprendendo a lidar com desafios como gerenciamento de estado, rotas, consumo de APIs, autenticação de usuários e persistência de dados.";
+
+const valores = [
+    {
+        icon: "web",
+        titulo: "React na Prática",
+        texto: "Aprendi a criar interfaces interativas e reativas usando React. Trabalhei com componentes, props, estado e hooks, além de entender a importância da componentização para manter o código organizado e reutilizável.",
+    },
+    {
+        icon: "cloud",
+        titulo: "Integração com Firebase",
+        texto: "Usei o Firebase para autenticar usuários, armazenar dados no Firestore, fazer deploy e até usar o banco de dados em tempo real. Isso me permitiu criar aplicações completas sem precisar montar um back-end do zero.",
+    },
+    {
+        icon: "architecture",
+        titulo: "Boas Práticas e Organização",
+        texto: "Aprendi a separar o projeto em pastas, reutilizar componentes, lidar com rotas e organizar melhor o código, pensando como um desenvolvedor profissional. Isso facilita a manutenção e escalabilidade do sistema.",
+    },
+];
+
+const aprendizados = [
+    {
+        img: "https://media.graphassets.com/ZrClv0hkRIu5gWyMDb8A",
+        titulo: "React e Firebase",
+        texto: "Com React e Firebase, consegui desenvolver aplicações modernas, com login, armazenamento de dados e navegação dinâmica. Aprendi a importância de ferramentas que facilitam o desenvolvimento e aumentam a produtividade.",
+        link: "",
+    },
+    {
+        img: "https://media.graphassets.com/ZrClv0hkRIu5gWyMDb8A",
+        titulo: "Projeto Web",
+        texto: "Projeto feito com react e firebase, fiz isso durante minhas aulas para conseguir compreender a matéria de forma mais solida e criar laços com o conteúdo, o projeto foi feito buscando simplicidade e eficiência",
+        link: "",
+    },
+];
+
+const opiniao =
+    "Essa foi uma das matérias que mais me empolgaram, porque me mostrou como realmente criar sistemas completos e funcionais com tecnologias atuais do mercado. React, no começo, parecia complicado com tantos conceitos novos, mas com a prática fui entendendo como tudo se encaixa. O Firebase também foi um divisor de águas — consegui fazer login de usuário, salvar dados no Firestore e até publicar meu projeto online, tudo de forma rápida e integrada. Gostei muito da proposta prática da disciplina, que me fez aprender testando, errando e corrigindo. Saio com mais segurança para desenvolver meus próprios projetos e até para pensar em soluções profissionais no futuro.";
+---
+
+<Layout>
+    <GenericModel
+        imgBack={"https://cdn.thenewstack.io/media/2022/01/30dfd9d4-react-js.png"}
+        titulo={"Técnicas Avançadas de Programação"}
+        subtitulo={"Domine o desenvolvimento web moderno!"}
+        valores={valores}
+        aprendizados={aprendizados}
+        sobre={sobre}
+        nomeProfessor={"Willian"}
+        fotoProfessor={""}
+        opniao={opiniao}
+    />
+</Layout>

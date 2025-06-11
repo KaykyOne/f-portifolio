@@ -1,0 +1,56 @@
+---
+import GenericModel from "../components/GenericModel";
+import Layout from "../layouts/Layout.astro";
+
+const sobre =
+  "Organização de Computadores é a parte que estuda como o hardware de um computador funciona por dentro, como a CPU, a memória e os barramentos. Nessa matéria, entendi como esses componentes trabalham juntos para processar dados e executar programas, além de como a informação circula dentro do sistema.";
+
+const valores = [
+  {
+    icon: "memory",
+    titulo: "Memória",
+    texto:
+      "Aprendi que a memória armazena dados e instruções temporariamente (RAM) ou permanentemente (HD, SSD). A velocidade da memória afeta diretamente o desempenho do computador.",
+  },
+  {
+    icon: "select_all",
+    titulo: "CPU (Processador)",
+    texto:
+      "A CPU é o cérebro do computador. Ela lê instruções da memória, executa cálculos e controla o funcionamento do sistema. Entendi o ciclo básico de busca, decodificação e execução.",
+  },
+  {
+    icon: "swap_horiz",
+    titulo: "Barramentos e Comunicação",
+    texto:
+      "Vi que os barramentos são como estradas que conectam a CPU, memória e dispositivos, permitindo que os dados sejam trocados entre eles de forma rápida e organizada.",
+  },
+];
+
+const aprendizados = [
+  {
+    img: "https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/logo-stackoverflow.png",
+    titulo: "Componentes Básicos do Computador",
+    texto:
+      "Entendi a importância de cada parte do computador e como elas interagem para executar programas, desde o armazenamento até o processamento e saída de resultados.",
+    link: "",
+  },
+];
+
+const opiniao =
+  "Essa matéria me fez entender melhor o que acontece por trás do que eu vejo na tela. Saber como a CPU e a memória funcionam me ajuda a programar com mais consciência e a pensar na eficiência do meu código. Foi um conteúdo que mostrou o lado físico da computação, que geralmente a gente não percebe, mas que é fundamental.";
+
+---
+
+<Layout>
+  <GenericModel
+    imgBack={"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Computer_architecture_overview.svg/1200px-Computer_architecture_overview.svg.png"}
+    titulo={"Organização de Computadores"}
+    subtitulo={"Como o computador funciona por dentro"}
+    valores={valores}
+    aprendizados={aprendizados}
+    sobre={sobre}
+    nomeProfessor={"Willian"}
+    fotoProfessor={""}
+    opniao={opiniao}
+  />
+</Layout>

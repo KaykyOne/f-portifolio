@@ -1,0 +1,56 @@
+---
+import GenericModel from "../components/GenericModel";
+import Layout from "../layouts/Layout.astro";
+
+const sobre =
+  "Gestão Ágil é um conjunto de metodologias que facilitam o desenvolvimento de software, focando em entregas rápidas, feedback constante e adaptação às mudanças. Aprendi que, ao invés de planejar tudo de uma vez, o time trabalha em ciclos curtos (chamados sprints) para entregar partes do produto, ajustar com base no que os clientes precisam e melhorar continuamente.";
+
+const valores = [
+  {
+    icon: "speed",
+    titulo: "Sprints e Entregas Curtas",
+    texto:
+      "Entendi que dividir o trabalho em pequenos ciclos permite entregar funcionalidades mais rápido e com menos riscos, deixando o produto sempre evoluindo.",
+  },
+  {
+    icon: "groups",
+    titulo: "Colaboração e Comunicação",
+    texto:
+      "Vi que o time deve trabalhar junto, trocar ideias diariamente (como nas reuniões diárias, chamadas daily stand-ups) para identificar problemas cedo e manter todo mundo alinhado.",
+  },
+  {
+    icon: "cable",
+    titulo: "Flexibilidade e Mudanças",
+    texto:
+      "Aprendi que, em vez de seguir um plano rígido, o time deve estar aberto a mudar prioridades e adaptar o projeto conforme o feedback dos usuários e necessidades do mercado.",
+  },
+];
+
+const aprendizados = [
+  {
+    img: "https://miro.medium.com/max/1400/1*MdZ0fhb_EFM6Y3tkIqWg1g.png",
+    titulo: "Metodologias Ágeis",
+    texto:
+      "Conheci várias metodologias, como Scrum e Kanban, que ajudam a organizar o trabalho, priorizar tarefas e garantir entregas constantes e de qualidade.",
+    link: "",
+  },
+];
+
+const opiniao =
+  "A disciplina de Gestão Ágil mudou minha forma de pensar o desenvolvimento de software. Percebi que planejar demais e ficar preso a documentos pode atrasar projetos, enquanto trabalhar em ciclos curtos e ouvir o cliente constantemente melhora o resultado final. A experiência prática com métodos ágeis me deixou mais preparado para trabalhar em equipes reais e entregar valor de verdade.";
+
+---
+
+<Layout>
+  <GenericModel
+    imgBack={"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Scrum_process.svg/1200px-Scrum_process.svg.png"}
+    titulo={"Gestão Ágil"}
+    subtitulo={"Como fazer software rápido e eficiente"}
+    valores={valores}
+    aprendizados={aprendizados}
+    sobre={sobre}
+    nomeProfessor={"Willian"}
+    fotoProfessor={""}
+    opniao={opiniao}
+  />
+</Layout>
