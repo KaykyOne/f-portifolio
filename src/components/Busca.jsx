@@ -105,7 +105,7 @@ export default function Busca() {
     return (
       <a
         key={item.nome}
-        href={`${item.rota}`}
+        href={`/f-portifolio/${item.rota}`}
         className="flex h-full   bg-gray-100 border border-gray-300 p-4 rounded-2xl shadow-sm gap-4 hover:scale-[1.02] transition duration-300 hover:shadow-lg w-full cursor-pointer"
       >
         <div className="flex flex-col items-start gap-4 flex-1">
