@@ -127,7 +127,7 @@ export default function Busca() {
       <a
         key={item.nome}
         href={`/f-portifolio/${item.rota}`}
-        className="flex h-full bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-700 p-4 rounded-2xl shadow-sm gap-4 hover:scale-[1.02] transition duration-300 hover:shadow-lg w-full cursor-pointer"
+        className="flex h-full bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-700 p-4 rounded-2xl shadow-sm gap-4 hover:scale-[1.02] transition duration-300 hover:shadow-lg w-full cursor-pointer flex-1"
       >
         <div className="flex flex-col items-start gap-4 flex-1">
           <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 capitalize">
@@ -175,7 +175,7 @@ export default function Busca() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen justify-start items-center bg-white dark:bg-zinc-900 transition-colors duration-500">
+    <div className="flex flex-col min-h-screen justify-start items-center bg-white dark:bg-zinc-900 transition-colors duration-500 mt-10 md:mt-0">
       <div className="flex flex-col items-center gap-2 w-10/12">
         <input
           className="bg-white dark:bg-gray-700 w-2/12 min-w-[300px] text-black dark:text-white rounded-2xl border border-gray-300 dark:border-zinc-600 p-2 mt-[20%] md:mt-[15%] lg:mt-[5%]"
