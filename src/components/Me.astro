@@ -1,11 +1,26 @@
+---
+import {differenceInYears } from 'date-fns';
+const dataInicio = new Date('2024-06-10');
+const hoje = new Date();
+const result = differenceInYears (hoje, dataInicio);
+---
+
+
 <div class="h-screen flex flex-col justify-center items-center">
-    <div class="bg-darkblue rounded-full h-[200px] w-[200px] hover:scale-105 transition duration-300">
-        
+    <div class="bg-darkblue rounded-full h-[200px] w-[200px] hover:scale-105 transition duration-300">      
     </div>
     <h1 class="text-4xl font-medium m-4">Kayky Zioti</h1>
-
     <p class="text-justify max-w-[400px] m-5">Sou <strong>Kayky Zioti</strong>, busco aprender para conseguir atingir as minhas expectativas como profissionas, moro em <strong>Jales-SP</strong>,
-    já trabalho em programação a algum tempo, desde meados de <strong>2024</strong>, continuo meu caminho do aprendizado, posso não ser o melhor, mas eu darei o meu melhor!
-    
+    já trabalho em programação a {result} {result > 1 ? 'anos' : 'ano'}, desde meados de <strong>2024</strong>, continuo meu caminho do aprendizado, posso não ser o melhor, mas eu darei o meu melhor! 
     </p>
+    <h1>Se quiser ver mais informações, aqui está meu curriculo:</h1>
+    <a class="flex border bg-gray-100 border-gray-300 rounded-2xl p-2 gap-2 min-w-[400px] mt-10 hover:bg-gray-200 transition duration-300 cursor-pointer items-center">
+        <span class="material-icons !text-4xl">
+            folder
+        </span>
+        <div class="flex flex-col">
+            <h1 class="font-medium">Meu Currículo</h1>
+            <h2 class="text-sm">Clique e veja!</h2>
+        </div>    
+    </a>
 </div>

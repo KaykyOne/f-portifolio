@@ -22,11 +22,11 @@ import Firebase from "../assets/icons/firebase.svg";
 
 ---
 
-<div>
+<div class="w-full p-4">
     <div class="flex flex-col p-2 text-center text-darkblue pt-2 items-center">
         <h1 class="text-center text-5xl font-bold w-full mt-10">Stack</h1>
         <h3>Minhas Habilidades</h3>
-        <div class="grid grid-cols-1 md:grid-cols-5 mt-10 w-8/12 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-5 mt-10 w-full gap-4 min-h-[300px]">
             <div class="flex group flex-col justify-center items-center transition-all duration-500 hover:-translate-y-2 cursor-pointer">
                 <Image class={"w-[100px] h-[100px]"} alt={"imagem-js"} src={logoJS} />
                 <h3 class="group-hover:translate-y-4 transition-all duration-500">Javascript</h3>
@@ -60,7 +60,7 @@ import Firebase from "../assets/icons/firebase.svg";
         <h1 class="text-center text-5xl font-bold w-full mt-10">Frameworks e Ferramentas</h1>
         <h3>Usados atualmente ou que já foram usados</h3>
 
-        <div class="flex flex-wrap w-8/12 justify-around bg-darkblue rounded-md p-8 text-white mt-8 gap-5 transition-all duration-500 hover:-translate-y-3">
+        <div class="flex flex-wrap w-full justify-around bg-darkblue rounded-2xl p-8 text-white mt-8 gap-5 transition-all duration-500 hover:-translate-y-3 ">
             <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
                 <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-react"} src={React} />
                 <h3>React.js</h3>

@@ -106,12 +106,13 @@ export default function Busca() {
       <a
         key={item.nome}
         href={`/f-portifolio/${item.rota}`}
-        className="flex h-full   bg-gray-100 border border-gray-300 p-4 rounded-2xl shadow-sm gap-4 hover:scale-[1.02] transition duration-300 hover:shadow-lg w-full cursor-pointer"
+        className="flex h-full   bg-gray-50 border border-gray-300 p-4 rounded-2xl shadow-sm gap-4 hover:scale-[1.02] transition duration-300 hover:shadow-lg w-full cursor-pointer"
       >
         <div className="flex flex-col items-start gap-4 flex-1">
           <h2 className="text-xl font-bold text-gray-800 capitalize">
             {item.nome}
           </h2>
+          <h1>asdasd  </h1>
 
           <div className="flex flex-wrap gap-2">
             <p className="capitalize w-max text-green-700 border border-green-700 bg-green-100 px-3 py-1 rounded-md text-sm font-medium flex items-center gap-1">
@@ -198,7 +199,7 @@ export default function Busca() {
         </div>
       </div>
 
-      <div className='p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 rounded-2xl shadow-md min-h-[500px] w-8/12 h-full items-start justify-start gap-2'>
+      <div className='p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 rounded-2xl shadow-md min-h-[500px] w-8/12 h-full items-start justify-start gap-5'>
         {componentesFiltrados.map((materia) => renderItem(materia))}
       </div>
     </div>
