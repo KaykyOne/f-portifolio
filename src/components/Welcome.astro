@@ -3,34 +3,46 @@ import Image from "astro/components/Image.astro";
 import iconGitHub from "../assets/icons/github.svg";
 import iconAstro from "../assets/iconAstro.png";
 import iconTaw from "../assets/iconTailwind.png";
-
 ---
 
-<div class="flex flex-col justify-center items-center min-h-[100vh] m-0 p-0">
-	<div class="p-3">
-		<h3 class="text-2xl text-center text-gray-700 md:text-start w-full">
-			Olá, eu sou <strong>Kayky</strong> e esse é
-		</h3>
-		<h1 class="font-semibold text-center text-6xl md:text-8xl">Meu <strong>Portifólio</strong></h1>
-	</div>
-	<a href="#contato" class="flex group bg-darkblue p-2 rounded-2xl text-white min-w-[200px] text-center font-medium mt-5 cursor-pointer hover:bg-black transition duration-300 justify-center gap-3">
-		Contato
-		<span class="material-icons">
-			arrow_forward
-		</span>
-	</a>
-	<div class="flex flex-col text-[#565656] text-xl mt-10 gap-3 items-center">
-		<h4><strong>Site</strong> Desenvolvido com: </h4>
-		<div class="flex gap-4">
-			<div class="flex justify-center items-center bg-gray-300 p-2 rounded-full h-[50px] w-[50px]">
-				<Image src={iconGitHub} alt="GitHub" width={40} />
-			</div>
-			<div class="flex justify-center items-center bg-gray-300 p-2 rounded-full h-[50px] w-[50px]">
-				<Image src={iconAstro} alt="Astro" width={30} />
-			</div>
-			<div class="flex justify-center items-center bg-gray-300 p-2 rounded-full h-[50px] w-[50px]">
-				<Image src={iconTaw} alt="Tailwind" width={40} />
-			</div>
-		</div>
-	</div>
+<div class="flex flex-col justify-center items-center min-h-[100vh] m-0 p-0 bg-white dark:bg-zinc-900 transition-colors duration-500">
+  <div class="p-3">
+    <h3 class="text-2xl text-center md:text-start w-full text-gray-700 dark:text-gray-300">
+      Olá, eu sou <strong>Kayky</strong> e esse é
+    </h3>
+    <h1 class="font-semibold text-center text-6xl md:text-8xl text-gray-900 dark:text-white">
+      Meu <strong>Portifólio</strong>
+    </h1>
+  </div>
+
+  <a
+    href="#contato"
+    class="flex group bg-darkblue dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-400 p-2 rounded-2xl text-white min-w-[200px] text-center font-medium mt-5 cursor-pointer hover:bg-black transition duration-300 justify-center gap-3"
+  >
+    Contato
+    <span class="material-icons">arrow_forward</span>
+  </a>
+
+  <div class="flex flex-col text-xl mt-10 gap-3 items-center text-gray-600 dark:text-gray-300 transition-colors duration-500">
+    <h4>
+      <strong>Site</strong> Desenvolvido com:
+    </h4>
+    <div class="flex gap-4">
+      <div
+        class="flex justify-center items-center bg-gray-300 dark:bg-zinc-700 p-2 rounded-full h-[50px] w-[50px] transition-colors duration-500"
+      >
+        <Image src={iconGitHub} alt="GitHub" class={'dark:invert'} width={40} />
+      </div>
+      <div
+        class="flex justify-center items-center bg-gray-300 dark:bg-zinc-700 p-2 rounded-full h-[50px] w-[50px] transition-colors duration-500"
+      >
+        <Image src={iconAstro} alt="Astro" class={'dark:invert'} width={30} />
+      </div>
+      <div
+        class="flex justify-center items-center bg-gray-300 dark:bg-zinc-700 p-2 rounded-full h-[50px] w-[50px] transition-colors duration-500"
+      >
+        <Image src={iconTaw} alt="Tailwind" class={'dark:invert'} width={40} />
+      </div>
+    </div>
+  </div>
 </div>

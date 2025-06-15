@@ -1,26 +1,26 @@
-<div class="flex flex-col items-center justify-center w-full px-4 py-8 bg-white/10 backdrop-blur-md">
-  <h1 class="text-4xl md:text-5xl font-bold text-center mb-8">Conteúdo</h1>
+<div class="flex flex-col items-center justify-center w-full px-4 py-8 bg-transparent">
+  <h1 class="text-4xl md:text-5xl font-bold text-center mb-8 text-black dark:text-white">
+    Conteúdo
+  </h1>
 
   <div
-    class="w-full max-w-full rounded-xl shadow-sm hover:-translate-y-2 hover:shadow-md border border-gray-200 dark:border-black transition-all duration-300"
+    class="w-full max-w-full rounded-xl shadow-sm hover:-translate-y-2 hover:shadow-md border bg-gray-50 dark:bg-zinc-800 border-gray-300 dark:border-zinc-700 transition-all duration-300"
   >
     <div class="p-6 flex flex-col">
       <div class="flex gap-2 justify-start items-center">
-        <span class="material-icons bg-darkblue text-white rounded-full p-3">
+        <span class="material-icons bg-[#100031] text-white rounded-full p-3">
           devices
         </span>
-        <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">
+        <h2 class="text-xl md:text-2xl font-bold text-gray-800 dark:text-white mb-2">
           Aqui você pode ver o que eu já fiz:
         </h2>
       </div>
 
-      <div class="border-l-2 border-l-darkblue p-2 mt-4">
-        <h2 class="text-lg text-gray-700">
-          Com meu tempo de trabalho, já fiz diversas coisas, como por <strong
-            >exemplo:</strong
-          >
+      <div class="border-l-2 border-l-[#100031] dark:border-l-white p-2 mt-4">
+        <h2 class="text-lg text-gray-700 dark:text-gray-300">
+          Com meu tempo de trabalho, já fiz diversas coisas, como por <strong>exemplo:</strong>
         </h2>
-        <ul class="list-disc ml-5 mt-2 text-sm">
+        <ul class="list-disc ml-5 mt-2 text-sm text-gray-800 dark:text-gray-300">
           <li>Automações com WhatsApp</li>
           <li>Projetos Backend</li>
           <li>Projetos Frontend</li>
@@ -35,13 +35,11 @@
 
       <a
         href="/f-portifolio/material"
-        class="flex max-w-[300px] group bg-darkblue p-2 rounded-2xl text-white min-w-[200px] text-center font-medium mt-5 cursor-pointer hover:bg-black transition duration-300 justify-center gap-3"
+        class="flex max-w-[300px] group bg-[#100031] dark:bg-white p-2 rounded-2xl text-white dark:text-black min-w-[200px] text-center font-medium mt-5 cursor-pointer hover:bg-black dark:hover:bg-gray-300 transition duration-300 justify-center gap-3"
       >
         Clique para ver mais!
         <span class="material-icons"> arrow_forward </span>
       </a>
-
-      {/* Aqui você pode renderizar os conteúdos ou uma lista */}
     </div>
   </div>
 </div>

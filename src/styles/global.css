@@ -3,3 +3,4 @@
 @theme {
   --color-darkblue: #100031;
 }
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));

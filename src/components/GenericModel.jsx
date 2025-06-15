@@ -5,9 +5,9 @@ export default function GenericModel({ imgBack, titulo, subtitulo, valores, apre
 
     const renderValores = (item) => {
         return (
-            <div className="flex bg-gray-50 border border-gray-300 p-4 rounded-2xl shadow-sm gap-3 hover:scale-102 transition duration-300 hover:shadow-lg">
+            <div className="flex bg-gray-50 dark:bg-zinc-800 border border-gray-300 dark:border-zinc-700 p-4 rounded-2xl shadow-sm gap-3 hover:scale-102 transition duration-300 hover:shadow-lg">
                 <div className="flex flex-col items-start gap-4">
-                    <span className="material-icons text-5xl bg-darkblue text-white rounded-full p-4">
+                    <span className="material-icons text-5xl bg-darkblue dark:bg-white text-white dark:text-darkblue rounded-full p-4">
                         {item.icon}
                     </span>
 
@@ -18,12 +18,12 @@ export default function GenericModel({ imgBack, titulo, subtitulo, valores, apre
                         </span>
                     </div>
 
-                    <h2 className="text-xl font-bold text-gray-800">
+                    <h2 className="text-xl font-bold text-gray-800 dark:text-gray-200">
                         {item.titulo}
                     </h2>
                     <div className='flex gap-4 flex-1'>
-                        <div className='h-full w-5 bg-darkblue rounded-2xl'></div>
-                        <p className="text-gray-700 text-justify">
+                        <div className='h-full w-5 bg-darkblue dark:bg-gray-400 rounded-2xl'></div>
+                        <p className="text-gray-700 dark:text-gray-200 text-justify">
                             {item.texto}
                         </p>
                     </div>
@@ -46,10 +46,10 @@ export default function GenericModel({ imgBack, titulo, subtitulo, valores, apre
 
     const renderAprendizado = (item) => {
         return (
-            <div className="flex bg-gray-50 border border-gray-300 p-4 rounded-2xl shadow-sm gap-3 hover:bg-gray-200 transition-all duration-500 cursor-pointer hover:shadow-lg ">
+            <a className="flex bg-gray-50 dark:bg-zinc-800 border border-gray-300 dark:border-zinc-700 p-4 rounded-2xl shadow-sm gap-3 hover:bg-gray-200 dark:hover:bg-zinc-700 transition-all duration-500 cursor-pointer hover:shadow-lg" href={item.link || '#'} target={item.link ? "_blank" : ''}>
                 <div className="flex flex-col md:flex-row justify-center items-start gap-4">
                     <img
-                        className="rounded-2xl object-cover w-full sm:w-[300px] h-auto max-h-[200px] shadow-md"
+                        className="rounded-2xl object-cover w-full min-w-[50px] max-w-[200px] h-auto max-h-[200px] shadow-md"
                         src={item.img ? item.img : imgAlter}
                         alt={item.titulo}
                     />
@@ -57,12 +57,12 @@ export default function GenericModel({ imgBack, titulo, subtitulo, valores, apre
 
                     <div className="flex flex-col gap-2">
 
-                        <h2 className="text-xl font-bold text-gray-800">
+                        <h2 className="text-xl font-bold text-gray-800 dark:text-gray-200">
                             {item.titulo}
                         </h2>
 
                         <div className="flex gap-4">
-                            <p className="text-gray-700 text-justify">
+                            <p className="text-gray-700 dark:text-gray-200 text-justify">
                                 {item.texto}
                             </p>
                         </div>
@@ -81,32 +81,28 @@ export default function GenericModel({ imgBack, titulo, subtitulo, valores, apre
 
                     </div>
                 </div>
-            </div>
+            </a>
         );
 
     };
 
     const RenderProfessor = () => {
         return (
-            <div className='flex flex-col md:flex-row itece justify-center items-center md:items-start bg-gray-50 border border-gray-300 p-4 rounded-2xl shadow-sm gap-3'>
-                <div className='flex flex-col flex-1'>
+            <div className='flex flex-col md:flex-row w-full max-w-full  mx-auto justify-center items-center md:items-start bg-gray-50 dark:bg-zinc-800 border border-gray-300 dark:border-zinc-700 p-4 rounded-2xl shadow-sm gap-4'>
+                <div className='flex flex-col flex-1 text-center md:text-left'>
                     <h2 className='text-2xl font-semibold'>Professor</h2>
-                    <h1 className='text-5xl font-bold'>{nomeProfessor}</h1>
-                    <p className="text-justify text-gray-600 ml-1 mt-3">
+                    <h1 className='text-4xl md:text-5xl font-bold'>{nomeProfessor}</h1>
+                    <p className="text-gray-600 dark:text-gray-200 mt-3">
                         Profissional experiente e dedicado ao ensino, trazendo conhecimento prático e teórico de forma clara e acessível.
                     </p>
-                    <div className='flex gap-2 mt-3'>
-                        <div className='flex p-2 bg-pink-100 border border-pink-600 gap-3 w-max rounded-md shadow-md text-pink-800'>
+                    <div className='flex flex-wrap justify-center md:justify-start gap-3 mt-4'>
+                        <div className='flex items-center p-2 bg-pink-100 border border-pink-600 gap-2 rounded-md shadow-md text-pink-800'>
                             <h3>Ótima Oratória</h3>
-                            <span class="material-icons">
-                                psychology
-                            </span>
+                            <span className="material-icons">psychology</span>
                         </div>
-                        <div className='flex p-2 bg-yellow-100 border border-yellow-600 gap-3 w-max rounded-md shadow-md text-yellow-800'>
+                        <div className='flex items-center p-2 bg-yellow-100 border border-yellow-600 gap-2 rounded-md shadow-md text-yellow-800'>
                             <h3>Explicação Clara</h3>
-                            <span class="material-icons">
-                                co_present
-                            </span>
+                            <span className="material-icons">co_present</span>
                         </div>
                     </div>
                 </div>
@@ -114,27 +110,27 @@ export default function GenericModel({ imgBack, titulo, subtitulo, valores, apre
         );
     };
 
+
     const RenderOpniao = () => {
         return (
-            <div className='flex flex-1 h-full flex-col md:flex-row justify-center items-center md:items-start bg-gray-50 border border-gray-300 p-6 rounded-2xl shadow-sm gap-6'>
+            <div className='flex flex-col md:flex-row w-full max-w-full mx-auto justify-center items-center md:items-start bg-gray-50 dark:bg-zinc-800 dark:text-white border border-gray-300 dark:border-zinc-700 p-6 rounded-2xl shadow-sm gap-6'>
 
-                {/* Espaço opcional para uma imagem ou ícone */}
                 <div className="flex-shrink-0">
-                    <span className="material-icons text-5xl bg-darkblue text-white rounded-full p-4">
+                    <span className="material-icons text-4xl sm:text-5xl bg-darkblue text-white dark:bg-white dark:text-darkblue rounded-full p-3 sm:p-4">
                         chat
                     </span>
                 </div>
 
-                {/* Texto da opinião */}
-                <div className="flex flex-col gap-4 text-justify">
-                    <h2 className="text-4xl font-bold text-gray-800">Minha Opinião</h2>
-                    <p className="text-gray-700 leading-relaxed">
+                <div className="flex flex-col gap-4 text-center md:text-left">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">Minha Opinião</h2>
+                    <p className="text-gray-700 dark:text-gray-200 leading-relaxed">
                         {opniao}
                     </p>
                 </div>
             </div>
         );
     };
+
 
 
     return (
@@ -144,13 +140,13 @@ export default function GenericModel({ imgBack, titulo, subtitulo, valores, apre
                 style={{ backgroundImage: `url(${imgBack ? imgBack : '../assets/images.png'})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className='flex-1 grid grid-cols-1 md:grid-cols-3'>
                     <div className='flex-1 grid grid-cols-1 col-span-2 md:grid-cols-2 bg-black/85 items-center p-5'>
-                        <div className='flex flex-col gap-4 mt-[10%] md:ml-5'>
-                            <h1 className='text-white text-5xl md:text-7xl font-bold '>{titulo}</h1>
-                            <h2 className='text-white text-2xl md:text-3xl'>{subtitulo}</h2>
+                        <div className='flex flex-col gap-4 md:ml-5'>
+                            <h1 className='text-white text-3xl sm:text-4xl md:text-6xl font-bold '>{titulo}</h1>
+                            <h2 className='text-white text-xl sm:text-2xl md:text-3xl'>{subtitulo}</h2>
                         </div>
                     </div>
                     <div className='flex-1 grid grid-cols-1 md:grid-cols-2 bg-black/85 items-center p-5'>
-                        
+
                     </div>
                 </div>
                 <div className='flex bg-black/85 items-center p-5 text-white gap-2 w-full justify-center'>
@@ -161,10 +157,10 @@ export default function GenericModel({ imgBack, titulo, subtitulo, valores, apre
                 </div>
             </div>
 
-            <div className='w-10/12'>
-                <div className='bg-img w-full bg-white p-3 grid grid-cols-1 md:grid-cols-3 mt-[2%]  '>
+            <div className='w-full p-2 md:w-10/12'>
+                <div className='bg-img w-full bg-transparent p-3 grid grid-cols-1 md:grid-cols-3 mt-10  '>
                     <div className='flex flex-col items-center justify-center gap-3 col-span-1'>
-                        <span className="material-icons !text-9xl bg-black text-white rounded-full">
+                        <span className="material-icons !text-9xl bg-black dark:invert text-white rounded-full hover:scale-105 transition-all duration-300 hover:-translate-y-2">
                             question_mark
                         </span>
 
@@ -202,16 +198,16 @@ export default function GenericModel({ imgBack, titulo, subtitulo, valores, apre
                 </div>
 
                 <div className='flex flex-col mb-4 p-4 gap-3 items-start'>
-                    <div className='flex flex-col gap-3'>
+                    <div className='flex flex-col p-2 gap-2 w-full'>
                         <RenderProfessor />
                         <RenderOpniao />
                     </div>
 
 
-                    <div className='flex flex-col items-center justify-center mt-[2%]'>
-                        <h1 className='capitalize text-5xl font-bold text-start w-full pl-5'>Meus Aprendizados</h1>
+                    <div className='flex flex-col items-center justify-center mt-[2%] w-full'>
+                        <h1 className='capitalize text-2xl md:text-5xl font-bold text-start w-full pl-5'>Meus Aprendizados</h1>
                         <p className='text-justify p-5 w-full'>Aqui eu mostro algumas coisas que eu fiz nessa matéria:</p>
-                        <div className='flex flex-col border border-gray-200 p-2 w-full gap-2'>
+                        <div className='flex flex-col border border-gray-200 dark:border-zinc-700 rounded-2xl p-2 w-full gap-2'>
                             {aprendizados && aprendizados.length > 0 ? (
                                 aprendizados.map(item => renderAprendizado(item))
                             ) : (

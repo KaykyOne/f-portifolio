@@ -14,15 +14,16 @@ import '../styles/global.css'
     <title>Astro Basics</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-    <script>
-      // Executa o mais cedo possível
-      const theme = localStorage.getItem('theme');
-      if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-    </script>
+  <script>
+    const html = document.documentElement;
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      html.setAttribute('data-theme', 'dark');
+    } else {
+      html.setAttribute('data-theme', 'light');
+    }
+  </script>
+
 	<script src="/f-portifolio//scripts/tema.js" is:inline></script>
   </head>
 

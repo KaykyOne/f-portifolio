@@ -1,26 +1,47 @@
 ---
-import {differenceInYears } from 'date-fns';
-const dataInicio = new Date('2024-06-10');
+import { differenceInYears } from "date-fns";
+const dataInicio = new Date("2024-06-10");
 const hoje = new Date();
-const result = differenceInYears (hoje, dataInicio);
+const result = differenceInYears(hoje, dataInicio);
 ---
 
-
 <div class="h-screen flex flex-col justify-center items-center">
-    <div class="bg-darkblue rounded-full h-[200px] w-[200px] hover:scale-105 transition duration-300">      
+    <div
+        class="bg-darkblue dark:bg-white rounded-full h-[200px] w-[200px] hover:scale-105 transition duration-300 overflow-hidden"
+    >
+    <img alt="eu" src="https://avatars.githubusercontent.com/u/153868092?v=4"/>
     </div>
     <h1 class="text-4xl font-medium m-4">Kayky Zioti</h1>
-    <p class="text-justify max-w-[400px] m-5">Sou <strong>Kayky Zioti</strong>, busco aprender para conseguir atingir as minhas expectativas como profissionas, moro em <strong>Jales-SP</strong>,
-    já trabalho em programação a {result} {result > 1 ? 'anos' : 'ano'}, desde meados de <strong>2024</strong>, continuo meu caminho do aprendizado, posso não ser o melhor, mas eu darei o meu melhor! 
+    <p class="text-justify max-w-[400px] m-5">
+        Sou <strong>Kayky Zioti</strong>, busco aprender para conseguir atingir
+        as minhas expectativas como profissionas, moro em <strong
+            >Jales-SP</strong
+        >, já trabalho em programação a {result}
+        {result > 1 ? "anos" : "ano"}, desde meados de <strong>2024</strong>,
+        continuo meu caminho do aprendizado, posso não ser o melhor, mas eu
+        darei o meu melhor!
     </p>
-    <h1>Se quiser ver mais informações, aqui está meu curriculo:</h1>
-    <a class="flex border bg-gray-100 border-gray-300 rounded-2xl p-2 gap-2 min-w-[400px] mt-10 hover:bg-gray-200 transition duration-300 cursor-pointer items-center">
-        <span class="material-icons !text-4xl">
-            folder
-        </span>
-        <div class="flex flex-col">
-            <h1 class="font-medium">Meu Currículo</h1>
-            <h2 class="text-sm">Clique e veja!</h2>
-        </div>    
-    </a>
+    <h1 class="text-justify max-w-[400px] ml-5 mr-5">Se quiser ver mais informações, aqui está meu curriculo:</h1>
+    <div class="flex justify-center w-full p-5">
+        <a
+            class="flex border rounded-2xl p-2 gap-2 w-full max-w-[400px] mt-10 cursor-pointer items-center
+    bg-gray-100 border-gray-300 hover:bg-gray-200 transition duration-300
+    dark:bg-zinc-800 dark:border-zinc-700 dark:hover:bg-zinc-700"
+    href="https://www.dropbox.com/scl/fi/hkht4klzluf0c48wys2hc/Curriculo.pdf?rlkey=ipulm7wmo0i5luodf24yg6uk7&st=8q8sdfk2&dl=1"
+        >
+            <span
+                class="material-icons !text-4xl text-gray-800 dark:text-gray-200"
+            >
+                folder
+            </span>
+            <div class="flex flex-col">
+                <h1 class="font-medium text-gray-900 dark:text-gray-100">
+                    Meu Currículo
+                </h1>
+                <h2 class="text-sm text-gray-600 dark:text-gray-400">
+                    Clique e veja!
+                </h2>
+            </div>
+        </a>
+    </div>
 </div>
