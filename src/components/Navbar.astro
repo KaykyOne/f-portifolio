@@ -58,23 +58,27 @@ import logoLinkedin from "../assets/iconLinkedin.png";
             <div
                 class="bg-transparent dark:hover:bg-white hover:bg-black group rounded-full p-1 hidden md:block"
             >
-                <Image
-                    src={logoGitHub}
-                    alt="GitHub"
-                    width={40}
-                    class={"cursor-pointer rounded-full group-hover:invert dark:invert dark:group-hover:filter-none transition duration-300 hover:shadow-xl"}
-                />
+                <a href="https://github.com/kaykyOne" target="_blank">
+                    <Image
+                        src={logoGitHub}
+                        alt="GitHub"
+                        width={40}
+                        class="cursor-pointer rounded-full group-hover:invert dark:invert dark:group-hover:filter-none transition duration-300 hover:shadow-xl"
+                    />
+                </a>
             </div>
 
             <div
                 class="bg-transparent dark:hover:bg-white hover:bg-black group rounded-full p-1 hidden md:block"
             >
-                <Image
-                    src={logoLinkedin}
-                    alt="GitHub"
-                    width={40}
-                    class={"cursor-pointer rounded-full group-hover:invert dark:invert dark:group-hover:filter-none transition duration-300 hover:shadow-xl"}
-                />
+                <a href="https://linkedin.com/in/KaykyZioti" target="_blank">
+                    <Image
+                        src={logoLinkedin}
+                        alt="LinkedIn"
+                        width={40}
+                        class="cursor-pointer rounded-full group-hover:invert dark:invert dark:group-hover:filter-none transition duration-300 hover:shadow-xl"
+                    />
+                </a>
             </div>
             <!-- From Uiverse.io by Javierrocadev -->
             <label
@@ -96,7 +100,9 @@ import logoLinkedin from "../assets/iconLinkedin.png";
 
                     <span class="material-icons mr-2">dark_mode</span>
                 </div>
-                <div class="flex md:hidden rounded-full p-2 bg-black dark:bg-white text-white dark:text-black justify-center items-center">
+                <div
+                    class="flex md:hidden rounded-full p-2 bg-black dark:bg-white text-white dark:text-black justify-center items-center"
+                >
                     <span class="material-icons">light_mode</span>
                 </div>
             </label>
