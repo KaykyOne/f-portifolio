@@ -30,9 +30,11 @@ import "../styles/global.css";
     <script src="/f-portifolio//scripts/tema.js" is:inline></script>
   </head>
 
-  <body class="bg-white text-black dark:bg-zinc-900 dark:text-white">
+  <body class="bg-white text-black dark:bg-zinc-900 dark:text-white flex flex-col items-center">
     <Navbar />
-    <slot />
+    <div >
+      <slot />
+    </div>
     <Footer />
   </body>
 </html>

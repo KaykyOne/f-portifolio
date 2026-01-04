@@ -126,8 +126,8 @@ export default function Busca() {
     return (
       <a
         key={item.nome}
-        href={`/f-portifolio/${item.rota}`}
-        className="flex bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-700 p-4 rounded-2xl shadow-sm gap-4 hover:scale-[1.02] transition duration-300 hover:shadow-lg w-full cursor-pointer"
+        href={`/f-portifolio/materias/${item.rota}`}
+        className="flex bg-white dark:bg-zinc-800 border border-gray-300 dark:border-zinc-700 p-4 rounded-md shadow-sm gap-4 hover:scale-[1.02] transition duration-300 hover:shadow-lg w-full cursor-pointer"
       >
         <div className="flex flex-col items-start gap-4 flex-1">
           <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 capitalize">
@@ -146,7 +146,7 @@ export default function Busca() {
           </div>
 
           <div className="flex gap-3">
-            <div className="h-full w-2 bg-darkblue dark:bg-white rounded-xl"></div>
+            <div className="h-full w-2 bg-darkblue dark:bg-white rounded-md"></div>
             <p className="text-gray-700 dark:text-gray-300 text-justify text-sm">{item.sobre}</p>
           </div>
 
@@ -178,7 +178,7 @@ export default function Busca() {
     <div className="flex flex-col min-h-screen justify-start items-center bg-white dark:bg-zinc-900 transition-colors duration-500">
       <div className="flex flex-col items-center gap-2 w-10/12">
         <input
-          className="bg-white dark:bg-gray-700 w-2/12 min-w-[300px] text-black dark:text-white rounded-2xl border border-gray-300 dark:border-zinc-600 p-2 mt-[100px]"
+          className="bg-white dark:bg-gray-700 w-2/12 min-w-[300px] text-black dark:text-white rounded-md border border-gray-300 dark:border-zinc-600 p-2 mt-[100px]"
           placeholder="Pesquisa..."
           value={pesquisa}
           onChange={(e) => {
@@ -210,7 +210,7 @@ export default function Busca() {
         </div>
       </div>
 
-      <div className="p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 rounded-2xl shadow-md min-h-[500px] items-start justify-start gap-5 w-full">
+      <div className="p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 rounded-md shadow-md min-h-[500px] items-start justify-start gap-5 w-full">
         {componentesFiltrados.map((materia) => renderItem(materia))}
       </div>
     </div>

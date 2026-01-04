@@ -5,9 +5,9 @@ export default function GenericModel({ imgBack, titulo, subtitulo, valores, apre
 
     const renderValores = (item) => {
         return (
-            <div className="flex bg-gray-50 dark:bg-zinc-800 border border-gray-300 dark:border-zinc-700 p-4 rounded-2xl shadow-sm gap-3 hover:scale-102 transition duration-300 hover:shadow-lg">
+            <div className="flex bg-gray-50 dark:bg-zinc-800 border border-gray-300 dark:border-zinc-700 p-4 rounded-md shadow-sm gap-3 hover:scale-102 transition duration-300 hover:shadow-lg">
                 <div className="flex flex-col items-start gap-4">
-                    <span className="material-icons text-5xl bg-darkblue dark:bg-white text-white dark:text-darkblue rounded-full p-4">
+                    <span className="material-icons text-5xl bg-darkblue dark:bg-white text-white dark:text-darkblue rounded-md p-4">
                         {item.icon}
                     </span>
 
@@ -22,7 +22,7 @@ export default function GenericModel({ imgBack, titulo, subtitulo, valores, apre
                         {item.titulo}
                     </h2>
                     <div className='flex gap-4 flex-1'>
-                        <div className='h-full w-5 bg-darkblue dark:bg-gray-400 rounded-2xl'></div>
+                        <div className='h-full w-5 bg-darkblue dark:bg-gray-400 rounded-md'></div>
                         <p className="text-gray-700 dark:text-gray-200 text-justify">
                             {item.texto}
                         </p>
@@ -46,10 +46,10 @@ export default function GenericModel({ imgBack, titulo, subtitulo, valores, apre
 
     const renderAprendizado = (item) => {
         return (
-            <a className="flex bg-gray-50 dark:bg-zinc-800 border border-gray-300 dark:border-zinc-700 p-4 rounded-2xl shadow-sm gap-3 hover:bg-gray-200 dark:hover:bg-zinc-700 transition-all duration-500 cursor-pointer hover:shadow-lg" href={item.link || '#'} target={item.link ? "_blank" : ''}>
+            <a className="flex bg-gray-50 dark:bg-zinc-800 border border-gray-300 dark:border-zinc-700 p-4 rounded-md shadow-sm gap-3 hover:bg-gray-200 dark:hover:bg-zinc-700 transition-all duration-500 cursor-pointer hover:shadow-lg" href={item.link || '#'} target={item.link ? "_blank" : ''}>
                 <div className="flex flex-col md:flex-row justify-center items-start gap-4">
                     <img
-                        className="rounded-2xl object-cover w-full min-w-[50px] max-w-[200px] h-auto max-h-[200px] shadow-md"
+                        className="rounded-md object-cover w-full min-w-[50px] max-w-[200px] h-auto max-h-[200px] shadow-md"
                         src={item.img ? item.img : imgAlter}
                         alt={item.titulo}
                     />
@@ -88,7 +88,7 @@ export default function GenericModel({ imgBack, titulo, subtitulo, valores, apre
 
     const RenderProfessor = () => {
         return (
-            <div className='flex flex-col md:flex-row w-full max-w-full  mx-auto justify-center items-center md:items-start bg-gray-50 dark:bg-zinc-800 border border-gray-300 dark:border-zinc-700 p-4 rounded-2xl shadow-sm gap-4'>
+            <div className='flex flex-col md:flex-row w-full max-w-full  mx-auto justify-center items-center md:items-start bg-gray-50 dark:bg-zinc-800 border border-gray-300 dark:border-zinc-700 p-4 rounded-md shadow-sm gap-4'>
                 <div className='flex flex-col flex-1 text-center md:text-left'>
                     <h2 className='text-2xl font-semibold'>Professor</h2>
                     <h1 className='text-4xl md:text-5xl font-bold'>{nomeProfessor}</h1>
@@ -113,10 +113,10 @@ export default function GenericModel({ imgBack, titulo, subtitulo, valores, apre
 
     const RenderOpniao = () => {
         return (
-            <div className='flex flex-col md:flex-row w-full max-w-full mx-auto justify-center items-center md:items-start bg-gray-50 dark:bg-zinc-800 dark:text-white border border-gray-300 dark:border-zinc-700 p-6 rounded-2xl shadow-sm gap-6'>
+            <div className='flex flex-col md:flex-row w-full max-w-full mx-auto justify-center items-center md:items-start bg-gray-50 dark:bg-zinc-800 dark:text-white border border-gray-300 dark:border-zinc-700 p-6 rounded-md shadow-sm gap-6'>
 
                 <div className="flex-shrink-0">
-                    <span className="material-icons text-4xl sm:text-5xl bg-darkblue text-white dark:bg-white dark:text-darkblue rounded-full p-3 sm:p-4">
+                    <span className="material-icons text-4xl sm:text-5xl bg-darkblue text-white dark:bg-white dark:text-darkblue rounded-md p-3 sm:p-4">
                         chat
                     </span>
                 </div>
@@ -160,7 +160,7 @@ export default function GenericModel({ imgBack, titulo, subtitulo, valores, apre
             <div className='w-full p-2 md:w-10/12'>
                 <div className='bg-img w-full bg-transparent p-3 grid grid-cols-1 md:grid-cols-3 mt-10  '>
                     <div className='flex flex-col items-center justify-center gap-3 col-span-1'>
-                        <span className="material-icons !text-9xl bg-black dark:invert text-white rounded-full hover:scale-105 transition-all duration-300 hover:-translate-y-2">
+                        <span className="material-icons !text-9xl bg-black dark:invert text-white rounded-md hover:scale-105 transition-all duration-300 hover:-translate-y-2">
                             question_mark
                         </span>
 
@@ -207,7 +207,7 @@ export default function GenericModel({ imgBack, titulo, subtitulo, valores, apre
                     <div className='flex flex-col items-center justify-center mt-[2%] w-full'>
                         <h1 className='capitalize text-2xl md:text-5xl font-bold text-start w-full pl-5'>Meus Aprendizados</h1>
                         <p className='text-justify p-5 w-full'>Aqui eu mostro algumas coisas que eu fiz nessa matéria:</p>
-                        <div className='flex flex-col border border-gray-200 dark:border-zinc-700 rounded-2xl p-2 w-full gap-2'>
+                        <div className='flex flex-col border border-gray-200 dark:border-zinc-700 rounded-md p-2 w-full gap-2'>
                             {aprendizados && aprendizados.length > 0 ? (
                                 aprendizados.map(item => renderAprendizado(item))
                             ) : (

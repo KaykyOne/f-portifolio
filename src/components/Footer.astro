@@ -1,11 +1,12 @@
 ---
 import Image from "astro/components/Image.astro"
-import GitHub from "../assets/icons/github.svg"
-import LinkedIn from "../assets/iconLinkedin.png"
+import ImagePersonalizado from "./ImagePersonalizado.astro"
+const  GitHub = "/assets/icons/github.svg"
+const LinkedIn = "/assets/iconLinkedin.png"
 
 ---
 
-<footer class="bg-black text-white p-6">
+<footer class="bg-black text-white p-6 w-full">
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
     <!-- Logo / Nome -->
     <div class="flex items-center gap-2">
@@ -23,14 +24,14 @@ import LinkedIn from "../assets/iconLinkedin.png"
     <div class="flex gap-4">
       <a href="https://github.com/kaykyOne" target="_blank">
         <div class="flex items-center gap-2 hover:invert-25 cursor-pointer transition">
-          <Image class={'invert'} height={30} src={GitHub} alt={'logo_GitHubFooter'}/>
+          <ImagePersonalizado className={'invert'} height={30} width={30} src={GitHub} alt={'logo_GitHubFooter'}/>
           <p>GitHub</p>
         </div>
       </a>
 
       <a href="https://linkedin.com/in/KaykyZioti" target="_blank">
         <div class="flex items-center gap-2 hover:invert-25 cursor-pointer transition">
-          <Image class={'invert'} height={30} src={LinkedIn} alt={'logo_LinkedIn'}/>
+          <ImagePersonalizado className={'invert'} height={30} width={30} src={LinkedIn} alt={'logo_LinkedIn'}/>
           <p>LinkedIn</p>
         </div>
       </a>

@@ -1,7 +1,7 @@
 ---
-import { Image } from "astro:assets";
-import logoGitHub from "../assets/icons/github.svg";
-import logoLinkedin from "../assets/iconLinkedin.png";
+import ImagePersonalizado from "./ImagePersonalizado.astro";
+const logoGitHub = "/assets/icons/github.svg";
+const logoLinkedin = "/assets/iconLinkedin.png";
 ---
 
 <div class="flex flex-col fixed z-50">
@@ -56,27 +56,29 @@ import logoLinkedin from "../assets/iconLinkedin.png";
 
         <div class="flex gap-2 mr-2 justify-end">
             <div
-                class="bg-transparent dark:hover:bg-white hover:bg-black group rounded-full p-1 hidden md:block"
+                class="bg-transparent dark:hover:bg-white hover:bg-black group rounded-md p-1 hidden md:block"
             >
                 <a href="https://github.com/kaykyOne" target="_blank">
-                    <Image
+                    <ImagePersonalizado
                         src={logoGitHub}
                         alt="GitHub"
                         width={40}
-                        class="cursor-pointer rounded-full group-hover:invert dark:invert dark:group-hover:filter-none transition duration-300 hover:shadow-xl"
+                        height={40}
+                        className="cursor-pointer rounded-md group-hover:invert dark:invert dark:group-hover:filter-none transition duration-300 hover:shadow-xl"
                     />
                 </a>
             </div>
 
             <div
-                class="bg-transparent dark:hover:bg-white hover:bg-black group rounded-full p-1 hidden md:block"
+                class="bg-transparent dark:hover:bg-white hover:bg-black group rounded-md p-1 hidden md:block"
             >
                 <a href="https://linkedin.com/in/KaykyZioti" target="_blank">
-                    <Image
+                    <ImagePersonalizado
                         src={logoLinkedin}
                         alt="LinkedIn"
                         width={40}
-                        class="cursor-pointer rounded-full group-hover:invert dark:invert dark:group-hover:filter-none transition duration-300 hover:shadow-xl"
+                        height={40}
+                        className="cursor-pointer rounded-md group-hover:invert dark:invert dark:group-hover:filter-none transition duration-300 hover:shadow-xl"
                     />
                 </a>
             </div>
@@ -92,8 +94,8 @@ import logoLinkedin from "../assets/iconLinkedin.png";
                 />
 
                 <div
-                    class="hidden md:flex justify-between p-1 items-center group peer ring-0 rounded-full outline-none duration-300 after:duration-300 w-24 h-12 shadow-md peer-checked:bg-white peer-focus:outline-none
-                    after:content-[''] after:rounded-full after:absolute after:bg-black dark:after:bg-gray-50 after:outline-none after:h-10 after:w-10 after:top-1 after:left-1
+                    class="hidden md:flex justify-between p-1 items-center group peer ring-0 rounded-md outline-none duration-300 after:duration-300 w-24 h-12 shadow-md peer-checked:bg-white peer-focus:outline-none
+                    after:content-[''] after:rounded-md after:absolute after:bg-black dark:after:bg-gray-50 after:outline-none after:h-10 after:w-10 after:top-1 after:left-1
                     after:flex after:justify-center after:items-center peer-checked:after:translate-x-12 peer-hover:after:scale-95 border border-zinc-200 dark:border-zinc-700"
                 >
                     <span class="material-icons ml-2">light_mode</span>
@@ -101,7 +103,7 @@ import logoLinkedin from "../assets/iconLinkedin.png";
                     <span class="material-icons mr-2">dark_mode</span>
                 </div>
                 <div
-                    class="flex md:hidden rounded-full p-2 bg-black dark:bg-white text-white dark:text-black justify-center items-center"
+                    class="flex md:hidden rounded-md p-2 bg-black dark:bg-white text-white dark:text-black justify-center items-center"
                 >
                     <span class="material-icons">light_mode</span>
                 </div>
@@ -110,7 +112,8 @@ import logoLinkedin from "../assets/iconLinkedin.png";
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const checkbox = document.getElementById("checkboxThema");
+            const res = document.getElementById("checkboxThema");
+            const checkbox: HTMLInputElement | null = res as HTMLInputElement | null;  
             if (!checkbox) return;
 
             const theme = getTheme();

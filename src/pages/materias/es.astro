@@ -1,6 +1,6 @@
 ---
-import GenericModel from "../components/GenericModel";
-import Layout from "../layouts/Layout.astro";
+import GenericModel from "../../components/GenericModel";
+import Layout from "../../layouts/Layout.astro";
 
 const sobre = "A disciplina de Engenharia de Software tem como objetivo ensinar aos alunos os fundamentos, processos e boas práticas para o desenvolvimento de sistemas de software com qualidade, eficiência e organização. Ela aborda desde a análise de requisitos até o projeto, implementação, testes e manutenção de sistemas, sempre com foco em metodologias, documentação e trabalho em equipe.\n\nDurante o curso, os alunos entram em contato com conceitos como ciclo de vida do software, modelagem UML, engenharia de requisitos, arquitetura de software e testes. Essa base é essencial para desenvolver projetos de forma mais estruturada, colaborativa e alinhada com as necessidades dos usuários.";
 
@@ -24,13 +24,13 @@ const valores = [
 
 const aprendizados = [
     {
-        img: "/f-portifolio//imgs/ES/img-pc.jpg",
+        img: "/imgs/ES/img-pc.jpg",
         titulo: "Engenharia de Requisitos",
         texto: "Com os requisitos bem definidos, percebi que é possível evitar boa parte dos erros e retrabalho no projeto. Aprendi a identificar, classificar e documentar esses requisitos de forma clara e objetiva.",
         link: "",
     },
     {
-        img: "/f-portifolio//imgs/ES/img-projeto.jpg",
+        img: "/imgs/ES/img-projeto.jpg",
         titulo: "Modelagem com UML",
         texto: "Diagramas como casos de uso, classes e sequência me ajudaram a planejar melhor o funcionamento do sistema. Isso facilitou a comunicação entre equipe e também a codificação.",
         link: "",
@@ -43,7 +43,7 @@ const onpiao = 'Durante o período em que cursei essa matéria, pude perceber o 
 
 <Layout>
     <GenericModel
-        imgBack={"/f-portifolio//imgs/ES/img-fundo.jpg"}
+        imgBack={"/imgs/ES/img-fundo.jpg"}
         titulo={"Engenharia de Software"}
         subtitulo={"Planeje, modele e entregue software de qualidade!"}
         valores={valores}

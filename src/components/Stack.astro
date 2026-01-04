@@ -1,22 +1,21 @@
 ---
-import Image from "astro/components/Image.astro";
-import logoJS from "../assets/icons/javascript.svg";
-import logoCSharp from "../assets/icons/CSharp.svg";
-import logoHTML from "../assets/icons/html5.svg";
-import logoCSS from "../assets/icons/css3.svg";
+import ImagePersonalizado from "./ImagePersonalizado.astro";
+const logoJS = "/assets/icons/javascript.svg";
+const logoCSharp = "/assets/icons/CSharp.svg";
+const logoHTML = "/assets/icons/html5.svg";
+const logoCSS = "/assets/icons/css3.svg";
 
-import React from "../assets/icons/react.svg";
-import Node from "../assets/icons/node.svg";
-import Git from "../assets/icons/git.svg";
-import GitHub from "../assets/icons/github.svg";
-import Next from "../assets/icons/next.svg";
-import Tailwind from "../assets/icons/tailwindcss.svg";
-import DotNet from "../assets/icons/dotnet.svg";
-import AstroIcon from "../assets/icons/astro.svg";
-
-import Postgres from "../assets/icons/postgresql.svg";
-import Supabase from "../assets/icons/supabase.svg";
-import Firebase from "../assets/icons/firebase.svg";
+const React = "/assets/icons/react.svg";
+const Node = "/assets/icons/node.svg";
+const Git = "/assets/icons/git.svg";
+const GitHub = "/assets/icons/github.svg";
+const Next = "/assets/icons/next.svg";
+const Tailwind = "/assets/icons/tailwindcss.svg";
+const DotNet = "/assets/icons/dotnet.svg";
+const AstroIcon = "/assets/icons/astro.svg";
+const Postgres = "/assets/icons/postgresql.svg";
+const Supabase = "/assets/icons/supabase.svg";
+const Firebase = "/assets/icons/firebase.svg";
 
 
 
@@ -28,25 +27,25 @@ import Firebase from "../assets/icons/firebase.svg";
         <h3>Minhas Habilidades</h3> 
         <div class="grid grid-cols-1 md:grid-cols-5 mt-10 w-full gap-4 min-h-[300px]">
             <div class="flex group flex-col justify-center items-center transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-                <Image class={"w-[100px] h-[100px] dark:invert"} alt={"imagem-js"} src={logoJS} />
+                <ImagePersonalizado className={"dark:invert"} alt={"imagem-js"} height={100} width={100} src={logoJS} />
                 <h3 class="group-hover:translate-y-4 transition-all duration-500">Javascript</h3>
                 <div class="bg-black h-1 mt-1 w-[80px] dark:invert group-hover:-translate-y-4 transition-all duration-500"></div>
             </div>
 
             <div class="flex group flex-col justify-center items-center transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-                <Image class={"w-[100px] h-[100px] dark:invert"} alt={"imagem-c#"} src={logoCSharp} />
+                <ImagePersonalizado className={" dark:invert"} alt={"imagem-c#"} height={100} width={100} src={logoCSharp} />
                 <h3 class="group-hover:translate-y-4 transition-all duration-500">C#</h3>
                 <div class="bg-black h-1 mt-1 w-[80px] group-hover:-translate-y-4 dark:invert transition-all duration-500"></div>
             </div>
 
             <div class="flex group flex-col justify-center items-center transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-                <Image class={"w-[100px] h-[100px] dark:invert"} alt={"imagem-html"} src={logoHTML} />
+                <ImagePersonalizado className={" dark:invert"} alt={"imagem-html"} height={100} width={100} src={logoHTML} />
                 <h3 class="group-hover:translate-y-4 transition-all duration-500">HTML5</h3>
                 <div class="bg-black h-1 mt-1 w-[80px] group-hover:-translate-y-4 dark:invert transition-all duration-500"></div>
             </div>
 
             <div class="flex group flex-col justify-center items-center transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-                <Image class={"w-[100px] h-[100px] dark:invert"} alt={"imagem-css"} src={logoCSS} />
+                <ImagePersonalizado className={" dark:invert"} alt={"imagem-css"} height={100} width={100} src={logoCSS} />
                 <h3 class="group-hover:translate-y-4 transition-all duration-500">CSS3</h3>
                 <div class="bg-black h-1 mt-1 w-[80px] group-hover:-translate-y-4 dark:invert transition-all duration-500"></div>
             </div>
@@ -60,50 +59,50 @@ import Firebase from "../assets/icons/firebase.svg";
         <h1 class="text-center text-5xl font-bold w-full mt-10">Frameworks e Ferramentas</h1>
         <h3>Usados atualmente ou que já foram usados</h3>
 
-        <div class="flex flex-wrap w-full justify-around dark:bg-zinc-800 bg-darkblue rounded-2xl p-8 text-white mt-8 gap-5 transition-all duration-500 hover:-translate-y-3 ">
+        <div class="flex flex-wrap w-full justify-around dark:bg-zinc-800 bg-darkblue rounded-md p-8 text-white mt-8 gap-5 transition-all duration-500 hover:-translate-y-3 ">
             <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
-                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-react"} src={React} />
+                <ImagePersonalizado className={" invert"} height={70} width={70} alt={"imagem-react"} src={React} />
                 <h3>React.js</h3>
             </div>
             <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
-                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-node"} src={Node} />
+                <ImagePersonalizado className={" invert"} height={70} width={70} alt={"imagem-node"} src={Node} />
                 <h3>Node.js</h3>
             </div>
             <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
-                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-git"} src={Git} />
+                <ImagePersonalizado className={" invert"} height={70} width={70} alt={"imagem-git"} src={Git} />
                 <h3>Git</h3>
             </div>
             <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
-                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-github"} src={GitHub} />
+                <ImagePersonalizado className={" invert"} height={70} width={70} alt={"imagem-github"} src={GitHub} />
                 <h3>GitHub</h3>
             </div>
             <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
-                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-next"} src={Next} />
+                <ImagePersonalizado className={" invert"} height={70} width={70} alt={"imagem-next"} src={Next} />
                 <h3>Next.js</h3>
             </div>
             <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
-                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-tailwind"} src={Tailwind} />
+                <ImagePersonalizado className={" invert"} height={70} width={70} alt={"imagem-tailwind"} src={Tailwind} />
                 <h3>Tailwind CSS</h3>
             </div>
             <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
-                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-dotnet"} src={DotNet} />
+                <ImagePersonalizado className={" invert"} height={70} width={70} alt={"imagem-dotnet"} src={DotNet} />
                 <h3>.NET</h3>
             </div>
             <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
-                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-astro"} src={AstroIcon} />
+                <ImagePersonalizado className={" invert"} height={70} width={70} alt={"imagem-astro"} src={AstroIcon} />
                 <h3>Astro</h3>
             </div>
 
             <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
-                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-postgres"} src={Postgres} />
+                <ImagePersonalizado className={" invert"} height={70} width={70} alt={"imagem-postgres"} src={Postgres} />
                 <h3>PostgreSQL</h3>
             </div>
             <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
-                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-supabase"} src={Supabase} />
+                <ImagePersonalizado className={" invert"} height={70} width={70} alt={"imagem-supabase"} src={Supabase} />
                 <h3>Supabase</h3>
             </div>
             <div class="flex group flex-col justify-center items-center cursor-pointer gap-2">
-                <Image class={"w-[70px] h-[70px] invert"} alt={"imagem-firebase"} src={Firebase} />
+                <ImagePersonalizado className={" invert"} height={70} width={70} alt={"imagem-firebase"} src={Firebase} />
                 <h3>Firebase</h3>
             </div>
         </div>

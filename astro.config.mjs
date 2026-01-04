@@ -11,7 +11,7 @@ export default defineConfig({
   site,
 
   // nome do repositório
-  base: '/f-portifolio/',
+  base: '/f-portifolio',
 
   vite: {
     plugins: [tailwindcss()],
