@@ -4,14 +4,14 @@ import tailwindcss from "@tailwindcss/vite";
 
 import react from '@astrojs/react';
 
-const site = 'https://KaykyOne.github.io/f-portifolio';
+const site = 'https://KaykyOne.github.io';
 
 // https://astro.build/config
 export default defineConfig({
   site,
 
   // nome do repositório
-  base: '/f-portifolio',
+  base: '/',
 
   vite: {
     plugins: [tailwindcss()],
