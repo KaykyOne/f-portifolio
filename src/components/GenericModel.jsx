@@ -1,5 +1,4 @@
 import React from 'react';
-import imgAlter from '../assets/images.jpg'
 
 export default function GenericModel({ imgBack, titulo, subtitulo, valores, aprendizados, sobre, nomeProfessor, fotoProfessor, opniao }) {
 
@@ -50,7 +49,7 @@ export default function GenericModel({ imgBack, titulo, subtitulo, valores, apre
                 <div className="flex flex-col md:flex-row justify-center items-start gap-4">
                     <img
                         className="rounded-md object-cover w-full min-w-[50px] max-w-[200px] h-auto max-h-[200px] shadow-md"
-                        src={item.img ? item.img : imgAlter}
+                        src={item.img ? item.img : ''}
                         alt={item.titulo}
                     />
 
