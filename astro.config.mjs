@@ -11,7 +11,7 @@ export default defineConfig({
   site,
 
   // nome do repositório
-  base: '/',
+  base: '',
 
   vite: {
     plugins: [tailwindcss()],
