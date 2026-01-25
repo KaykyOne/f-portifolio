@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-
 const {
   src,
   alt = "",
@@ -8,12 +6,10 @@ const {
   width = 100,
   height = 100,
 } = Astro.props;
-
-const finalSrc = `${src}`;
 ---
 
-<Image
-  src={finalSrc}
+<img
+  src={src}
   alt={alt}
   class={className}
   width={width}
