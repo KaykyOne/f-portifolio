@@ -1,17 +1,112 @@
 ---
-
+import "../global.css";
 ---
 
-<html lang="en">
+<html lang="pt-br">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Kayky Zioti</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<div
+			class="bg-neutral-800 w-full h-screen flex items-center justify-center"
+		>
+			<div
+				class="h-[40vh] w-[40vh] fixed bg-neutral-600 rounded-full justify-center items-center blur-[150px] z-0"
+				id="bolha"
+			>
+			</div>
+			<div
+				class="w-screen h-screen fixed z-10 bg-neutral-800/50 backdrop-blur-3xl grid grid-cols-1 md:grid-cols-2 gap-4"
+			>
+				<div
+					class="w-full h-full flex flex-col justify-between items-start p-10 md:p-20 lg:p-30 overflow-hidden"
+				>
+					<div class="w-full overflow-hidden ">
+						<h1 class="text-4xl text-white font-bold">
+							Kayky Zioti Silva
+						</h1>
+						<p
+							class="text-white uppercase leading-10 text-sm font-light tracking-widest opacity-70"
+						>
+							Desenvolvedor Full-Stack
+						</p>
+						<p
+							class="text-sm text-justify w-full text-neutral-400 font-light mt-5"
+						>
+							Full-stack Developer | Performance, UXUI & Lead Generation Systems
+						</p>
+					</div>
+
+					<div
+						class="mt-5 w-full text-white justify-start items-start flex flex-col gap-5"
+					>
+						<ul
+							class="w-full justify-start items-start flex flex-col gap-5"
+						>
+							<li
+								class="w-full flex gap-2 items-center group text-neutral-400 hover:text-white transition-all duration-300 cursor-pointer"
+							>
+								Sobre
+								<div
+									class="w-5 h-[1px] group-hover:w-20 bg-neutral-400 group-hover:bg-white transition-all duration-300"
+								>
+								</div>
+							</li>
+							<li
+								class="w-full flex gap-2 items-center group text-neutral-400 hover:text-white transition-all duration-300 cursor-pointer"
+							>
+								Principais Projetos
+								<div
+									class="w-5 h-[1px] group-hover:w-20 bg-neutral-400 group-hover:bg-white transition-all duration-300"
+								>
+								</div>
+							</li>
+							<li
+								class="w-full flex gap-2 items-center group text-neutral-400 hover:text-white transition-all duration-300 cursor-pointer"
+							>
+								Técnologias
+								<div
+									class="w-5 h-[1px] group-hover:w-20 bg-neutral-400 group-hover:bg-white transition-all duration-300"
+								>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="flex justify-start items-start gap-4">
+						<a
+							href="https://www.linkedin.com/in/kaykyzioti/"
+							target="_blank"
+							class="h-8 w-8 opacity-40 hover:opacity-100 transition-opacity duration-300"
+						>
+							<img src="/linkedin.png" />
+						</a>
+						<a
+							href="https://github.com/KaykyOne"
+							target="_blank"
+							class="h-8 w-8 opacity-40 hover:opacity-100 transition-opacity duration-300"
+						>
+							<img src="/github.png" />
+						</a>
+						<a
+							href="https://www.instagram.com/kaykyzioti/"
+							target="_blank"
+							class="h-8 w-8 opacity-40 hover:opacity-100 transition-opacity duration-300"
+						>
+							<img src="/instagram.png" />
+						</a>
+					</div>
+				</div>
+				<div class="w-full h-full flex flex-col justify-between items-start pt-10 md:pt-20 lg:pt-30 overflow-y-auto">
+					<h1 class="text-white text-2xl font-semibold">.Sobre</h1>
+				</div>
+			</div>
+		</div>
+		<script src="../js/index.js"></script>
 	</body>
 </html>
