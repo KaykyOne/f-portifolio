@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Loja online de roupas com design moderno, carrinho dinamico e checkout de demonstracao funcional."
+    />
+    <title>Noir Atelier | Loja Online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#top" class="brand">Noir Atelier</a>
+        <nav class="site-nav" aria-label="Navegacao principal">
+          <a href="#catalogo">Catalogo</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#faq">FAQ</a>
+          <button id="openCart" class="cart-trigger" type="button" aria-label="Abrir carrinho">
+            Carrinho <span id="cartCount">0</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">COLECAO CONTEMPORANEA 2026</p>
+            <h1>Moda premium para rotina real.</h1>
+            <p>
+              Um e-commerce de apresentacao com curadoria autoral, foco em
+              experiencia e checkout fake totalmente funcional.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#catalogo">Explorar produtos</a>
+              <button id="heroCheckout" class="btn btn-ghost" type="button">Abrir checkout</button>
+            </div>
+          </div>
+          <div class="hero-media reveal-delay" role="img" aria-label="Modelo vestindo colecao minimalista"></div>
+        </div>
+      </section>
+
+      <section class="metrics section">
+        <div class="container metrics-grid reveal-stagger">
+          <article>
+            <p class="metric-value">+18k</p>
+            <p>Clientes atendidos em colecoes limitadas</p>
+          </article>
+          <article>
+            <p class="metric-value">4.9/5</p>
+            <p>Avaliacao media dos compradores</p>
+          </article>
+          <article>
+            <p class="metric-value">72h</p>
+            <p>Janela de despacho para capitais</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="catalogo" class="section">
+        <div class="container">
+          <header class="section-head reveal">
+            <p class="eyebrow">CATALOGO</p>
+            <h2>Pecas em destaque</h2>
+            <p>
+              Selecao de itens ficticios para demonstrar uma loja de roupas mais
+              moderna e comercialmente apresentavel.
+            </p>
+          </header>
+
+          <div class="product-grid">
+            <article class="product-card reveal" data-id="blazer-noir" data-name="Blazer Noir" data-price="349.90">
+              <img src="https://images.unsplash.com/photo-1593032465171-8bd8b3e6f6b5?auto=format&fit=crop&w=900&q=80" alt="Blazer preto elegante" loading="lazy" />
+              <div class="product-info">
+                <p class="product-type">Alfaiataria</p>
+                <h3>Blazer Noir</h3>
+                <p>Corte preciso e tecido encorpado para uso diario refinado.</p>
+                <div class="product-meta">
+                  <strong>R$ 349,90</strong>
+                  <button class="add-cart" data-add-cart type="button">Adicionar</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-id="camisa-oslo" data-name="Camisa Oslo" data-price="189.90">
+              <img src="https://images.unsplash.com/photo-1603252109303-2751441f5c7a?auto=format&fit=crop&w=900&q=80" alt="Camisa branca minimalista" loading="lazy" />
+              <div class="product-info">
+                <p class="product-type">Basics</p>
+                <h3>Camisa Oslo</h3>
+                <p>Textura leve com estrutura limpa e acabamento premium.</p>
+                <div class="product-meta">
+                  <strong>R$ 189,90</strong>
+                  <button class="add-cart" data-add-cart type="button">Adicionar</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-id="calca-stone" data-name="Calca Stone" data-price="229.90">
+              <img src="https://images.unsplash.com/photo-1555689502-c4b22d76c56f?auto=format&fit=crop&w=900&q=80" alt="Calca reta bege" loading="lazy" />
+              <div class="product-info">
+                <p class="product-type">Bottom</p>
+                <h3>Calca Stone</h3>
+                <p>Silhueta reta, caimento elegante e conforto para jornada longa.</p>
+                <div class="product-meta">
+                  <strong>R$ 229,90</strong>
+                  <button class="add-cart" data-add-cart type="button">Adicionar</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-id="trench-urban" data-name="Trench Urban" data-price="479.90">
+              <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Trench coat marrom" loading="lazy" />
+              <div class="product-info">
+                <p class="product-type">Outerwear</p>
+                <h3>Trench Urban</h3>
+                <p>Camadas sofisticadas para clima ameno com visual editorial.</p>
+                <div class="product-meta">
+                  <strong>R$ 479,90</strong>
+                  <button class="add-cart" data-add-cart type="button">Adicionar</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-id="saia-frame" data-name="Saia Frame" data-price="169.90">
+              <img src="https://images.unsplash.com/photo-1583496661160-fb5886a13d87?auto=format&fit=crop&w=900&q=80" alt="Saia preta midi" loading="lazy" />
+              <div class="product-info">
+                <p class="product-type">Studio</p>
+                <h3>Saia Frame</h3>
+                <p>Proporcao moderna com movimento fluido e acabamento fosco.</p>
+                <div class="product-meta">
+                  <strong>R$ 169,90</strong>
+                  <button class="add-cart" data-add-cart type="button">Adicionar</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-id="tenis-core" data-name="Tenis Core" data-price="299.90">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="Tenis branco casual" loading="lazy" />
+              <div class="product-info">
+                <p class="product-type">Footwear</p>
+                <h3>Tenis Core</h3>
+                <p>Design limpo para combinar com pecas urbanas e alfaiataria.</p>
+                <div class="product-meta">
+                  <strong>R$ 299,90</strong>
+                  <button class="add-cart" data-add-cart type="button">Adicionar</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-id="moletom-fade" data-name="Moletom Fade" data-price="259.90">
+              <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80" alt="Moletom cinza claro" loading="lazy" />
+              <div class="product-info">
+                <p class="product-type">Casual</p>
+                <h3>Moletom Fade</h3>
+                <p>Conforto premium com visual versatil para dia e noite.</p>
+                <div class="product-meta">
+                  <strong>R$ 259,90</strong>
+                  <button class="add-cart" data-add-cart type="button">Adicionar</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-id="vestido-lune" data-name="Vestido Lune" data-price="319.90">
+              <img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?auto=format&fit=crop&w=900&q=80" alt="Vestido preto elegante" loading="lazy" />
+              <div class="product-info">
+                <p class="product-type">Evening</p>
+                <h3>Vestido Lune</h3>
+                <p>Modelagem fluida para um visual contemporaneo e sofisticado.</p>
+                <div class="product-meta">
+                  <strong>R$ 319,90</strong>
+                  <button class="add-cart" data-add-cart type="button">Adicionar</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" class="section about-section">
+        <div class="container about-grid reveal">
+          <div>
+            <p class="eyebrow">SOBRE A MARCA</p>
+            <h2>Curadoria urbana para quem valoriza detalhe.</h2>
+          </div>
+          <div>
+            <p>
+              A Noir Atelier nasce para apresentar moda de forma objetiva e
+              elegante. Menos excesso visual, mais foco no produto e na experiencia de compra.
+            </p>
+            <ul class="list">
+              <li>Modelagens atemporais</li>
+              <li>Fluxo de compra simplificado</li>
+              <li>Checkout de demonstracao para portfolio</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" class="section">
+        <div class="container reviews-grid reveal-stagger">
+          <article class="review-card">
+            <p>"Layout premium e conversao clara. O produto realmente ganha destaque."</p>
+            <strong>Marina L. - Diretora de E-commerce</strong>
+          </article>
+          <article class="review-card">
+            <p>"Fluxo de checkout fluido e muito apresentavel para pitch comercial."</p>
+            <strong>Rafael S. - Product Lead</strong>
+          </article>
+          <article class="review-card">
+            <p>"Design moderno sem exagero. Excelente para portfolio profissional."</p>
+            <strong>Cintia A. - UX Strategist</strong>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq-section">
+        <div class="container faq-grid reveal">
+          <div>
+            <p class="eyebrow">FAQ</p>
+            <h2>Perguntas frequentes</h2>
+          </div>
+          <div>
+            <details>
+              <summary>Esse checkout faz cobranca real?</summary>
+              <p>Nao. E um fluxo de demonstracao para portfolio e apresentacao visual.</p>
+            </details>
+            <details>
+              <summary>Posso trocar conteudo e produtos?</summary>
+              <p>Sim. Estrutura pronta para personalizar textos, imagens e precos.</p>
+            </details>
+            <details>
+              <summary>Funciona no celular?</summary>
+              <p>Sim, o layout e responsivo e otimizado para mobile e desktop.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" aria-label="Carrinho de compras">
+      <div class="drawer-head">
+        <h2>Seu carrinho</h2>
+        <button id="closeCart" class="icon-btn" type="button" aria-label="Fechar carrinho">x</button>
+      </div>
+      <div id="cartItems" class="drawer-body"></div>
+      <div class="drawer-footer">
+        <p>Total <strong id="cartTotal">R$ 0,00</strong></p>
+        <div class="drawer-actions">
+          <button id="clearCart" class="btn btn-ghost" type="button">Limpar</button>
+          <button id="goCheckout" class="btn btn-primary" type="button">Checkout</button>
+        </div>
+      </div>
+    </aside>
+
+    <div id="overlay" class="overlay" hidden></div>
+
+    <section id="checkoutModal" class="hidden" aria-hidden="true" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+        <div class="modal-head">
+          <h2 id="checkoutTitle">Checkout de demonstracao</h2>
+          <button id="closeCheckout" class="icon-btn" type="button" aria-label="Fechar checkout">x</button>
+        </div>
+        <form id="checkoutForm" class="modal-form">
+          <label>
+            Nome completo
+            <input name="name" type="text" required />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" required />
+          </label>
+          <label>
+            Endereco
+            <input name="address" type="text" required />
+          </label>
+          <label>
+            Metodo de pagamento
+            <select name="payment" required>
+              <option value="">Selecione</option>
+              <option>Cartao de credito</option>
+              <option>Pix</option>
+              <option>Boleto</option>
+            </select>
+          </label>
+          <p class="summary">Resumo: <strong id="checkoutSummary">0 item - R$ 0,00</strong></p>
+          <button class="btn btn-primary" type="submit">Finalizar pedido ficticio</button>
+          <p id="checkoutMessage" class="checkout-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>Noir Atelier</p>
+        <p>Loja ficticia para portfolio</p>
+        <p>contato@noiratelier.store</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

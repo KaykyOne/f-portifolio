@@ -1,93 +1,87 @@
-import React, { useState, useEffect } from 'react';
-import RepositoryCard from './RepositoryCard';
+import React from "react";
+import SiteCard from "./SiteCard";
 
-interface Repository {
-    name: string;
-    html_url: string;
-    description: string | null;
-    stargazers_count: number;
-    created_at: string;
-}
+type Site = {
+  title: string;
+  description: string;
+  url: string;
+  techs: string[];
+};
+
+const sites: Site[] = [
+  {
+    title: "BRUTO CORTE | Barbearia",
+    description: "Landing page brutalista para barbearia com foco em servicos e reservas.",
+    url: "/sites/barbeiro/index.html",
+    techs: ["HTML", "CSS"],
+  },
+  {
+    title: "NeonByte Informatica",
+    description: "Site de informatica com secao de servicos, produtos e contato comercial.",
+    url: "/sites/informatica/index.html",
+    techs: ["HTML", "CSS"],
+  },
+  {
+    title: "Noir Atelier | Loja Online",
+    description: "E-commerce demonstrativo com catalogo, carrinho e checkout ficticio.",
+    url: "/sites/loja_online_roupas/index.html",
+    techs: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    title: "Mira Kinetic | Portfolio",
+    description: "Portfolio criativo com filtros de projetos e animacoes interativas.",
+    url: "/sites/portfolio_kinetic/index.html",
+    techs: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    title: "Dra. Helena Costa | Psicologa",
+    description: "Pagina institucional para atendimento psicologico com secoes de abordagem e FAQ.",
+    url: "/sites/pscologa/index.html",
+    techs: ["HTML", "CSS"],
+  },
+];
 
 export default function ProjectsPage() {
-    const [repositories, setRepositories] = useState<Repository[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
+  return (
+    <main className="relative min-h-screen w-full overflow-hidden bg-neutral-800 px-6 py-16 text-white md:px-12 lg:px-20">
+      <div
+        className="pointer-events-none absolute left-1/2 top-0 h-64 w-64 -translate-x-1/2 rounded-full bg-neutral-600/40 blur-[120px]"
+        aria-hidden="true"
+      />
 
-    useEffect(() => {
-        const fetchRepositories = async () => {
-            try {
-                // Altere 'your-username' para seu username do GitHub
-                const response = await fetch('https://api.github.com/users/kaykyOne/repos?sort=stars&order=desc');
-                if (!response.ok) {
-                    throw new Error('Falha ao carregar repositórios');
-                }
-                const data = await response.json();
-                setRepositories(data);
-            } catch (err) {
-                setError(err instanceof Error ? err.message : 'Erro desconhecido');
-            } finally {
-                setLoading(false);
-            }
-        };
+      <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-10">
+        <header className="flex flex-col gap-4">
+          <a
+            href="/"
+            className="w-fit rounded-full border border-neutral-700 bg-neutral-900/60 px-4 py-2 text-sm text-neutral-300 transition-colors duration-300 hover:border-neutral-500 hover:text-white"
+          >
+            Voltar para inicio
+          </a>
 
-        fetchRepositories();
-    }, []);
+          <div className="space-y-3">
+            <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">Sites Desenvolvidos</h1>
+            <p className="max-w-3xl text-sm font-light leading-relaxed text-neutral-300 md:text-base">
+              Selecao de sites de exemplo disponiveis neste portfolio. Clique em "Acessar" para
+              abrir cada projeto em nova aba.
+            </p>
+          </div>
+        </header>
 
-    if (loading) {
-        return (
-            <div className="min-h-screen bg-neutral-800 text-white px-4 py-12">
-                <div className="max-w-3xl mx-auto">
-                    <h1 className="text-4xl font-bold mb-2">Meus Projetos</h1>
-                    <p className="text-neutral-400 mt-4">Carregando projetos...</p>
-                </div>
-            </div>
-        );
-    }
-
-    if (error) {
-        return (
-            <div className="min-h-screen bg-neutral-800 text-white px-4 py-12">
-                <div className="max-w-3xl mx-auto">
-                    <h1 className="text-4xl font-bold mb-2">Meus Projetos</h1>
-                    <p className="text-red-400 mt-4">Erro: {error}</p>
-                </div>
-            </div>
-        );
-    }
-
-    return (
-        <div className="min-h-screen bg-neutral-800 text-white px-4 py-12">
-            <div className="max-w-3xl mx-auto">
-                <div className="mb-12">
-                    <div className='w-full justify-start flex mb-5'>
-                        <a  href='../'
-                            className='flex gap-2 justify-center items-center text-neutral-400'>
-                            <span
-                                className="material-symbols-outlined text-neutral-400"
-                            >
-                                arrow_back_ios
-                            </span>
-                            <p>Voltar</p>
-                        </a>
-                    </div>
-
-                    <h1 className="text-4xl font-bold mb-3">Meus Projetos</h1>
-                    <p className="text-neutral-400">
-                        Todos os meus projetos no GitHub, organizados por relevância
-                    </p>
-                </div>
-
-                <div className="space-y-3">
-                    {repositories.map((repo) => (
-                        <RepositoryCard key={repo.name} repo={repo} />
-                    ))}
-                </div>
-
-                {repositories.length === 0 && (
-                    <p className="text-center text-neutral-500 py-12">Nenhum projeto encontrado</p>
-                )}
-            </div>
-        </div>
-    );
+        <section
+          className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3"
+          aria-label="Lista de sites"
+        >
+          {sites.map((site) => (
+            <SiteCard
+              key={site.title}
+              title={site.title}
+              description={site.description}
+              url={site.url}
+              techs={site.techs}
+            />
+          ))}
+        </section>
+      </div>
+    </main>
+  );
 }

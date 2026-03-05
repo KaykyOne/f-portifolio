@@ -62,7 +62,6 @@ document.addEventListener("mousemove", (e) => {
 const sobre = document.getElementById("sobre");
 const experiencia = document.getElementById("experiencia");
 const projetos = document.getElementById("projetos");
-// const tecnologias = document.getElementById("tecnologias");
 
 const sections = [sobre, experiencia, projetos];
 

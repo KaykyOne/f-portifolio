@@ -1,0 +1,9 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#F4ECDD"/>
+  <rect x="78" y="68" width="644" height="464" rx="28" fill="#FFFFFF" stroke="#111111" stroke-width="8"/>
+  <rect x="280" y="130" width="240" height="70" rx="16" fill="#111111"/>
+  <path d="M300 200H385L360 470H250L300 200Z" fill="#1E56D9" stroke="#111111" stroke-width="8"/>
+  <path d="M500 200H415L440 470H550L500 200Z" fill="#1E56D9" stroke="#111111" stroke-width="8"/>
+  <rect x="368" y="200" width="64" height="80" fill="#FFD447" stroke="#111111" stroke-width="8"/>
+  <text x="106" y="515" fill="#111111" font-size="34" font-family="Arial, Helvetica, sans-serif" font-weight="700">CALCA EIXO RETO</text>
+</svg>

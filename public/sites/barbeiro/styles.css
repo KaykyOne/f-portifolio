@@ -1,0 +1,385 @@
+:root {
+  --paper: #f2efe8;
+  --ink: #121212;
+  --accent: #ff4d00;
+  --accent-2: #ffe600;
+  --line: #121212;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  background: repeating-linear-gradient(
+    -45deg,
+    #f2efe8,
+    #f2efe8 16px,
+    #ece8df 16px,
+    #ece8df 32px
+  );
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.wrap {
+  width: min(1140px, 94vw);
+  margin-inline: auto;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--accent-2);
+  border-bottom: 4px solid var(--line);
+}
+
+.topbar .wrap {
+  min-height: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  font-family: "Bebas Neue", Impact, sans-serif;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  letter-spacing: 0.05em;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.menu a {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid var(--line);
+  background: #ffffff;
+  padding: 0.35rem 0.62rem;
+  box-shadow: 3px 3px 0 var(--line);
+}
+
+.menu a:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--line);
+}
+
+.section {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.brutal-block {
+  border-top: 4px solid var(--line);
+  border-bottom: 4px solid var(--line);
+  background: var(--paper);
+}
+
+.hero {
+  min-height: calc(100vh - 76px);
+  display: grid;
+  align-items: center;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: start;
+}
+
+.tag {
+  display: inline-block;
+  margin: 0 0 0.8rem;
+  padding: 0.2rem 0.55rem;
+  background: var(--accent);
+  border: 2px solid var(--line);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+h1,
+h2 {
+  font-family: "Bebas Neue", Impact, sans-serif;
+  letter-spacing: 0.03em;
+  line-height: 0.95;
+}
+
+h1 {
+  font-size: clamp(3rem, 13vw, 8.2rem);
+  max-width: 8ch;
+}
+
+h1 span {
+  background: var(--ink);
+  color: #f5f5f5;
+  padding-inline: 0.25rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 8vw, 4.5rem);
+  max-width: 13ch;
+}
+
+h3 {
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: 1.9rem;
+  letter-spacing: 0.04em;
+}
+
+.lead {
+  max-width: 53ch;
+  font-size: clamp(1.02rem, 1.9vw, 1.18rem);
+  font-weight: 500;
+}
+
+.cta-row {
+  margin-top: 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.96rem;
+  letter-spacing: 0.03em;
+  padding: 0.82rem 1.1rem;
+  border: 3px solid var(--line);
+  color: var(--ink);
+  background: var(--accent-2);
+  box-shadow: 6px 6px 0 var(--line);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 var(--line);
+}
+
+.btn-ghost {
+  background: #ffffff;
+}
+
+.stamp-card {
+  border: 3px solid var(--line);
+  background: #ffffff;
+  padding: 1.1rem;
+  box-shadow: 10px 10px 0 var(--line);
+  transform: rotate(-1deg);
+}
+
+.stamp-title {
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.stamp-card ul {
+  margin: 0.8rem 0;
+  padding-left: 1.1rem;
+}
+
+.stamp-note {
+  display: inline-block;
+  margin: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.25rem 0.4rem;
+  border: 2px solid var(--line);
+}
+
+.section-head {
+  margin-bottom: 1.2rem;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem;
+}
+
+.service {
+  border: 3px solid var(--line);
+  background: #ffffff;
+  padding: 1rem;
+  min-height: 180px;
+}
+
+.service:nth-child(odd) {
+  background: #fcfbf8;
+}
+
+.price-section {
+  background: #ffffff;
+  border-bottom: 4px solid var(--line);
+}
+
+.price-list {
+  border: 3px solid var(--line);
+  background: #ffffff;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  padding: 0.8rem 0.95rem;
+  border-bottom: 2px solid var(--line);
+  font-weight: 700;
+}
+
+.row:last-child {
+  border-bottom: 0;
+}
+
+.row-head {
+  background: var(--ink);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+
+.tile {
+  border: 3px solid var(--line);
+  min-height: 170px;
+  padding: 0.8rem;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: flex-end;
+}
+
+.t1 {
+  background: #ffffff;
+}
+
+.t2 {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.t3 {
+  background: var(--ink);
+  color: #f0f0f0;
+}
+
+.t4 {
+  background: var(--accent-2);
+}
+
+.contact-section {
+  background: var(--paper);
+  border-top: 4px solid var(--line);
+  border-bottom: 4px solid var(--line);
+}
+
+.contact-wrap {
+  text-align: center;
+}
+
+.contact-wrap p {
+  max-width: 54ch;
+  margin: 0 auto 1.2rem;
+  font-weight: 500;
+}
+
+.footer {
+  background: var(--ink);
+  color: #ffffff;
+}
+
+.footer-wrap {
+  min-height: 4.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-wrap p {
+  margin: 0.7rem 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+@media (max-width: 1020px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stamp-card {
+    transform: rotate(0);
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .topbar .wrap {
+    padding: 0.6rem 0;
+    min-height: auto;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .menu {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .service-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

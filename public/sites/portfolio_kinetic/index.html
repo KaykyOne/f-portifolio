@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de design e desenvolvimento com identidade visual autoral e interacao dinamica."
+    />
+    <title>Mira Kinetic | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#top" class="brand">Mira Kinetic</a>
+        <nav class="site-nav" aria-label="Navegacao principal">
+          <a href="#projetos">Projetos</a>
+          <a href="#processo">Processo</a>
+          <a href="#resultados">Resultados</a>
+          <a href="#contato" class="pill">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">PORTFOLIO 2026</p>
+            <h1>
+              Design que vira
+              <span>performance.</span>
+            </h1>
+            <p>
+              Crio experiencias digitais para marcas que querem sair do comum,
+              unindo narrativa visual, estrategia e produto.
+            </p>
+            <div class="hero-actions">
+              <a href="#projetos" class="btn btn-solid">Ver projetos</a>
+              <a href="#contato" class="btn btn-line">Iniciar projeto</a>
+            </div>
+          </div>
+
+          <div class="hero-stack reveal-delay">
+            <article class="stack-card card-a">
+              <p>Brand Systems</p>
+              <h2>12 identidades</h2>
+            </article>
+            <article class="stack-card card-b">
+              <p>Digital Products</p>
+              <h2>34 lancamentos</h2>
+            </article>
+            <article class="stack-card card-c">
+              <p>Average uplift</p>
+              <h2>+41% conversao</h2>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projetos" class="section projects-section">
+        <div class="container">
+          <header class="section-head reveal">
+            <p class="eyebrow">SELECAO CURADA</p>
+            <h2>Projetos em destaque</h2>
+            <p>
+              Filtre por categoria para explorar casos de marca, produto e e-commerce.
+            </p>
+          </header>
+
+          <div class="filters reveal" role="tablist" aria-label="Filtro de projetos">
+            <button class="filter-btn is-active" data-filter="all" type="button">Todos</button>
+            <button class="filter-btn" data-filter="branding" type="button">Branding</button>
+            <button class="filter-btn" data-filter="ux" type="button">UX/UI</button>
+            <button class="filter-btn" data-filter="commerce" type="button">E-commerce</button>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card reveal" data-category="branding ux">
+              <div class="thumb thumb-1">
+                <span>Pulse Coffee</span>
+              </div>
+              <div class="project-info">
+                <p class="tag">Branding + UX</p>
+                <h3>Rebrand e site institucional premium</h3>
+                <p>Nova linguagem visual, arquitetura de conteudo e aumento de reconhecimento digital.</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="ux commerce">
+              <div class="thumb thumb-2">
+                <span>NorthFit</span>
+              </div>
+              <div class="project-info">
+                <p class="tag">UX + Commerce</p>
+                <h3>Loja digital com compra em 2 passos</h3>
+                <p>Fluxo simplificado de checkout e estrutura para campanhas de alta recorrencia.</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="branding">
+              <div class="thumb thumb-3">
+                <span>Alta Forma</span>
+              </div>
+              <div class="project-info">
+                <p class="tag">Branding</p>
+                <h3>Identidade visual para estudio criativo</h3>
+                <p>Sistema grafico modular aplicado em social, impresso e apresentacoes comerciais.</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="ux">
+              <div class="thumb thumb-4">
+                <span>Vox Health</span>
+              </div>
+              <div class="project-info">
+                <p class="tag">UX/UI</p>
+                <h3>Dashboard de dados clinicos em tempo real</h3>
+                <p>Redesenho da interface com foco em legibilidade, alertas e tomada de decisao rapida.</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="commerce branding">
+              <div class="thumb thumb-5">
+                <span>Mono Atelier</span>
+              </div>
+              <div class="project-info">
+                <p class="tag">Commerce + Branding</p>
+                <h3>Capsula digital para moda independente</h3>
+                <p>Direcao de arte, storytelling de produto e lancamento de colecao com foco em desejo.</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="ux commerce">
+              <div class="thumb thumb-6">
+                <span>Logik</span>
+              </div>
+              <div class="project-info">
+                <p class="tag">UX + Commerce</p>
+                <h3>SaaS de vendas com landing de conversao</h3>
+                <p>Reposicionamento completo com jornada orientada a leads qualificados.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="processo" class="section process-section">
+        <div class="container process-grid reveal-stagger">
+          <article>
+            <p class="step">01</p>
+            <h3>Diagnostico estrategico</h3>
+            <p>Analise de contexto, audiencia e posicionamento para definir oportunidades reais.</p>
+          </article>
+          <article>
+            <p class="step">02</p>
+            <h3>Direcao criativa</h3>
+            <p>Conceito visual, narrativa e prototipos para validar a experiencia com velocidade.</p>
+          </article>
+          <article>
+            <p class="step">03</p>
+            <h3>Entrega e evolucao</h3>
+            <p>Implementacao, mensuracao de resultado e melhorias continuas por iteracoes curtas.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="resultados" class="section results-section">
+        <div class="container stats-wrap reveal">
+          <article class="stat">
+            <p class="value" data-count="76">0</p>
+            <p>Projetos entregues</p>
+          </article>
+          <article class="stat">
+            <p class="value" data-count="18">0</p>
+            <p>Paises alcancados</p>
+          </article>
+          <article class="stat">
+            <p class="value" data-count="41">0</p>
+            <p>Media de uplift (%)</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contato" class="section cta-section">
+        <div class="container cta reveal">
+          <h2>Vamos construir algo memoravel?</h2>
+          <p>
+            Disponivel para projetos de branding, UX/UI, websites e lancamentos digitais.
+          </p>
+          <a class="btn btn-solid" href="mailto:contato@mirakinetic.com">contato@mirakinetic.com</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>Mira Kinetic Studio</p>
+        <p>Portfolio ficticio para apresentacao</p>
+        <p>2026</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
