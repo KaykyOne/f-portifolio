@@ -68,19 +68,31 @@ const sections = [sobre, experiencia, projetos];
 
 let anterior = null;
 
+const setActiveNav = (sectionId) => {
+  if (!sectionId) return;
+
+  if (anterior && anterior.id !== sectionId) {
+    const navAnterior = document.getElementById(`nav${anterior.id}`);
+    if (navAnterior) {
+      navAnterior.classList.add("normal");
+      navAnterior.classList.remove("selecionado");
+    }
+  }
+
+  const currentSection = document.getElementById(sectionId);
+  const navAtual = document.getElementById(`nav${sectionId}`);
+  if (navAtual) {
+    navAtual.classList.add("selecionado");
+    navAtual.classList.remove("normal");
+  }
+
+  if (currentSection) anterior = currentSection;
+};
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      if (anterior && anterior !== entry.target) {
-        const navAnterior = document.getElementById(`nav${anterior.id}`);
-      
-        navAnterior.classList.add("normal");
-        navAnterior.classList.remove("selecionado");
-      }
-      anterior = entry.target;
-      const nav = document.getElementById(`nav${entry.target.id}`);
-      nav.classList.add("selecionado");
-      nav.classList.remove("normal");
+      setActiveNav(entry.target.id);
     }
   });
 }, {
@@ -88,5 +100,17 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 sections.forEach(section => observer.observe(section));
+
+document.querySelectorAll("#sidebar a[href^='#']").forEach((link) => {
+  link.addEventListener("click", () => {
+    const targetId = link.getAttribute("href")?.replace("#", "");
+    setActiveNav(targetId);
+  });
+});
+
+sections.forEach((section) => {
+  if (!section) return;
+  section.addEventListener("click", () => setActiveNav(section.id));
+});
 
 
