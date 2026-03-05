@@ -1,0 +1,269 @@
+/* ProjectDetail.css */
+
+.project-detail-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgb(31, 41, 55) 0%, rgb(17, 24, 39) 100%);
+  color: white;
+  padding: 40px 20px;
+}
+
+.project-detail-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  animation: fadeIn 0.8s ease-in;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: rgb(96, 165, 250);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.back-link:hover {
+  color: rgb(147, 197, 253);
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.project-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(209, 213, 219, 0.2);
+}
+
+.project-owner-info {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.owner-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid rgb(96, 165, 250);
+  object-fit: cover;
+}
+
+.project-detail-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.owner-link {
+  color: rgb(209, 213, 219);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.owner-link:hover {
+  color: rgb(96, 165, 250);
+}
+
+.view-github-btn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.view-github-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+.project-description {
+  font-size: 1.1rem;
+  color: rgb(209, 213, 219);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.project-stats-detail {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+  padding: 30px;
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.stat-icon {
+  font-size: 2rem;
+}
+
+.stat-label {
+  color: rgb(156, 163, 175);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(96, 165, 250);
+  margin: 5px 0 0 0;
+}
+
+.project-language {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: rgba(139, 92, 246, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid rgb(139, 92, 246);
+}
+
+.language-label {
+  font-weight: 600;
+  color: rgb(209, 213, 219);
+}
+
+.language-badge {
+  padding: 6px 12px;
+  background-color: rgb(139, 92, 246);
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.project-topics {
+  margin-bottom: 30px;
+}
+
+.topics-label {
+  display: block;
+  font-weight: 600;
+  color: rgb(209, 213, 219);
+  margin-bottom: 15px;
+}
+
+.topics-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.topic-tag {
+  padding: 8px 16px;
+  background-color: rgba(59, 130, 246, 0.2);
+  border: 1px solid rgb(96, 165, 250);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: rgb(147, 197, 253);
+  transition: all 0.3s ease;
+}
+
+.topic-tag:hover {
+  background-color: rgb(96, 165, 250);
+  color: white;
+}
+
+.project-link {
+  margin-bottom: 40px;
+}
+
+.homepage-link {
+  display: inline-block;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.homepage-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4);
+}
+
+.project-dates {
+  padding-top: 30px;
+  border-top: 1px solid rgba(209, 213, 219, 0.2);
+  color: rgb(156, 163, 175);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.project-dates p {
+  margin: 10px 0;
+}
+
+.date-label {
+  font-weight: 600;
+  color: rgb(209, 213, 219);
+}
+
+.loading-text,
+.error-text {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.1rem;
+}
+
+.error-text {
+  color: rgb(239, 68, 68);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-detail-header {
+    flex-direction: column;
+  }
+
+  .project-detail-title {
+    font-size: 1.8rem;
+  }
+
+  .view-github-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .project-stats-detail {
+    grid-template-columns: 1fr;
+  }
+}

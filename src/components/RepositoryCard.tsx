@@ -1,17 +1,11 @@
-import React from 'react';
+import React from "react";
 
 interface Repository {
   name: string;
-  full_name: string;
   html_url: string;
   description: string | null;
   stargazers_count: number;
-  forks_count: number;
-  language: string | null;
-  owner: {
-    avatar_url: string;
-    login: string;
-  };
+  created_at: string;
 }
 
 interface RepositoryCardProps {
@@ -19,44 +13,34 @@ interface RepositoryCardProps {
 }
 
 export default function RepositoryCard({ repo }: RepositoryCardProps) {
+  const createdDate = new Date(repo.created_at).toLocaleDateString("pt-BR");
+
   return (
-    <div className="repository-card">
-      <div className="repo-header">
-        <img 
-          src={repo.owner.avatar_url} 
-          alt={repo.owner.login}
-          className="avatar"
-        />
-        <div className="repo-title-section">
-          <h3 className="repo-name">{repo.name}</h3>
-          <p className="repo-full-name">{repo.full_name}</p>
+    <a
+      href={repo.html_url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block group px-4 py-3 rounded-lg border border-neutral-700 hover:border-amber-500 hover:bg-neutral-800/50 transition-all duration-200"
+    >
+      <div className="flex items-start justify-between gap-4">
+        <div className="flex-1 min-w-0">
+          <h3 className="text-base font-semibold text-white group-hover:text-amber-400 transition-colors truncate">
+            {repo.name}
+          </h3>
+          {repo.description && (
+            <p className="text-sm text-neutral-400 mt-1 line-clamp-2 group-hover:text-neutral-300 transition-colors">
+              {repo.description}
+            </p>
+          )}
         </div>
-      </div>
-
-      {repo.description && (
-        <p className="repo-description">{repo.description}</p>
-      )}
-
-      <div className="repo-stats">
-        <div className="stat">
-          <span className="stat-label">⭐ Stars</span>
-          <span className="stat-value">{repo.stargazers_count}</span>
-        </div>
-        <div className="stat">
-          <span className="stat-label">🔀 Forks</span>
-          <span className="stat-value">{repo.forks_count}</span>
-        </div>
-        {repo.language && (
-          <div className="stat">
-            <span className="stat-label">📝 Language</span>
-            <span className="stat-value">{repo.language}</span>
+        {repo.stargazers_count > 0 && (
+          <div className="flex items-center gap-1 text-xs text-neutral-400 whitespace-nowrap">
+            <span>★</span>
+            <span>{repo.stargazers_count}</span>
           </div>
         )}
       </div>
-
-      <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="repo-link">
-        Ver no GitHub →
-      </a>
-    </div>
+      <p className="text-xs text-neutral-500 mt-2">{createdDate}</p>
+    </a>
   );
 }

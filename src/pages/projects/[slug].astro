@@ -1,0 +1,36 @@
+---
+import "../../global.css";
+import ProjectDetail from "../../components/ProjectDetail";
+
+interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.params as Props;
+const ownerName = "your-username"; // Altere para seu username do GitHub
+
+// Você pode gerar páginas estáticas para projetos específicos
+export async function getStaticPaths() {
+  // Este exemplo gera páginas sob demanda
+  // Você pode listar repositórios específicos aqui se quiser
+  return [];
+}
+---
+
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{slug} - Kayky Zioti</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body class="bg-neutral-800">
+    <ProjectDetail client:load projectName={slug} ownerName={ownerName} />
+  </body>
+</html>

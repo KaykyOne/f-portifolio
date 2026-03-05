@@ -6,3 +6,35 @@
   left: 0;
   transform: translate(-50%, -50%);
 }
+
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scroll-behavior: smooth;
+  scroll-margin-top: 100px;
+}
+
+/* Estilo para links ativos na navegação */
+a.active {
+  @apply !text-white
+}
+
+a.active div {
+  @apply !bg-white !w-[80px]
+}
+
+.normal{
+  @apply w-full flex gap-2 items-center text-neutral-400 hover:text-white transition-all duration-300 cursor-pointer
+}
+
+.normal div{
+  @apply w-5 h-[2px] bg-white rounded-full transition-all duration-300
+}
+
+.selecionado{
+  @apply w-full flex gap-2 items-center text-white transition-all duration-300 cursor-pointer
+}
+
+.selecionado div{
+  @apply w-[80px] h-[2px] bg-white rounded-full transition-all duration-300
+}

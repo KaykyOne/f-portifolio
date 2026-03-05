@@ -1,94 +1,53 @@
-.repository-card {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+.repo-card {
+  display: block;
   padding: 16px;
-  background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #111;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  background: #fff;
 }
 
-.repository-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  border-color: #d0d0d0;
-}
-
-.repo-header {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 12px;
-  align-items: flex-start;
-}
-
-.avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.repo-title-section {
-  flex: 1;
+.repo-card:hover {
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
 .repo-name {
-  margin: 0;
-  font-size: 18px;
+  margin: 0 0 8px 0;
+  font-size: 16px;
   font-weight: 600;
-  color: #0366d6;
-}
-
-.repo-full-name {
-  margin: 4px 0 0 0;
-  font-size: 13px;
-  color: #666;
-  font-weight: 400;
 }
 
 .repo-description {
-  font-size: 14px;
-  color: #555;
-  margin: 10px 0;
-  line-height: 1.5;
+  font-size: 13px;
+  color: #666;
+  margin: 0 0 12px 0;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: all 0.2s ease;
 }
 
-.repo-stats {
+.repo-description.expanded {
+  white-space: normal;
+}
+
+.repo-meta {
   display: flex;
   gap: 16px;
-  margin: 16px 0;
-  flex-wrap: wrap;
+  font-size: 12px;
+  color: #555;
 }
 
-.stat {
+.meta-item {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 4px;
 }
 
-.stat-label {
-  font-size: 12px;
-  color: #666;
-  font-weight: 500;
-}
-
-.stat-value {
+.material-symbols-outlined {
   font-size: 16px;
-  font-weight: 600;
-  color: #24292e;
-}
-
-.repo-link {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 8px 16px;
-  background-color: #0366d6;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-
-.repo-link:hover {
-  background-color: #0256c7;
 }
