@@ -1,0 +1,281 @@
+---
+import "../../global.css";
+---
+
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>NovusCFC - Case Study</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body class="bg-neutral-800 text-white">
+    <div class="max-w-4xl mx-auto px-6 py-12 md:py-20">
+      <!-- Header -->
+      <div class="mb-12">
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors mb-8"
+        >
+          <span class="material-symbols-outlined text-sm">arrow_back</span>
+          Voltar
+        </a>
+
+        <div class="mb-8">
+          <div class="bg-neutral-700/40 rounded-lg p-6 mb-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">NovusCFC</h1>
+            <p class="text-neutral-300 text-lg">
+              Sistema de Gestão Completo para Autoescolas
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-neutral-700/30 rounded-lg p-4">
+              <p class="text-neutral-500 text-xs uppercase">Status</p>
+              <p class="text-emerald-400 font-semibold">Em Produção</p>
+            </div>
+            <div class="bg-neutral-700/30 rounded-lg p-4">
+              <p class="text-neutral-500 text-xs uppercase">Timeline</p>
+              <p class="font-semibold">2024 - Presente</p>
+            </div>
+            <div class="bg-neutral-700/30 rounded-lg p-4">
+              <p class="text-neutral-500 text-xs uppercase">Tipo</p>
+              <p class="font-semibold">SaaS</p>
+            </div>
+            <div class="bg-neutral-700/30 rounded-lg p-4">
+              <p class="text-neutral-500 text-xs uppercase">Meu Papel</p>
+              <p class="font-semibold">Full-Stack Lead</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- O Desafio -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6"><span class="material-symbols-outlined">target</span> O Desafio</h2>
+        <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6 space-y-4">
+          <p class="text-neutral-300">
+            Autoescolas enfrentavam dificuldades em gerenciar alunos, aulas, 
+            documentos e pagamentos de forma integrada. O cliente precisava de um 
+            sistema robusto que centralizasse todas as operações.
+          </p>
+          <ul class="space-y-2 text-neutral-300">
+            <li class="flex gap-3">
+              <span class="text-orange-500">•</span>
+              <span>Falta de integração entre módulos administrativos</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-orange-500">•</span>
+              <span>Processo manual de agendamento e controle de aulas</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-orange-500">•</span>
+              <span>Documentação desorganizada e difícil acesso</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-orange-500">•</span>
+              <span>Necessidade de relatórios em tempo real</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Solução -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6"><span class="material-symbols-outlined">lightbulb</span> A Solução</h2>
+        <div class="space-y-6">
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-bold text-lg mb-4">Arquitetura da Solução</h3>
+            <div class="bg-neutral-900 rounded-lg p-4 text-sm space-y-2">
+              <p>
+                <strong>Frontend:</strong> React + TypeScript com Next.js para SSR,
+                componentes reutilizáveis e estado global com Context API
+              </p>
+              <p>
+                <strong>Backend:</strong> Express.js + TypeScript com arquitetura 
+                em camadas (Controllers, Services, Repositories)
+              </p>
+              <p>
+                <strong>Database:</strong> PostgreSQL com migrations gerenciadas 
+                automaticamente, índices otimizados para queries frequentes
+              </p>
+              <p>
+                <strong>DevOps:</strong> Docker para containerização, CI/CD com 
+                testes automatizados em cada deploy
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-bold text-lg mb-4">Módulos Implementados</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <p class="font-semibold text-emerald-400 mb-2">Gestão de Alunos</p>
+                <p class="text-neutral-300 text-sm">
+                  Dashboard com listagem, busca avançada, histórico de progresso
+                </p>
+              </div>
+              <div>
+                <p class="font-semibold text-emerald-400 mb-2">Agendamento</p>
+                <p class="text-neutral-300 text-sm">
+                  Calendário interativo com conflito de horários automático
+                </p>
+              </div>
+              <div>
+                <p class="font-semibold text-emerald-400 mb-2">Financeiro</p>
+                <p class="text-neutral-300 text-sm">
+                  Faturamento, controle de recebíveis e relatórios fiscais
+                </p>
+              </div>
+              <div>
+                <p class="font-semibold text-emerald-400 mb-2">Relatórios</p>
+                <p class="text-neutral-300 text-sm">
+                  Dashboards em tempo real com gráficos e exportação em PDF
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tecnologias -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6"><span class="material-symbols-outlined">build</span> Stack Técnico</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <div class="bg-neutral-700/30 rounded-lg p-4">
+            <p class="text-neutral-500 text-xs uppercase mb-2">Frontend</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-neutral-700 px-2 py-1 rounded text-xs">React</span>
+              <span class="bg-neutral-700 px-2 py-1 rounded text-xs">Next.js</span>
+              <span class="bg-neutral-700 px-2 py-1 rounded text-xs">TypeScript</span>
+              <span class="bg-neutral-700 px-2 py-1 rounded text-xs">TailwindCSS</span>
+            </div>
+          </div>
+          <div class="bg-neutral-700/30 rounded-lg p-4">
+            <p class="text-neutral-500 text-xs uppercase mb-2">Backend</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-neutral-700 px-2 py-1 rounded text-xs">Node.js</span>
+              <span class="bg-neutral-700 px-2 py-1 rounded text-xs">Express.js</span>
+              <span class="bg-neutral-700 px-2 py-1 rounded text-xs">TypeScript</span>
+            </div>
+          </div>
+          <div class="bg-neutral-700/30 rounded-lg p-4">
+            <p class="text-neutral-500 text-xs uppercase mb-2">Database</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-neutral-700 px-2 py-1 rounded text-xs">PostgreSQL</span>
+              <span class="bg-neutral-700 px-2 py-1 rounded text-xs">Prisma ORM</span>
+            </div>
+          </div>
+          <div class="bg-neutral-700/30 rounded-lg p-4">
+            <p class="text-neutral-500 text-xs uppercase mb-2">Infraestrutura</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-neutral-700 px-2 py-1 rounded text-xs">Docker</span>
+              <span class="bg-neutral-700 px-2 py-1 rounded text-xs">GitHub Actions</span>
+            </div>
+          </div>
+          <div class="bg-neutral-700/30 rounded-lg p-4">
+            <p class="text-neutral-500 text-xs uppercase mb-2">Quality</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-neutral-700 px-2 py-1 rounded text-xs">Jest</span>
+              <span class="bg-neutral-700 px-2 py-1 rounded text-xs">ESLint</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resultados -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">📈 Resultados & Impacto</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-emerald-700/20 border border-emerald-700/40 rounded-lg p-6">
+            <p class="text-emerald-400 text-3xl font-bold">80%</p>
+            <p class="text-neutral-300 text-sm mt-2">Redução de tempo administrativo</p>
+          </div>
+          <div class="bg-emerald-700/20 border border-emerald-700/40 rounded-lg p-6">
+            <p class="text-emerald-400 text-3xl font-bold">100%</p>
+            <p class="text-neutral-300 text-sm mt-2">Uptime em produção</p>
+          </div>
+          <div class="bg-emerald-700/20 border border-emerald-700/40 rounded-lg p-6">
+            <p class="text-emerald-400 text-3xl font-bold">3</p>
+            <p class="text-neutral-300 text-sm mt-2">Autoescolas usando atualmente</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Decisões Técnicas -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">🧠 Decisões Técnicas</h2>
+        <div class="space-y-4">
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-semibold mb-2 flex items-center gap-2">
+              <span class="text-blue-400">→</span> Por que TypeScript?
+            </h3>
+            <p class="text-neutral-300 text-sm">
+              Type safety em todo o stack, redução de bugs em produção, 
+              melhor autocompletar e refatorações seguras.
+            </p>
+          </div>
+
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-semibold mb-2 flex items-center gap-2">
+              <span class="text-blue-400">→</span> Por que PostgreSQL?
+            </h3>
+            <p class="text-neutral-300 text-sm">
+              ACID compliance, relacionamentos complexos (essential para autoescola),
+              indices customizados, tudo open-source.
+            </p>
+          </div>
+
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-semibold mb-2 flex items-center gap-2">
+              <span class="text-blue-400">→</span> Por que Next.js ao invés de React puro?
+            </h3>
+            <p class="text-neutral-300 text-sm">
+              SSR para melhor SEO, API routes eliminam necessidade de backend separado,
+              otimizações automáticas, roteamento file-based.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- O que aprendi -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">📚 Aprendizados</h2>
+        <ul class="space-y-3 text-neutral-300">
+          <li class="flex gap-3">
+            <span class="text-blue-400 font-bold">✓</span>
+            <span>Arquitetura escalável: como estruturar um projeto fullstack em camadas</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-blue-400 font-bold">✓</span>
+            <span>Performance: otimização de queries, índices, caching estratégico</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-blue-400 font-bold">✓</span>
+            <span>DevOps: containerização, automatização de deploys, CI/CD</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-blue-400 font-bold">✓</span>
+            <span>Testes: importância de cobertura e testes em produção</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-blue-400 font-bold">✓</span>
+            <span>Comunicação: entender necessidades do cliente e validar soluções</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Footer -->
+      <div class="border-t border-neutral-700 pt-8 mt-12">
+        <p class="text-neutral-400 text-sm">
+          Interessado em conhecer mais sobre este projeto ou discutir soluções similares?
+          <a href="/" class="text-white hover:underline ml-1">Entre em contato</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

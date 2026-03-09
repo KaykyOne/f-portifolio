@@ -1,0 +1,299 @@
+---
+import "../global.css";
+---
+
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Filosofia de Desenvolvimento</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body class="bg-neutral-800 text-white">
+    <div class="max-w-4xl mx-auto px-6 py-12 md:py-20">
+      <!-- Header -->
+      <div class="mb-16">
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors mb-8"
+        >
+          <span class="material-symbols-outlined text-sm">arrow_back</span>
+          Voltar
+        </a>
+
+        <div>
+          <h1 class="text-5xl md:text-6xl font-bold mb-4">
+            Filosofia de Desenvolvimento
+          </h1>
+          <p class="text-xl text-neutral-300 max-w-2xl">
+            Como penso sobre arquitetura, código e produtos que escalo
+          </p>
+        </div>
+      </div>
+
+      <!-- Core Principles -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-8">🧭 Princípios Fundamentais</h2>
+        
+        <div class="space-y-6">
+          <div class="bg-neutral-700/20 border-l-4 border-emerald-500 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-emerald-400 mb-3">Ship First, Optimize Later</h3>
+            <p class="text-neutral-300 mb-3">
+              Começar é mais importante que perfect. Mais rápido você coloca 
+              em produção, mais rápido aprende com usuários reais.
+            </p>
+            <p class="text-neutral-400 text-sm italic">
+              "Premature optimization is the root of all evil" — Donald Knuth
+            </p>
+          </div>
+
+          <div class="bg-neutral-700/20 border-l-4 border-blue-500 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-blue-400 mb-3">DRY + KISS</h3>
+            <p class="text-neutral-300 mb-3">
+              <strong>D</strong>on't <strong>R</strong>epeat <strong>Y</strong>ourself 
+              + <strong>K</strong>eep <strong>I</strong>t <strong>S</strong>tupidly 
+              <strong>S</strong>imple. Abstrair quando faz sentido, não por 
+              abstrair.
+            </p>
+            <p class="text-neutral-400 text-sm">
+              Código simples é mais fácil de debugar, estender e manter.
+            </p>
+          </div>
+
+          <div class="bg-neutral-700/20 border-l-4 border-purple-500 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-purple-400 mb-3">Observabilidade > Perfeição</h3>
+            <p class="text-neutral-300 mb-3">
+              Não dá pra prever tudo. Então priorizo: logging, monitoring, 
+              alertas. Sistema que você consegue debugar é melhor que sistema 
+              bonito que você não entende.
+            </p>
+            <p class="text-neutral-400 text-sm">
+              Dica: estruturado logging + Sentry/Datadog resolver 95% dos problemas.
+            </p>
+          </div>
+
+          <div class="bg-neutral-700/20 border-l-4 border-orange-500 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-orange-400 mb-3">Performance é Visibilidade</h3>
+            <p class="text-neutral-300 mb-3">
+              Sistema lento = usuários indo embora = você não sabendo porquê.
+              Performance não é luxo, é requisito.
+            </p>
+            <p class="text-neutral-400 text-sm">
+              Métrica importante: Core Web Vitals, time to interactive, 
+              database query time.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Architecture Thinking -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-8">🏗️ Pensamento Arquitetural</h2>
+
+        <div class="space-y-6">
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-bold text-lg mb-4">1. Layers & Separation of Concerns</h3>
+            <div class="bg-neutral-900 rounded-lg p-4 font-mono text-xs text-neutral-300 mb-3 overflow-x-auto">
+              <div>Layer 1: Controllers (HTTP)</div>
+              <div class="mt-1">Layer 2: Services (Business Logic)</div>
+              <div class="mt-1">Layer 3: Repositories (Data Access)</div>
+              <div class="mt-1">Layer 4: Database (Persistence)</div>
+            </div>
+            <p class="text-neutral-300 text-sm">
+              Cada camada tem responsabilidade clara. Muda frontend? 
+              Backend continua estável. Muda database? Services não sabem.
+            </p>
+          </div>
+
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-bold text-lg mb-4">2. Type Safety First</h3>
+            <p class="text-neutral-300 text-sm mb-3">
+              TypeScript não é opcional. Erros de tipo = bugs previsíveis. 
+              Rodando TypeScript strict mode significa confiança no deploy.
+            </p>
+            <p class="text-neutral-400 text-xs italic">
+              Benefício: refatoração segura. Muda interface? Compilador 
+              avisa em toda parte que quebrou.
+            </p>
+          </div>
+
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-bold text-lg mb-4">3. Premature Optimization = Technical Debt</h3>
+            <p class="text-neutral-300 text-sm mb-3">
+              Mas negligenciá-la é pior. Equilíbrio: Code review, profile 
+              em produção, otimiza onde dói.
+            </p>
+            <div class="bg-neutral-900 rounded-lg p-3 text-xs text-neutral-400 mt-3">
+              📊 "Measure, don't guess" — Meu mantra é: dados > opinião
+            </div>
+          </div>
+
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-bold text-lg mb-4">4. Testing é Investimento</h3>
+            <p class="text-neutral-300 text-sm">
+              <strong class="text-emerald-400">Unit Tests:</strong> 
+              Lógica complexa, utils, helpers
+            </p>
+            <p class="text-neutral-300 text-sm">
+              <strong class="text-emerald-400">Integration Tests:</strong>
+              APIs, fluxos críticos, database
+            </p>
+            <p class="text-neutral-300 text-sm">
+              <strong class="text-emerald-400">E2E Tests:</strong> 
+              User journeys críticas (checkout, login)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Development Practices -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-8">👨‍💻 Práticas de Desenvolvimento</h2>
+
+        <div class="space-y-4">
+          <div class="flex gap-4 items-start">
+            <span class="text-2xl">🔄</span>
+            <div>
+              <p class="font-bold">Code Review</p>
+              <p class="text-neutral-300 text-sm">
+                PR antes de merge, sempre. Mesmo trabalhando sozinho, revisar 
+                código mais tarde com fresh eyes.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="text-2xl">📝</span>
+            <div>
+              <p class="font-bold">Documentação</p>
+              <p class="text-neutral-300 text-sm">
+                Não essays. Documento decisões, não óbvios. Exemplo: 
+                "Por usamos X ao invés de Y" é importante, "Esta função 
+                soma numeros" é redundante.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="text-2xl">🔍</span>
+            <div>
+              <p class="font-bold">Debugging Sistemático</p>
+              <p class="text-neutral-300 text-sm">
+                Logs estruturados, stack traces detalhados. Se algo quebra, 
+                consigo reproduzir e entender exatamente o quê.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="text-2xl">🚀</span>
+            <div>
+              <p class="font-bold">CI/CD Pipeline</p>
+              <p class="text-neutral-300 text-sm">
+                Testes rodam em cada PR. Deploy em produção é um click, 
+                não saga de 3 horas. Rollback disponível.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="text-2xl">📊</span>
+            <div>
+              <p class="font-bold">Observabilidade</p>
+              <p class="text-neutral-300 text-sm">
+                Logs, metrics, traces. Sentry para erros. DataDog/New Relic 
+                para performance. Posso responder: "Por que está lento?" 
+                com dados, não adivinhação.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Communication & Collaboration -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-8">💬 Comunicação & Colaboração</h2>
+
+        <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-8">
+          <div class="space-y-4">
+            <div>
+              <p class="font-semibold text-emerald-400 mb-2">Clarezade Requisitos</p>
+              <p class="text-neutral-300 text-sm">
+                Perguntar antes de assumir. "Qual seu sucesso?" é pergunta 
+                que faço sempre. Objetivos claros = solução melhor.
+              </p>
+            </div>
+
+            <div>
+              <p class="font-semibold text-emerald-400 mb-2">Status & Transparency</p>
+              <p class="text-neutral-300 text-sm">
+                Updates regulares, nem bloqueadores escondidos. Se algo tá 
+                atrasado, você sabe e entende porquê.
+              </p>
+            </div>
+
+            <div>
+              <p class="font-semibold text-emerald-400 mb-2">Explicar Decisões Técnicas</p>
+              <p class="text-neutral-300 text-sm">
+                "Usamos X porque Y" não é luxo, é obrigação. Você precisar 
+                entender trade-offs, custos, próximos passos.
+              </p>
+            </div>
+
+            <div>
+              <p class="font-semibold text-emerald-400 mb-2">Feedback Loop</p>
+              <p class="text-neutral-300 text-sm">
+                Product não é build-and-forget. Depois do deploy, junto 
+                métricas, feedback, propõe iterações.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What I Won't Do -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-8">⛔ O Que NÃO Faço</h2>
+
+        <div class="space-y-3">
+          <div class="flex gap-3 items-start">
+            <span class="text-red-400 font-bold">✕</span>
+            <p class="text-neutral-300">Código sem testes em produção</p>
+          </div>
+          <div class="flex gap-3 items-start">
+            <span class="text-red-400 font-bold">✕</span>
+            <p class="text-neutral-300">Débito técnico ignorado (cresce exponencialmente)</p>
+          </div>
+          <div class="flex gap-3 items-start">
+            <span class="text-red-400 font-bold">✕</span>
+            <p class="text-neutral-300">Arquitetura sem documentação</p>
+          </div>
+          <div class="flex gap-3 items-start">
+            <span class="text-red-400 font-bold">✕</span>
+            <p class="text-neutral-300">Deploy sem observabilidade</p>
+          </div>
+          <div class="flex gap-3 items-start">
+            <span class="text-red-400 font-bold">✕</span>
+            <p class="text-neutral-300">Assumir requisitos sem validar</p>
+          </div>
+          <div class="flex gap-3 items-start">
+            <span class="text-red-400 font-bold">✕</span>
+            <p class="text-neutral-300">Sumir depois de entregar (suporte é parte do job)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <div class="border-t border-neutral-700 pt-8 text-center">
+        <p class="text-neutral-400 text-sm">
+          Essa é minha abordagem. Se combina com como você pensa, 
+          <a href="/why-hire-me" class="text-emerald-400 hover:underline">vamos trabalhar juntos</a>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

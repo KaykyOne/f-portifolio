@@ -5,9 +5,18 @@ type SiteCardProps = {
   description: string;
   url: string;
   techs: string[];
+  challenge?: string;
+  result?: string;
 };
 
-export default function SiteCard({ title, description, url, techs }: SiteCardProps) {
+export default function SiteCard({ 
+  title, 
+  description, 
+  url, 
+  techs,
+  challenge,
+  result 
+}: SiteCardProps) {
   return (
     <article className="group flex h-full flex-col justify-between rounded-2xl border border-neutral-700 bg-neutral-900/70 p-5 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-neutral-500 hover:bg-neutral-900">
       <div className="flex items-start justify-between gap-4">
@@ -23,6 +32,20 @@ export default function SiteCard({ title, description, url, techs }: SiteCardPro
       </div>
 
       <p className="mt-4 text-sm font-light leading-relaxed text-neutral-300">{description}</p>
+
+      {challenge && (
+        <div className="mt-3 border-l-2 border-neutral-600 pl-3">
+          <p className="text-[10px] uppercase tracking-widest text-neutral-500">Desafio</p>
+          <p className="text-xs text-neutral-300 mt-1">{challenge}</p>
+        </div>
+      )}
+
+      {result && (
+        <div className="mt-2 border-l-2 border-emerald-700 pl-3">
+          <p className="text-[10px] uppercase tracking-widest text-emerald-600">Resultado</p>
+          <p className="text-xs text-emerald-300 mt-1">{result}</p>
+        </div>
+      )}
 
       <div className="mt-5 flex flex-wrap gap-2" aria-label="Tecnologias utilizadas">
         {techs.map((tech) => (

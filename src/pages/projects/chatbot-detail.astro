@@ -1,0 +1,286 @@
+---
+import "../../global.css";
+---
+
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Chatbot WhatsApp - Case Study</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body class="bg-neutral-800 text-white">
+    <div class="max-w-4xl mx-auto px-6 py-12 md:py-20">
+      <!-- Header -->
+      <div class="mb-12">
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors mb-8"
+        >
+          <span class="material-symbols-outlined text-sm">arrow_back</span>
+          Voltar
+        </a>
+
+        <div class="mb-8">
+          <div class="bg-neutral-700/40 rounded-lg p-6 mb-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+              Chatbot WhatsApp
+            </h1>
+            <p class="text-neutral-300 text-lg">
+              Sistema Inteligente de Atendimento ao Cliente com IA
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-neutral-700/30 rounded-lg p-4">
+              <p class="text-neutral-500 text-xs uppercase">Status</p>
+              <p class="text-emerald-400 font-semibold">Em Produção</p>
+            </div>
+            <div class="bg-neutral-700/30 rounded-lg p-4">
+              <p class="text-neutral-500 text-xs uppercase">Timeline</p>
+              <p class="font-semibold">2024 - Presente</p>
+            </div>
+            <div class="bg-neutral-700/30 rounded-lg p-4">
+              <p class="text-neutral-500 text-xs uppercase">Clientes</p>
+              <p class="font-semibold">2+ empresas</p>
+            </div>
+            <div class="bg-neutral-700/30 rounded-lg p-4">
+              <p class="text-neutral-500 text-xs uppercase">Meu Papel</p>
+              <p class="font-semibold">Full-Stack Dev</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- O Problema -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">🤔 O Problema</h2>
+        <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6 space-y-4">
+          <p class="text-neutral-300">
+            Empresas recebem centenas de mensagens diárias no WhatsApp, mas 
+            atender manualmente consome muito tempo e recursos. O desafio era 
+            automatizar respostas mantendo a qualidade do atendimento.
+          </p>
+          <ul class="space-y-2 text-neutral-300">
+            <li class="flex gap-3">
+              <span class="text-orange-500">•</span>
+              <span>Respostas lentas causam perda de clientes (drop de 40%)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-orange-500">•</span>
+              <span>Equipe gasta 6+ horas por dia respondendo dúvidas repetitivas</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-orange-500">•</span>
+              <span>Leads interessados saem sem acompanhamento</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-orange-500">•</span>
+              <span>Sem dados sobre quais dúvidas são mais frequentes</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Solução -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">✨ A Solução</h2>
+        <div class="space-y-6">
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-bold text-lg mb-4">Como Funciona</h3>
+            <ol class="space-y-3 text-neutral-300 list-decimal list-inside">
+              <li>Mensagem chega no WhatsApp</li>
+              <li>Webhook dispara para nosso backend</li>
+              <li>OpenAI API processa e entende a intenção</li>
+              <li>Sistema responde automaticamente ou escala para atendente</li>
+              <li>Lead é classificado e adicionado ao CRM</li>
+              <li>Dados alimentam dashboard de análise</li>
+            </ol>
+          </div>
+
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-bold text-lg mb-4">Arquitetura Técnica</h3>
+            <div class="bg-neutral-900 rounded-lg p-4 text-sm space-y-2 font-mono">
+              <p><span class="text-blue-400">WhatsApp API</span> → Webhook → <span class="text-green-400">Express.js</span></p>
+              <p><span class="text-green-400">Express.js</span> → <span class="text-purple-400">OpenAI</span> (entender intenção)</p>
+              <p><span class="text-green-400">Express.js</span> → <span class="text-orange-400">Supabase</span> (armazenar conversa)</p>
+              <p><span class="text-green-400">Express.js</span> → <span class="text-red-400">CRM Integration</span> (classificar lead)</p>
+            </div>
+          </div>
+
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-bold text-lg mb-4">Capacidades Principais</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <p class="font-semibold text-emerald-400 mb-2">🤖 NLU - Entender Intenção</p>
+                <p class="text-neutral-300 text-sm">
+                  "Qual é o preço?" → Intenção: PRICING | 
+                  "Como faço brinde?" → Intenção: HELP
+                </p>
+              </div>
+              <div>
+                <p class="font-semibold text-emerald-400 mb-2">📊 Classificação de Leads</p>
+                <p class="text-neutral-300 text-sm">
+                  HOT: Pronto para comprar | WARM: Interessado | 
+                  COLD: Apenas explorador
+                </p>
+              </div>
+              <div>
+                <p class="font-semibold text-emerald-400 mb-2">⚡ Escalação Inteligente</p>
+                <p class="text-neutral-300 text-sm">
+                  Se o bot não tem resposta, escalona para atendente 
+                  mantendo histórico
+                </p>
+              </div>
+              <div>
+                <p class="font-semibold text-emerald-400 mb-2">📈 Analytics Real-Time</p>
+                <p class="text-neutral-300 text-sm">
+                  Dashboard mostra: mensagens/dia, taxa de conversão, 
+                  tópicos mais comuns
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stack Técnico -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6"><span class="material-symbols-outlined">build</span> Stack Técnico</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-neutral-700/30 rounded-lg p-4">
+            <p class="text-neutral-500 text-xs uppercase mb-3">Backend</p>
+            <div class="space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="text-green-400">→</span>
+                <span class="text-sm">Express.js</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-green-400">→</span>
+                <span class="text-sm">TypeScript</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-green-400">→</span>
+                <span class="text-sm">Node.js</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-neutral-700/30 rounded-lg p-4">
+            <p class="text-neutral-500 text-xs uppercase mb-3">IA & Integrações</p>
+            <div class="space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="text-purple-400">→</span>
+                <span class="text-sm">OpenAI GPT-4</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-purple-400">→</span>
+                <span class="text-sm">WhatsApp API</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-purple-400">→</span>
+                <span class="text-sm">Webhooks</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-neutral-700/30 rounded-lg p-4">
+            <p class="text-neutral-500 text-xs uppercase mb-3">Data & Storage</p>
+            <div class="space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="text-orange-400">→</span>
+                <span class="text-sm">Supabase</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-orange-400">→</span>
+                <span class="text-sm">PostgreSQL</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-orange-400">→</span>
+                <span class="text-sm">Redis Cache</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resultados -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">📊 Resultados em Produção</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div class="bg-emerald-700/20 border border-emerald-700/40 rounded-lg p-6">
+            <p class="text-emerald-400 text-3xl font-bold">95%</p>
+            <p class="text-neutral-300 text-sm mt-2">Mensagens respondidas automaticamente</p>
+          </div>
+          <div class="bg-emerald-700/20 border border-emerald-700/40 rounded-lg p-6">
+            <p class="text-emerald-400 text-3xl font-bold">2min</p>
+            <p class="text-neutral-300 text-sm mt-2">Tempo médio de resposta (vs 30min antes)</p>
+          </div>
+          <div class="bg-emerald-700/20 border border-emerald-700/40 rounded-lg p-6">
+            <p class="text-emerald-400 text-3xl font-bold">40%</p>
+            <p class="text-neutral-300 text-sm mt-2">Aumento em leads captados</p>
+          </div>
+          <div class="bg-emerald-700/20 border border-emerald-700/40 rounded-lg p-6">
+            <p class="text-emerald-400 text-3xl font-bold">85%</p>
+            <p class="text-neutral-300 text-sm mt-2">Economia de tempo da equipe</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Desafios & Soluções -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">🔧 Desafios Superados</h2>
+        <div class="space-y-4">
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-semibold mb-2 flex items-center gap-2">
+              <span class="text-red-400">⚠</span> Latência de Resposta
+            </h3>
+            <p class="text-neutral-300 text-sm mb-2">
+              <strong>Problema:</strong> OpenAI API leva 2-3s para responder
+            </p>
+            <p class="text-neutral-300 text-sm">
+              <strong>Solução:</strong> Implementar cache Redis para respostas comuns, 
+              processamento assíncrono, pre-compute de respostas
+            </p>
+          </div>
+
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-semibold mb-2 flex items-center gap-2">
+              <span class="text-red-400">⚠</span> Context Window
+            </h3>
+            <p class="text-neutral-300 text-sm mb-2">
+              <strong>Problema:</strong> Manter histórico de conversa sem exceder limite de tokens
+            </p>
+            <p class="text-neutral-300 text-sm">
+              <strong>Solução:</strong> Implementar sliding window, resumir conversas antigas, 
+              armazenar em PostgreSQL
+            </p>
+          </div>
+
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-semibold mb-2 flex items-center gap-2">
+              <span class="text-red-400">⚠</span> Custos de API
+            </h3>
+            <p class="text-neutral-300 text-sm mb-2">
+              <strong>Problema:</strong> Cada chamada custa dinheiro, volume crescente = custos crescentes
+            </p>
+            <p class="text-neutral-300 text-sm">
+              <strong>Solução:</strong> Modelo de negócio: cobrar por mensagem, implementar rate limiting, 
+              priorizar clientes
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <div class="border-t border-neutral-700 pt-8 mt-12">
+        <p class="text-neutral-400 text-sm">
+          Desenvolvido como parte da estratégia de automação de vendas da NovusTech.
+          <a href="/" class="text-white hover:underline ml-1">Voltar ao portfólio</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

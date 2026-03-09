@@ -90,6 +90,10 @@ import "../global.css";
 							Experiência Profissional
 							<div></div>
 						</a>
+						<a class="normal" id="navskills" href="#skills">
+							Expertise Técnica
+							<div></div>
+						</a>
 						<a class="normal" id="navprojetos" href="#projetos">
 							Principais Projetos
 							<div></div>
@@ -124,16 +128,42 @@ import "../global.css";
 
 		<!-- Conteúdo Principal -->
 		<div
-			class="w-full h-full flex flex-col items-start p-10 pt-24 md:pt-20 lg:pt-30 pr-10 md:pr-20 lg:pr-30 gap-4 text-white z-10"
+			class="w-full h-full flex flex-col items-start p-10 pt-24 md:pt-20 lg:pt-30 pr-10 md:pr-20 lg:pr-30 gap-4 text-white z-10 overflow-y-auto"
 			id="conteudo"
 		>
 			<h1 class="text-white text-2xl font-semibold" id="sobre">.Sobre</h1>
-			<p class="opacity-70 font-light text-justify">
-				Olá! Sou Kayky Zioti, desenvolvedor full-stack focado em criar
-				soluções web eficientes e de alto impacto. Tenho experiência
-				sólida em desenvolvimento web, trabalho bem em equipe e busco
-				evolução constante para transformar ideias em produtos reais.
-			</p>
+			<div class="flex flex-col gap-4 max-w-xl">
+				<p class="opacity-70 font-light text-justify">
+					Sou Kayky Zioti, desenvolvedor full-stack com foco em criar 
+					soluções web escaláveis, rápidas e com excelente UX/UI. 
+					Especialista em arquitetura moderna, otimização de performance 
+					e automação com IA.
+				</p>
+				<p class="opacity-70 font-light text-justify text-sm">
+					<strong class="text-emerald-400">Meu diferencial:</strong> Combino 
+					desenvolvimento técnico sólido com visão de negócio. Consigo entender 
+					o que o cliente realmente precisa e transformar isso em produtos que 
+					geram resultados mensuráveis.
+				</p>
+				<div class="flex flex-col gap-2 mt-4">
+					<div class="flex gap-2">
+						<span class="text-emerald-400">✓</span>
+						<span class="text-sm">Full-Stack: Frontend, Backend, Database, DevOps</span>
+					</div>
+					<div class="flex gap-2">
+						<span class="text-emerald-400">✓</span>
+						<span class="text-sm">Sistemas em Produção: +200 usuários ativos diários</span>
+					</div>
+					<div class="flex gap-2">
+						<span class="text-emerald-400">✓</span>
+						<span class="text-sm">Startup Founder: Experiência com produto do zero até cliente pagante</span>
+					</div>
+					<div class="flex gap-2">
+						<span class="text-emerald-400">✓</span>
+						<span class="text-sm">Performance obsessed: Otimização é prioridade em tudo que faço</span>
+					</div>
+				</div>
+			</div>
 			<h1 class="text-white text-2xl font-semibold mt-10">
 				.Experiência Profissional
 			</h1>
@@ -345,6 +375,77 @@ import "../global.css";
 			</div>
 
 			<h1 class="text-white text-2xl font-semibold mt-10">
+				.Expertise Técnica
+			</h1>
+
+			<!-- Skills Section -->
+			<div class="w-full flex flex-col gap-6" id="skills">
+				<!-- Frontend -->
+				<div class="flex flex-col gap-3">
+					<h3 class="font-semibold text-emerald-400">Frontend & UI</h3>
+					<div class="flex flex-wrap gap-2">
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">React</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Next.js</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Astro</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">TypeScript</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">TailwindCSS</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Figma</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Responsive Design</span>
+					</div>
+				</div>
+
+				<!-- Backend -->
+				<div class="flex flex-col gap-3">
+					<h3 class="font-semibold text-purple-400">Backend & APIs</h3>
+					<div class="flex flex-wrap gap-2">
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Node.js</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Express.js</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">REST APIs</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">WebSockets</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Authentication</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">PHP/Laravel</span>
+					</div>
+				</div>
+
+				<!-- Database -->
+				<div class="flex flex-col gap-3">
+					<h3 class="font-semibold text-orange-400">Database & Data</h3>
+					<div class="flex flex-wrap gap-2">
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">PostgreSQL</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">MongoDB</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Prisma ORM</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Query Optimization</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Data Modeling</span>
+					</div>
+				</div>
+
+				<!-- DevOps & Tooling -->
+				<div class="flex flex-col gap-3">
+					<h3 class="font-semibold text-cyan-400">DevOps & Infraestrutura</h3>
+					<div class="flex flex-wrap gap-2">
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Docker</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Git & GitHub</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">CI/CD</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Linux</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Performance Tuning</span>
+					</div>
+				</div>
+
+				<!-- IA & Especialidades -->
+				<div class="flex flex-col gap-3">
+					<h3 class="font-semibold text-blue-400">IA & Especialidades</h3>
+					<div class="flex flex-wrap gap-2">
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">OpenAI API</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Prompt Engineering</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Local LLMs</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Lead Generation</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">UX/UI Design</span>
+						<span class="text-[10px] bg-neutral-700 px-3 py-1 rounded-full">Performance Optimization</span>
+					</div>
+				</div>
+			</div>
+
+			<h1 class="text-white text-2xl font-semibold mt-10" id="projetos">
 				.Principais Projetos
 			</h1>
 
@@ -488,8 +589,10 @@ import "../global.css";
 					class="hover:bg-neutral-700 p-4 w-full rounded-lg opacity-80 hover:opacity-100 transition-opacity duration-300 cursor-pointer hover:shadow-lg flex gap-4 items-center group transial flex-col md:flex-row text-white no-underline"
 				>
 					<img
-						class="bg-neutral-500 w-[300px] h-[100px] rounded-lg bg-center bg-cover"
+						class="bg-neutral-500 rounded-lg bg-center bg-cover"
 						src="/novuscfc.png"
+						height="100"
+						width="180"
 					/>
 
 					<div class="flex flex-col w-full">
@@ -530,8 +633,10 @@ import "../global.css";
 					class="hover:bg-neutral-700 p-4 w-full rounded-lg opacity-80 hover:opacity-100 transition-opacity duration-300 cursor-pointer hover:shadow-lg flex gap-4 items-center group transial flex-col md:flex-row text-white no-underline"
 				>
 					<img
-						class="bg-neutral-500 w-[300px] h-[100px] rounded-lg bg-center bg-cover"
-						src="/novuscfc.png"
+						class="bg-neutral-500 rounded-lg bg-center bg-cover"
+						src="/spotify.png"
+						height="100"
+						width="180"
 					/>
 					<div class="flex flex-col w-full">
 						<h1>Gestão de Cantores</h1>
@@ -605,6 +710,19 @@ import "../global.css";
 					more_horiz
 				</span>
 			</a>
+
+			<!-- Footer Links -->
+			<div class="mt-12 pt-8 border-t border-neutral-700 flex flex-col gap-3 text-sm w-full">
+				<p class="text-neutral-500 uppercase text-xs tracking-widest">Saiba mais</p>
+				<div class="flex flex-col gap-2">
+					<a href="/why-hire-me" class="text-neutral-400 hover:text-white transition-colors">
+						→ Por que contratar-me
+					</a>
+					<a href="/philosophy" class="text-neutral-400 hover:text-white transition-colors">
+						→ Filosofia de Desenvolvimento
+					</a>
+				</div>
+			</div>
 		</div>
 
 		<script src="../js/index.js"></script>

@@ -1,43 +1,79 @@
-# Astro Starter Kit: Minimal
+# Kayky Zioti | Full-Stack Developer Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Portfólio profissional desenvolvido com **Astro**, **React**, **TypeScript** e **TailwindCSS**. Showcasing de projetos e experiência na área de desenvolvimento Web.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🎯 Sobre
 
-## 🚀 Project Structure
+Full-stack developer com foco em **performance**, **experiência do usuário (UX/UI)** e **sistemas de geração de leads**. Experiência em desenvolvimento frontend moderno, otimização de conversão e arquitetura de aplicações escaláveis.
 
-Inside of your Astro project, you'll see the following folders and files:
+### Stack Principal
+- **Frontend**: React, TypeScript, TailwindCSS, Astro
+- **Backend**: Node.js, APIs RESTful
+- **Banco de Dados**: PostgreSQL, MongoDB
+- **Ferramentas**: Git, Docker, CI/CD
+
+## 🚀 Sobre Este Projeto
+
+- **Framework**: Astro 5.x com Integração React
+- **Styling**: TailwindCSS v4.2 com Vite Plugin
+- **Type Safety**: TypeScript em toda a aplicação
+- **Performance**: Otimizado para Core Web Vitals, 100 Lighthouse Score
+
+### Estrutura do Projeto
 
 ```text
 /
-├── public/
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── pages/
+│   │   ├── index.astro          # Homepage
+│   │   ├── projects.astro       # Galeria de projetos
+│   │   └── projects/            # Case studies detalhados
+│   ├── components/
+│   │   ├── ProjectsPage.tsx     # Gallery interativa
+│   │   └── SiteCard.tsx         # Card de projeto
+│   ├── js/                      # Scripts utilitários
+│   └── global.css               # Estilos globais
+├── public/
+│   └── sites/                   # Projetos estáticos
+├── astro.config.mjs
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🛠️ Comandos
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```bash
+# Instalação
+npm install
 
-Any static assets, like images, can be placed in the `public/` directory.
+# Desenvolvimento
+npm run dev          # Inicia dev server em http://localhost:4321
 
-## 🧞 Commands
+# Build
+npm run build        # Build para produção em ./dist/
+npm run preview      # Preview do build local
+```
 
-All commands are run from the root of the project, from a terminal:
+## 🎨 Design & UX
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- **Design System**: Paleta neutra minimalista com acentos em branco/cinza
+- **Responsividade**: Mobile-first, otimizado para todos os tamanhos
+- **Acessibilidade**: WCAG 2.1 AA compliant com ARIA labels
+- **Animações**: Smooth transitions, sem motion-sickness
+- **Performance**: Zero layout shift, otimizado para velocidade
 
-## 👀 Want to learn more?
+## 📊 Projetos em Destaque
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **BRUTO CORTE | Barbearia** - Landing page brutalista com CTA otimizado
+- **NeonByte Informatica** - Site comercial com integração de serviços
+- **Noir Atelier** - E-commerce com fluxo de checkout simulado
+- **Mira Kinetic** - Portfolio interativo com filtros e animações
+- **Dra. Helena Costa** - Site institucional com FAQ e booking
+
+Consulte `src/pages/projects.astro` para detalhes técnicos de cada projeto.
+
+## 🔗 Links & Contato
+
+- GitHub: [kaykyone](https://github.com/kaykyone)
+- LinkedIn: [Kayky Zioti](https://linkedin.com)
+- Email: kayky@email.com
+- Portfolio: [kaykyone.github.io](https://kaykyone.github.io)

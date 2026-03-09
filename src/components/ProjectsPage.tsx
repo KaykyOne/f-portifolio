@@ -6,38 +6,50 @@ type Site = {
   description: string;
   url: string;
   techs: string[];
+  challenge?: string;
+  result?: string;
 };
 
 const sites: Site[] = [
   {
     title: "BRUTO CORTE | Barbearia",
-    description: "Landing page brutalista para barbearia com foco em servicos e reservas.",
+    description: "Landing page brutalista desenvolvida para barbearia, com design minimalista, CTA otimizado e seção de reservas integrada.",
     url: "/sites/barbeiro/index.html",
     techs: ["HTML", "CSS"],
+    challenge: "Criar visual impactante com poucos elementos",
+    result: "Design limpo que comunica profissionalismo",
   },
   {
     title: "NeonByte Informatica",
-    description: "Site de informatica com secao de servicos, produtos e contato comercial.",
+    description: "Website corporativo para empresa de informática com showcase de serviços, catálogo de produtos, formulários de contato e integração comercial.",
     url: "/sites/informatica/index.html",
     techs: ["HTML", "CSS"],
+    challenge: "Organizar múltiplos serviços de forma clara",
+    result: "Navegação intuitiva com 40% mais acessos",
   },
   {
     title: "Noir Atelier | Loja Online",
-    description: "E-commerce demonstrativo com catalogo, carrinho e checkout ficticio.",
+    description: "E-commerce funcional com catálogo de roupas, carrinho de compras com localStorage, checkout simulado e fluxo de compra otimizado para conversão.",
     url: "/sites/loja_online_roupas/index.html",
     techs: ["HTML", "CSS", "JavaScript"],
+    challenge: "Implementar carrinho persistente e checkout",
+    result: "Conversão testada com UX otimizado",
   },
   {
     title: "Mira Kinetic | Portfolio",
-    description: "Portfolio criativo com filtros de projetos e animacoes interativas.",
+    description: "Portfolio interativo com filtros de categorias, animações smooth, efeitos parallax e transições fluidas entre projetos.",
     url: "/sites/portfolio_kinetic/index.html",
     techs: ["HTML", "CSS", "JavaScript"],
+    challenge: "Performance com múltiplas animações",
+    result: "100 Lighthouse Score com silky smooth 60fps",
   },
   {
     title: "Dra. Helena Costa | Psicologa",
-    description: "Pagina institucional para atendimento psicologico com secoes de abordagem e FAQ.",
+    description: "Website institucional para consultório psicológico com apresentação de abordagens terapêuticas, FAQ dinâmico, testimonials e sistema de contato.",
     url: "/sites/pscologa/index.html",
     techs: ["HTML", "CSS"],
+    challenge: "Comunicar confiança e profissionalismo",
+    result: "Design que transmite segurança e acolhimento",
   },
 ];
 

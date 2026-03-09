@@ -1,0 +1,312 @@
+---
+import "../../global.css";
+---
+
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>LocalLoreAI - Case Study</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body class="bg-neutral-800 text-white">
+    <div class="max-w-4xl mx-auto px-6 py-12 md:py-20">
+      <!-- Header -->
+      <div class="mb-12">
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors mb-8"
+        >
+          <span class="material-symbols-outlined text-sm">arrow_back</span>
+          Voltar
+        </a>
+
+        <div class="mb-8">
+          <div class="bg-neutral-700/40 rounded-lg p-6 mb-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">LocalLoreAI</h1>
+            <p class="text-neutral-300 text-lg">
+              RPG Open-World com IA Local Treinada
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-neutral-700/30 rounded-lg p-4">
+              <p class="text-neutral-500 text-xs uppercase">Status</p>
+              <p class="text-blue-400 font-semibold">Em Desenvolvimento</p>
+            </div>
+            <div class="bg-neutral-700/30 rounded-lg p-4">
+              <p class="text-neutral-500 text-xs uppercase">Tipo</p>
+              <p class="font-semibold">Game/IA</p>
+            </div>
+            <div class="bg-neutral-700/30 rounded-lg p-4">
+              <p class="text-neutral-500 text-xs uppercase">Timeline</p>
+              <p class="font-semibold">2024 - Presente</p>
+            </div>
+            <div class="bg-neutral-700/30 rounded-lg p-4">
+              <p class="text-neutral-500 text-xs uppercase">Meu Papel</p>
+              <p class="font-semibold">Full-Stack Creator</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- O Conceito -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">🎮 O Conceito</h2>
+        <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6 space-y-4">
+          <p class="text-neutral-300">
+            Um jogo de RPG em texto totalmente gerado por IA, onde cada decisão 
+            do jogador cria uma narrativa única. Diferente de jogos com IA genérica, 
+            o LocalLoreAI usa modelos trainados localmente para maior controle e consistência.
+          </p>
+          <div class="bg-neutral-900 rounded-lg p-4">
+            <p class="text-sm text-neutral-400 italic">
+              "Imagine um D&D master que nunca fica cansado, que conhece perfeitamente 
+              o mundo que criou, e que se adapta a qualquer decisão do jogador."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Visão -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6"><span class="material-symbols-outlined">target</span> Visão Técnica</h2>
+        <div class="space-y-6">
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-bold text-lg mb-4">Por que IA Local?</h3>
+            <div class="space-y-3 text-neutral-300 text-sm">
+              <p>
+                <strong class="text-emerald-400">∞ Contexto Infinito:</strong> 
+                Sem limites de tokens, o jogo pode ter narrativas extremamente longas
+              </p>
+              <p>
+                <strong class="text-emerald-400">💰 Sem custos recorrentes:</strong> 
+                Modelo treinado uma vez, roda gratuitamente
+              </p>
+              <p>
+                <strong class="text-emerald-400">🎨 Total customização:</strong> 
+                Treinar com base de dados própria (lore criado especificamente)
+              </p>
+              <p>
+                <strong class="text-emerald-400">📍 Mundo consistente:</strong> 
+                Modelo sempre gera as mesmas respostas para as mesmas situações
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-bold text-lg mb-4">Arquitetura Do Jogo</h3>
+            <div class="bg-neutral-900 rounded-lg p-4 text-sm space-y-2">
+              <p>
+                <strong class="text-cyan-400">Frontend:</strong> React + TypeScript com interface imersiva
+              </p>
+              <p>
+                <strong class="text-violet-400">Backend:</strong> Express.js + Llama 2 (IA local rodando via Ollama)
+              </p>
+              <p>
+                <strong class="text-orange-400">Game State:</strong> PostgreSQL para persistência de savegames
+              </p>
+              <p>
+                <strong class="text-green-400">IA Engine:</strong> Prompt engineering customizado para narrativa coerente
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-bold text-lg mb-4">Mecânicas de Gameplay</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="border-l-2 border-cyan-500 pl-4">
+                <p class="font-semibold text-cyan-400 mb-1">Mundo Dinâmico</p>
+                <p class="text-xs text-neutral-300">
+                  Cada interação afeta o estado do mundo. NPCs lembram suas interações anteriores.
+                </p>
+              </div>
+              <div class="border-l-2 border-purple-500 pl-4">
+                <p class="font-semibold text-purple-400 mb-1">Múltiplos Finais</p>
+                <p class="text-xs text-neutral-300">
+                  Centenas de possíveis narrativas baseadas em escolhas do jogador.
+                </p>
+              </div>
+              <div class="border-l-2 border-emerald-500 pl-4">
+                <p class="font-semibold text-emerald-400 mb-1">Sistema de Stats</p>
+                <p class="text-xs text-neutral-300">
+                  Força, Inteligência, Carisma afetam outcomes de ações.
+                </p>
+              </div>
+              <div class="border-l-2 border-orange-500 pl-4">
+                <p class="font-semibold text-orange-400 mb-1">Lore Customizável</p>
+                <p class="text-xs text-neutral-300">
+                  Players podem criar seus próprios mundos treinando modelos IA.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6"><span class="material-symbols-outlined">build</span> Stack Técnico</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-neutral-700/30 rounded-lg p-4 border border-neutral-700">
+            <p class="text-cyan-400 font-semibold mb-3">IA & ML</p>
+            <div class="space-y-2 text-sm">
+              <div>Llama 2 (7B params)</div>
+              <div>Ollama (AI runtime)</div>
+              <div>Fine-tuning em Lore</div>
+              <div>Vector embeddings</div>
+            </div>
+          </div>
+          <div class="bg-neutral-700/30 rounded-lg p-4 border border-neutral-700">
+            <p class="text-green-400 font-semibold mb-3">Backend</p>
+            <div class="space-y-2 text-sm">
+              <div>Express.js</div>
+              <div>TypeScript</div>
+              <div>Node.js</div>
+              <div>WebSockets</div>
+            </div>
+          </div>
+          <div class="bg-neutral-700/30 rounded-lg p-4 border border-neutral-700">
+            <p class="text-purple-400 font-semibold mb-3">Frontend & Data</p>
+            <div class="space-y-2 text-sm">
+              <div>React 19</div>
+              <div>TypeScript</div>
+              <div>PostgreSQL</div>
+              <div>Prisma ORM</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Desafios Técnicos -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6"><span class="material-symbols-outlined">lightbulb</span> Desafios Técnicos</h2>
+        <div class="space-y-4">
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-semibold mb-2 flex items-center gap-2">
+              <span class="text-red-400">⚡</span> Latência de Geração de Texto
+            </h3>
+            <p class="text-neutral-300 text-sm">
+              <strong>Challenge:</strong> Llama 2 em GPU local gera ~50 tokens/seg. 
+              Resposta de 200 tokens leva 4 segundos.
+            </p>
+            <p class="text-neutral-300 text-sm mt-2">
+              <strong>Solution:</strong> Streaming de tokens em tempo real via WebSockets, 
+              UI mostra texto sendo digitado, sensação é mais fluida.
+            </p>
+          </div>
+
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-semibold mb-2 flex items-center gap-2">
+              <span class="text-red-400">🧠</span> Manter Consistência Narrativa
+            </h3>
+            <p class="text-neutral-300 text-sm">
+              <strong>Challenge:</strong> IA pode "esquecer" contexto anterior ou 
+              contradizer informações já estabelecidas.
+            </p>
+            <p class="text-neutral-300 text-sm mt-2">
+              <strong>Solution:</strong> System prompt extremamente detalhado com toda 
+              a história atual, Vector DB para recuperar contextos relevantes, 
+              resumos automáticos de narrativas longas.
+            </p>
+          </div>
+
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-semibold mb-2 flex items-center gap-2">
+              <span class="text-red-400">💾</span> Persistência & Recuperação de Estado
+            </h3>
+            <p class="text-neutral-300 text-sm">
+              <strong>Challenge:</strong> Savefiles precisam ser compactos mas conter 
+              toda a história narrativa para recuperação.
+            </p>
+            <p class="text-neutral-300 text-sm mt-2">
+              <strong>Solution:</strong> Delta updates (só salva mudanças), compressão 
+              GZIP, sumários de história para reduzir tamanho.
+            </p>
+          </div>
+
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-6">
+            <h3 class="font-semibold mb-2 flex items-center gap-2">
+              <span class="text-red-400"><span class="material-symbols-outlined">target</span></span> Fine-tuning Eficiente
+            </h3>
+            <p class="text-neutral-300 text-sm">
+              <strong>Challenge:</strong> Treinar modelos IA requer infraestrutura cara 
+              e conhecimento especializado.
+            </p>
+            <p class="text-neutral-300 text-sm mt-2">
+              <strong>Solution:</strong> LoRA (Low-Rank Adaptation) para reduzir 
+              parâmetros treináveis, pre-configured templates de lore.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Roadmap -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">🗺️ Roadmap</h2>
+        <div class="space-y-3">
+          <div class="bg-emerald-700/20 border border-emerald-700/40 rounded-lg p-4">
+            <p class="text-emerald-400 font-semibold text-sm">✓ Alpha</p>
+            <p class="text-neutral-300 text-xs">Core gameplay, geração de narrativa, salvamento</p>
+          </div>
+          <div class="bg-blue-700/20 border border-blue-700/40 rounded-lg p-4">
+            <p class="text-blue-400 font-semibold text-sm">→ Beta (próximo)</p>
+            <p class="text-neutral-300 text-xs">Multiplayer, custom world builder, mod support</p>
+          </div>
+          <div class="bg-neutral-700/20 border border-neutral-700 rounded-lg p-4">
+            <p class="text-neutral-400 font-semibold text-sm">○ 1.0 Release</p>
+            <p class="text-neutral-300 text-xs">Steam integration, marketplace de mundos, tournament mode</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- O que aprendi -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">📚 Learnings - IA & ML</h2>
+        <ul class="space-y-3 text-neutral-300">
+          <li class="flex gap-3">
+            <span class="text-purple-400 font-bold">◆</span>
+            <span>
+              <strong>Prompt Engineering:</strong> Como estruturar prompts para 
+              máxima consistência e qualidade de resposta
+            </span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-purple-400 font-bold">◆</span>
+            <span>
+              <strong>Fine-tuning em Produção:</strong> Treinar e deployar modelos 
+              em um ambiente real é muito diferente de um notebook
+            </span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-purple-400 font-bold">◆</span>
+            <span>
+              <strong>Streaming de IA:</strong> Usar streaming webhooks para melhorar 
+              UX em aplicações com IA lenta
+            </span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-purple-400 font-bold">◆</span>
+            <span>
+              <strong>Vector Embeddings:</strong> Como usar embeddings para recuperação 
+              de contexto relevante em aplicações de IA
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Footer -->
+      <div class="border-t border-neutral-700 pt-8 mt-12">
+        <p class="text-neutral-400 text-sm">
+          Um projeto experimental em desenvolvimento, focado em explorar 
+          as possibilidades de IA local e narrativa interativa.
+          <a href="/" class="text-white hover:underline ml-1">Voltar</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
